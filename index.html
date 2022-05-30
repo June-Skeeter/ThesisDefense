@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Reveal.js template</title>
+  <!-- credit https://bl.ocks.org/elipousson/f64814b1ee4aab5d83775bfbf556d35a -->
+
+  <meta name="description" content="Simple Reveal.js slidedeck template. Source files loaded from jsDelivr.">
+  <meta name="author" content="jitesh@spinspire.com">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.css">
+
+<!-- 
+    <link id="theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.2.0/dist/theme/white.css"> -->
+    <link id="theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/theme/serif.css">
+
+  <style>
+    body {
+      /* make it totally black */
+      /*background-color: black;*/
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .col {
+      flex: 1
+    }
+
+.h2{position: fixed; 
+  vertical-align: text-top;}
+.left {
+  left:-8.33%;
+  text-align: left;
+  float: left;
+  width:50%;
+  z-index:10;
+  /*position: fixed; */
+}
+
+/*.center {
+  left:31.25%;
+  top: 75px;
+  float: right;
+  text-align: right;
+  z-index:-10;
+  width:50%;
+}*/
+
+.right {
+  left:31.25%;
+  top: 75px;
+  float: right;
+  text-align: right;
+  z-index:10;
+  width:50%;
+  /*position: fixed; */
+
+}
+
+
+
+.ul {
+  padding-left: 5px;
+}
+
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <div class="slides">
+
+       <section>
+        <h2>Using Machine Learning to Identify and Map Controls of Growing-Season Carbon Dioxide and Methane Fluxes in the Mackenzie Delta Region</h2>
+        <div class="container" style="text-align:center;">
+          <div class="col" style="text-align: center">
+            <p>June Skeeter</p>
+          </div>
+      </section>
+
+      
+
+      <section>
+        <h2>Territorial Acknowledgements</h2>
+        <div class="container">
+          <div class="col" style="text-align: left;">
+            <p>For the last seven years, I have been living as an uninvited guest on the traditional territoires of the Coast Salish Peoples.
+              Specifically the ...
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Territorial Acknowledgements</h2>
+        <div class="container">
+          <div class="col" style="text-align: left;">
+            <p>This research was conducted in the Inuvialut Settlement Region.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="container">
+          <div class="left">
+            <h3>Introduction</h3>
+            <p>Arctic Amplification accelerate warming at high latitudes, and tundra ecosystems are a hot spot for effects of climate change.</p>
+            <ul>
+              <li>Decreased snow and ice cover.
+                
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img src="images/Fig1.png" width="400"></img>
+          </div>
+        </div>
+      </section>
+
+      
+
+    </div><!-- .slides -->
+
+  </div><!-- .reveal -->
+
+  <!-- not needed since 3.8.0 -->
+  <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/head.min.js"><script -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js"></script> -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/math/math.min.js"></script>
+
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      overview: false,
+      loop: false,
+      margin: 0.04,
+      width: 1200,
+
+
+      transition: 'none',
+
+    plugins: [ RevealMath.MathJax2 ]
+    },
+
+
+    );
+  </script>
+</body>
+
+</html>
