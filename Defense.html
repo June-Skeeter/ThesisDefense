@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Reveal.js template</title>
+  <!-- credit https://bl.ocks.org/elipousson/f64814b1ee4aab5d83775bfbf556d35a -->
+
+  <meta name="description" content="Simple Reveal.js slidedeck template. Source files loaded from jsDelivr.">
+  <meta name="author" content="jitesh@spinspire.com">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.css">
+
+<!-- 
+    <link id="theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.2.0/dist/theme/white.css"> -->
+    <link id="theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/theme/serif.css">
+
+  <style>
+
+.container {
+  position: fixed;
+    height: 700px;
+    width: 100%;
+}
+
+.title{
+  position: relative;
+  top: 5%;
+}
+
+.subtitle{
+  position: relative;
+  top: 10%;
+}
+
+.header1 {
+  top: 1%;
+  height: 14%;
+  width: 100%;
+  position: absolute;
+  text-align: left;
+}
+
+
+.full {
+ width: 95%;
+ top:  15%;
+ left: 0%;
+ text-align: left;
+ position: absolute; 
+}
+
+.left {
+  width: 50%;
+  /* height: 75%; */
+  top: 15%;
+  left: 0%;
+  position: absolute;
+  text-align: left;
+}
+
+/* .left2 {
+  width: 60%;
+  flex: 1;
+  height: 75%;
+  top: 20%;
+  left: 0%;
+  position: absolute;
+  text-align: left;
+}
+
+.left3 {
+  width: 40%;
+  flex: 1;
+  height: 75%;
+  top: 20%;
+  left: 0%;
+  position: absolute;
+  text-align: left;
+} */
+
+.right {
+  width: 48%;
+  top:  20%;
+  /* height: 75%; */
+  left: 51%;
+  position: absolute;
+  text-align: left;
+}
+
+
+.right_fig {
+  width: 49%;
+  top: 15%;
+  /* height: 75%; */
+  left: 51%;
+  position: absolute;
+  text-align: center;
+}
+
+/* .right3 {
+  width: 58%;
+  height: 75%;
+  top: 20%;
+  left: 41%;
+  position: absolute;
+  text-align: left;
+} */
+
+  /* .eq {
+    top: 10%;
+    font-size: 80%;
+    font-style: italic;
+    position: relative;
+  }
+
+  .eqcaption {
+    text-align: center;
+    font-size: 75%;
+    position: relative;
+    top: 20%;
+  } */
+
+  .caption {
+    text-align: center;
+    font-size: 75%;
+  }
+
+  ul {
+      /*list-style: none;*/
+      padding-left: 0;
+  }
+
+  .reveal a {
+    color: blue;
+  }
+
+</style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+       <section>
+        <div class="container">
+          <h2 class="title">Using Machine Learning to Identify and Map Controls of Growing-Season Carbon Dioxide and Methane Fluxes in the Mackenzie Delta Region</h2>
+          <p class="subtitle">PhD Thesis: June Skeeter, UBC Geography</p> 
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+        <h3 class="header1">Territorial Acknowledgements</h3>
+          <div class="left">
+            <p>This research was conducted in the Inuvialut Settlement Region.</p>
+            <iframe src="https://native-land.ca/api/embed/embed.html?maps=territories&name=inuvialut" style="width:100%; height:400px; border:none;"></iframe>
+          </div>
+          <div class="right">
+            <p>I live and work in unceeded Coast Salish territory.</p>
+            <iframe src="https://native-land.ca/api/embed/embed.html?maps=territories&name=skwxw7mesh-xwumixw,tsleil-waututh-səl̓ilwətaɂɬ,xʷməθkʷəy̓əm" style="width:100%; height:400px; border:none;"></iframe> 
+          </div>
+      </section>
+
+      <section>
+        <div class="container">
+        <h2 class="header1">Framing the Problem</h2>
+          <div class="left">
+            <p>Arctic Amplification is accelerating warming at high latitudes.  Tundra ecosystems are a hot spot for effects of climate change.</p>
+            <ul>
+              <li>Increasing permafrost temperatures and thaw depths.</li>
+              <li>Accelerating and expanding thermokarst.</li>
+              <li>Tundra greening.</li>
+              <li>Altered C balance.</li>
+            </ul>
+          </div>
+          <div class="right_fig">
+            <img src="images/Amplification.png" width="600">
+            <p class="caption">Source: <a href="https://interactive-atlas.ipcc.ch/regional-information#eyJ0eXBlIjoiQVRMQVMiLCJjb21tb25zIjp7ImxhdCI6MjA3NDEyLCJsbmciOjU0NDMzMCwiem9vbSI6MywicHJvaiI6IkVQU0c6NTQwMzAiLCJtb2RlIjoiY29tcGxldGVfYXRsYXMifSwicHJpbWFyeSI6eyJzY2VuYXJpbyI6InNzcDU4NSIsInBlcmlvZCI6Im5lYXIiLCJzZWFzb24iOiJ5ZWFyIiwiZGF0YXNldCI6IkNNSVA2IiwidmFyaWFibGUiOiJ0YXMiLCJ2YWx1ZVR5cGUiOiJBTk9NQUxZIiwiaGF0Y2hpbmciOiJTSU1QTEUiLCJyZWdpb25TZXQiOiJub25lIiwiYmFzZWxpbmUiOiJXTU8yIiwicmVnaW9uc1NlbGVjdGVkIjpbXX0sInBsb3QiOnsiYWN0aXZlVGFiIjoicGx1bWUiLCJtYXNrIjoibm9uZSIsInNjYXR0ZXJZTWFnIjpudWxsLCJzY2F0dGVyWVZhciI6bnVsbCwic2hvd2luZyI6ZmFsc2V9fQ==">IPCC Climate Atlas</a></p>
+          </div>
+      </section>
+
+       
+      <section>
+        <div class="container">
+        <h2 class="header1">Tundra Carbon Fluxes</h2>
+          <div class="left">
+            <p>Historically, tundra ecosystems have tended to be C sinks.</p>
+            <ul>
+              <li>Short but productive growing seasons, brief shoulder seasons, frigid winters.</li>
+              <ul>
+                <li>Limits decomposition, accumulation of C</li>
+              </ul>
+              <li>Expansive wetlands further limit aerobic decomposition</li>
+              <ul>
+                <li>Promote anaerobic decomposition</li>
+                <li>Methane Emissoins</li>
+              </ul>
+            </ul>
+          </div>
+          <div class="right_fig">
+            <img src="images/Seasons.png" width="400"></img>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2 class="header1">Tundra Carbon Fluxes</h2>
+          <div class="left">
+            <p></p>
+            <ul>
+              <li>NEE = ER - GPP</li>
+              <li>ER: Ecosystem respriation</li>
+              <li>GPP: Gross prmary productivity</li>
+            </ul>
+          </div>
+          <div class="right">
+            <p>Net Methane Exchange (NME) of CH<sub>4</sub></p>
+            <ul>
+              <li>NME = Methanogenesis - Methanotropy</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="container">
+          <h2 class="header1">Tundra Carbon Fluxes</h2>
+          <div class="left">
+            <p>The main components of the tundra ecosystem C balance:</p>
+            <ul>
+              <li><b>Net Ecosystem Exchange (NEE)</b> of CO<sub>2</sub> </li>
+              <li><b>Net Methane Exchange (NME)</b> of CH<sub>4</sub></li>
+            </ul>
+          </div>
+          <div class="right">
+            <p>Net Methane Exchange (NME) of CH<sub>4</sub></p>
+            <ul>
+              <li>NME = Methanogenesis - Methanotropy</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <section>
+        <div class="container">
+        <h2 class="header1">Framing the Problem</h2>
+          <div class="left">
+            <p>Eddy covariance (EC) is a method for measuring NEE and NME, but there is limited coverage in the Arctic.</p>
+            <ul>
+              <li>Logistical challenges in remote locations.</li>
+              <li>Extreme conditoins (frigid temps, low sun angles).</li>
+              <li>Observation bias (Alaska).</li>
+            </ul>
+          </div>
+          <div class="right_fig">
+            <img src="images/Fig1.png" width="600" border: 3px solid black;></img>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2 class="header1">Machine Learning</h2>
+          <div class="full">
+            <p>Algorithms which build a predictive models from experience by learning patterns in training data.</p>
+            <ul>
+              <li>Algorithms can learn the functional relationships (and noise) in a dataset without them being explicitly programmed in advance (Smith 1993).</li>
+              <ul>
+                <li>Care must be taken to prevent overfitting; numerous methods available (e.g. Sarle 1995 & 2014; Khosravi and Nahavandi, 2011).</li>
+              </ul>
+              <li>EC data is prone to data gaps</li>
+              <ul>
+                <li>Traditional NEE gap filling methods don't work well in the Arctic</li>
+                <li>No standard methods for NME</li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2 class="header1">Machine Learning</h2>
+          <div class="full">
+            <p>Algorithms which build a predictive models from experience by learning patterns in training data.</p>
+            <ul>
+              <li>Random Forest Regression</li>
+              <ul>
+                <li>A powerful, lightweight machine learning method that can be applied with relative ease.</li>
+              </ul>
+              <li>Neural Networks</li>
+              <ul>
+                <li>An incredibly flexible and powerful group of machine learning algorithms.. They are ideally suited for handling data with complex non-linear relationships because they make no prior assumptions about the distribution of a dataset (Hornik 1991; Melesse and Hanley 2005; Khosravi et al. 2011). They are frequently used for feature detection and pattern recognition for tasks like speech recognition and computer vision. They are much more computationally expensive than RF models and have historically been considered impractical because of the time required to train models and fine-tune hyper parameters. Recent advancements in hardware (e.g., GPU processing) and software (e.g., TensorFlow) have streamlined the NN training process.</li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      
+
+
+      <section>
+        <div class="container">
+        <h2 class="header1">Research Objectives</h2>
+          <div class="full">
+            <p>Advance our understanding of the dynamics governing growing season C exchange in remote tundra ecosystems of the Mackenzie Delta Region.</p>
+            <ol>
+              <li>Measure growing season fluxes of CO2 and CH4 at Illisarvik and Fish Island in the northern Mackenzie Delta Region, use gap-filling to estimate NEE and NME, and quantify the portion of CO2 uptake offset by CH4 emissions at both sites.</li>
+              <li>Use NN models to gain insight into the controls of ecosystem scale NEE and NME at Illisarvik and Fish Island.
+                <ol>
+                  <li>Identify the dominant bio-climate drivers of NEE and NME and map the functional relationships identified.</li>
+                  <li>Investigate and account for the influence of fine-scale spatial heterogeneity over ecosystem scale fluxes.</li>
+                </ol>
+              </li>
+              <li>Investigate interannual climate variability at Fish Island and conduct a temporal upscaling experiment using NN models to estimate the possible influence of variability on growing season CO2 and CH4 fluxes at Fish Island.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Chapter 2: Illisarvik</h2>
+          <div class="left">
+            <p>Experimentally drained thermokarst lake basin.</p>
+            <ul>
+              <li>Rapid & diverse vegetation succession since drainage (Cite McKay ...).</li>
+              <li>EC system operated from July 8th - August 7th 2016.</li>
+              <li>Reinbou ...?</li>
+            </ul>
+          </div>
+          <div class="right_fig">
+            <div class="r-stack">
+              <p class="fragment fade-out" data-fragment-index="0" ><img src="images/BasinPhoto.JPG"><br>Photo Credit: Antoni Lewkowicz</p>
+              <p class="fragment current-visible"  data-fragment-index="0" ><img src="images/Illisarvik_Tower.JPG"></p>
+              <p class="fragment current-visible"  data-fragment-index="1" ><img src="images/Illisarvik_Sensors.jpg"></p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      
+      <section>
+        <div class="container">
+          <h2>Chapter 2: Illisarvik</h2>
+          <div class="right">
+            <p>1-month monitoring</p>
+          </div>
+          <div class="right">
+            <p>Insert images</p>
+          </div>
+        </div>
+      </section>
+
+      
+      <section>
+        <div class="container">
+          <h2>Chapter 3: Fish Island</h2>
+          <div class="col">
+            <p>Polygonal Peatland</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="container">
+          <h2>Chapter 4: Modelling</h2>
+          <div class="col">
+            <p>Temporal upscaling</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="container">
+          <h2>Conclusions</h2>
+          <div class="col">
+            <ol>
+              <li>Both Illisarvik and Fish Island were growing season CO2 sinks. Illisarvik was a weak CH4 source, but with patches of very high fluxes in wet areas dominated by sedges. Fish Island was a moderately strong CH4 source.</li>
+              <li>Temporal upscaling indicated significant interannual variability in growing season NEE and NME at Fish Island. Climate warming could reduce the CO2 sink strength of Fish Island. Compared to two similar low center polygon ecosystems with long-term eddy covariance records:</li>
+              <ul>
+                <li>Fish Island is likely a weaker growing season CO2 sink and stronger growing season CH4 source than a low center polygon ecosystem near Utqiagvik, Alaska.</li>
+                <li>Fish Island may be both a stronger growing season CO2 sink CH4 source than a low center polygon ecosystem at Samoylov Island, in the Lena River Delta.</li>
+              </ul>
+              <li>Spatial heterogeneity was a significant factor influencing carbon fluxes at Fish Island and Illisarvik.</li>
+              <ul>
+                <li>Both NEE and NME at Illisarvik varied significantly between different vegetation types</li>
+                <li>At Fish Island, polygonal microtopography had a significant influence over NME but had no influence over NEE.</li>
+                <li>Neural network analysis and footprint modelling can be combined with to help account for, and model the influence of, spatial heterogeneity on eddy covariance flux observations.</li>
+              </ul>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Future Research</h2>
+          <div class="col">
+            <ol>
+              <li>Long-term flux data needed.</li>
+              <ul>
+                <li>Interannual variability is significant.</li>
+                <li>Warming may reduce overall sink strenght.</li>
+              </ul>
+              <li>Cold seson fluxes.</li>
+              <ul>
+                <li>Significant question mark.</li>
+                <li>Extended senescent period could offset much of growing season uptake.</li>
+              </ul>
+              <li>Methane fluxes.</li>
+              <ul>
+                <li>Pressure pumping.</li>
+                <li>Spatial variability - landscape scale changes.</li>
+              </ul>
+              <li>Network architecture.</li>
+              <ul>
+                <li>Multi-layer models to simulate GPP and ER separately.</li>
+                <li>Time lagged models.</li>
+              </ul>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      
+      <section>
+        <div class="container">
+          <h2 class="header1">Reflections</h2>
+          <div class="full">
+            <ol>
+              <li>Future work should focus on sustainable long term monitoring.</li>
+              <ul>
+                <li>Short, resource intensive campaigns are a missalocation of resources.</li>
+                <ul>
+                  <li>Tens of thousands of dollars worth of equipment, fuel, & labor.</li>
+                  <li>Only 4 months of flux data.</li>
+                </ul>
+              </ul>
+              <li>Prioritize engagement & involvement of local communities.</li>
+              <ul>
+                <li>Projects will be sustainable over longer timescales.</li>
+                <li>Tehnical training & employment for communities.</li>
+              </ul>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- .slides -->
+
+  </div><!-- .reveal -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/math/math.min.js"></script>
+
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      overview: false,
+      loop: false,
+      margin: 0.03,
+      width: 1200,
+
+      height: 700,
+
+      transition: 'none',
+
+    plugins: [ RevealMath.MathJax2 ]
+    },
+
+
+    );
+  </script>
+</body>
+
+</html>
