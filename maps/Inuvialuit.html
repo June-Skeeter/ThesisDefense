@@ -17,16 +17,18 @@ body { margin: 0; padding: 0; }
 mapboxgl.accessToken = 'pk.eyJ1IjoianVuZXNwYWNlYm9vdHMiLCJhIjoiY2twY3g4aXloMWFlcDJzbXN3aG95aG5uZiJ9.mFiJt0MIfL1MiJ2rB2xhKQ';
 
 const Inuvialuit = 'https://native-land.ca/wp-json/nativeland/v1/api/index.php?maps=territories&name=inuvialut';
+const Sites = 'https://raw.githubusercontent.com/June-Skeeter/ThesisDefense/main/Data/FieldSites.json';
 
 async function getGeoJson(layer) {
         const data = await fetch(layer);
         const geojson = await data.json();
-        // console.log(geojson[0]);
+        console.log(geojson);
         return geojson[0];
     };
 
 async function mapData(){
     const Inuvialuit_geoJson = await getGeoJson(Inuvialuit)
+    const Sites_geoJson = await getGeoJson(Sites)
 
     const map = new mapboxgl.Map({
     container: 'map',
@@ -44,21 +46,33 @@ async function mapData(){
         data: Inuvialuit_geoJson
         });
 
+    map.addSource('Sites', {
+        type: 'geojson',
+        data: Sites_geoJson
+        });
 
     map.addLayer({
                 'id': 'Inuvialuit',
-                'type': 'fill',
+                'type': 'line',
                 'source': 'Inuvialuit Layer',
-                'layout': {
-                    // hide layer by default.
-                    'visibility': 'visible'
-                },
+                
                 'paint': {
-                    'fill-color': '#f54287', // blue color fill
-                    'fill-opacity': 0.5
+                    'line-color': '#f54287',
+                    'line-width': 3
                     }
                 });
 
+    map.addLayer({
+                'id': 'Sites',
+                'type': 'circle',
+                'source': 'Sites Layer',
+                'paint': {
+                    'circle-radius': 6,
+                    'circle-color': '#fc79fa',
+                    "circle-stroke-width": 1,
+                    "circle-stroke-color": 'black'
+                    },
+                });
 
     });
 
