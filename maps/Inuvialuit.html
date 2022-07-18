@@ -22,13 +22,18 @@ const Sites = 'https://raw.githubusercontent.com/June-Skeeter/ThesisDefense/main
 async function getGeoJson(layer) {
         const data = await fetch(layer);
         const geojson = await data.json();
-        console.log(geojson);
-        return geojson[0];
+        if (geojson.constructor === Array){
+            return geojson[0];
+        } else {
+            return geojson;
+        };
+
     };
 
 async function mapData(){
     const Inuvialuit_geoJson = await getGeoJson(Inuvialuit)
     const Sites_geoJson = await getGeoJson(Sites)
+    console.log(Sites_geoJson)
 
     const map = new mapboxgl.Map({
     container: 'map',
