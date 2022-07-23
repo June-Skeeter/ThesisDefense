@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Land Acknowledgement</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoianVuZXNwYWNlYm9vdHMiLCJhIjoiY2twY3g4aXloMWFlcDJzbXN3aG95aG5uZiJ9.mFiJt0MIfL1MiJ2rB2xhKQ';
+
+const Inuvialuit = 'https://native-land.ca/wp-json/nativeland/v1/api/index.php?maps=territories&name=inuvialut';
+const Salish = 'https://native-land.ca/wp-json/nativeland/v1/api/index.php?maps=territories&name=puget-sound-salish';
+const Sites = 'https://raw.githubusercontent.com/June-Skeeter/ThesisDefense/main/Data/FieldSites.json';
+
+async function getGeoJson(layer) {
+        const data = await fetch(layer);
+        const geojson = await data.json();
+        if (geojson.constructor === Array){
+            return geojson[0];
+        } else {
+            return geojson;
+        };
+
+    };
+
+async function mapData(){
+    const Inuvialuit_geoJson = await getGeoJson(Inuvialuit)
+    const Salish_geoJson = await getGeoJson(Salish)
+    const Sites_geoJson = await getGeoJson(Sites)
+    console.log(Sites_geoJson)
+
+    const map = new mapboxgl.Map({
+    container: 'map',
+    zoom: 2.75,
+    center: [-130, 63.75],
+    style: 'mapbox://styles/mapbox/satellite-v9',
+    projection: 'globe' // Display the map as a globe
+    });
+
+    map.on('load', function() {
+
+    map.addSource('Inuvialuit Layer', {
+        type: 'geojson',
+        data: Inuvialuit_geoJson
+        });
+
+    map.addSource('Salish Layer', {
+        type: 'geojson',
+        data: Salish_geoJson
+        });
+
+    map.addSource('Sites Layer', {
+        type: 'geojson',
+        data: Sites_geoJson
+        });
+
+    map.addSource('Van Layer', {
+        'type': 'geojson',
+        'data': {
+        'type': 'FeatureCollection',
+        'features': [{
+        'type': 'Feature',
+        'geometry': {
+        'type': 'Point',
+        'coordinates': [-123.25623935785569, 49.26603956877689]
+        },
+        'properties': {
+        'title': 'Vancouver BC'
+        }
+        }]
+        }
+    });
+
+    map.addLayer({
+                'id': 'Inuvialuit',
+                'type': 'line',
+                'source': 'Inuvialuit Layer',
+                'paint': {
+                    'line-color': '#035afc',
+                    'line-width': 4
+                    }
+                });
+
+
+    map.addLayer({
+                'id': 'Salish',
+                'type': 'line',
+                'source': 'Salish Layer',
+                'paint': {
+                    'line-color': '#035afc',
+                    'line-width': 4
+                    }
+                });
+
+    map.addLayer({
+                'id': 'Sites',
+                'type': 'circle',
+                'source': 'Sites Layer',
+                'paint': {
+                    'circle-radius': 6,
+                    'circle-color': '#fcf803',
+                    "circle-stroke-width": 1,
+                    "circle-stroke-color": 'black'
+                    },
+                });
+
+    map.addLayer({
+                'id': 'Van',
+                'type': 'circle',
+                'source': 'Van Layer',
+                'paint': {
+                    'circle-radius': 6,
+                    'circle-color': '#f55a42',
+                    "circle-stroke-width": 1,
+                    "circle-stroke-color": 'black'
+                    },
+                });
+
+
+    });
+
+};
+
+mapData();
+</script>
+ 
+</body>
+</html>
