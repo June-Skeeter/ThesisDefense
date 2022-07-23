@@ -20,8 +20,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.css">
 
-<!-- 
-    <link id="theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.2.0/dist/theme/white.css"> -->
+
     <link id="theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/theme/serif.css">
 
   <style>
@@ -44,7 +43,7 @@
 
 .header1 {
   top: 1%;
-  height: 14%;
+  height: 12%;
   width: 100%;
   position: absolute;
   text-align: left;
@@ -60,7 +59,7 @@
 
 .left {
   width: 50%;
-  /* height: 75%; */
+  height: 75%;
   top: 15%;
   left: 0%;
   position: absolute;
@@ -69,7 +68,7 @@
 
 .right {
   width: 49%;
-  top:  15%;
+  top: 15%;
   height: 75%;
   left: 51%;
   position: absolute;
@@ -77,37 +76,61 @@
 }
 
 .right_fig {
-  width: 49%;
-  top: 15%;
-  /* height: 75%; */
+  /* width: 49%; */
+  bottom: 0%;
+  height: 75%;
   left: 51%;
   position: absolute;
-  text-align: center;
+  /* display: flex; */
 }
 
-  .caption {
-    text-align: center;
-    font-size: 75%;
-  }
+.caption {
+  text-align: center;
+  font-size: 75%;
+}
 
-  ul {
-      /*list-style: none;*/
-      padding-left: 0;
-  }
-  
 h1 {
   display: block;
-  font-size: 2em !important;
+  font-size: 1.9em !important;
   margin-top: 0.67em;
   margin-bottom: 0.67em;
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
 }
+  
+h2 {
+  display: block;
+  font-size: 1.5em !important;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+.reveal a {
+  color: blue;
+}
+.reveal {
+  background-color: #e6f9fc;
+}
 
-  .reveal a {
-    color: blue;
-  }
+ul {
+    padding-left: 0;
+} 
+
+ol {
+  counter-reset: item;
+  /* padding-left: 0; */
+}
+
+li.nl {
+  display: block;
+}
+li.nl:before {
+  content: counters(item, ".") " ";
+  counter-increment: item;
+}
 
 </style>
 </head>
@@ -127,52 +150,86 @@ h1 {
 
       <section>
         <div class="container">
-        <h3 class="header1">Territorial Acknowledgements</h3>
+        <h1 class="header1">Territorial Acknowledgement</h1>
           <div class="left">
-            <div class="r-stack">
-              <p class="fragment fade-out" data-fragment-index="0" >This research was conducted in the Inuvialut Settlement Region.</p>
-              <p class="fragment current-visible"  data-fragment-index="0" >Throughout this time I have been I living and work in unceeded Coast Salish territory.</p>
-            </div>
+            <ul></ul>
+              <li>This research was conducted in the Inuvialuit Settlement Region.</li>
+              <li>During my PhD, I have been I living and working in unceded Coast Salish territory.</li>
           </div>
-          <div class="right">
-            <div class="r-stack">
-              <iframe class="fragment fade-out" data-fragment-index="0" src="https://native-land.ca/api/embed/embed.html?maps=territories&name=inuvialut" style="width:100%; height:400px; border:none;"></iframe>
-              <iframe class="fragment current-visible"  data-fragment-index="0" src="https://native-land.ca/api/embed/embed.html?maps=territories&name=skwxw7mesh-xwumixw,tsleil-waututh-səl̓ilwətaɂɬ,xʷməθkʷəy̓əm" style="width:100%; height:400px; border:none;"></iframe>
-
-              </div>
+          <div class="right_fig">
+              <!-- <br> -->
+              <iframe src="maps/Acknowledgement.html" style="width:20em; height: 100%; border:2px solid #555"></iframe>
           </div>
-          
         </div>
       </section>
 
       <section>
         <div class="container">
-        <h3 class="header1">Territorial Acknowledgements</h3>
-          <div class="left">
-            <p>This research was conducted in the Inuvialut Settlement Region.</p>
-            <iframe src="https://native-land.ca/api/embed/embed.html?maps=territories&name=inuvialut" style="width:100%; height:400px; border:none;"></iframe>
+        <h1 class="header1">Overview</h1>
+          <div class="full">
+            <ol>
+              <li class="nl">Introduction</li>
+              <ol>
+                <li class="nl">Background</li>
+                <li class="nl">The Study Area</li>
+                <li class="nl">Eddy Covariance & Machine Learning</li>
+                <li class="nl">Research Objectives</li>
+              </ol>
+              <li class="nl">Illsiarvik</li>
+              <li class="nl">Fish Island</li>
+              <li class="nl">Upscaling</li>
+              <li class="nl">Conclusions</li>
+            </ol>
           </div>
-          <div class="right">
-            <p>I live and work in unceeded Coast Salish territory.</p>
-            <iframe src="https://native-land.ca/api/embed/embed.html?maps=territories&name=skwxw7mesh-xwumixw,tsleil-waututh-səl̓ilwətaɂɬ,xʷməθkʷəy̓əm" style="width:100%; height:400px; border:none;"></iframe> 
+      </section>
+
+
+      <section>
+        <div class="container">
+        <h1 class="header1">Introduction: Background</h1>
+          <div class="left">
+            <p><u>Arctic amplification</u> is causing rapid climate change at high latitudes.</p>
+            <ul>
+              <li>Changing precipitation patterns</li>
+              <li>Decreased snow and ice cover</li>
+              <li>Longer growing seasons</li>
+              <li>Permafrost degradation</li>
+            </ul>
+            <!-- <p><u>Tundra ecosystems:</u> are particularly vulnerable to climate change.</p> -->
+          </div>
+          <div class="right_fig">
+            <img src="images/CMIP.png" width="100%"; style = "border:2px solid #555">
           </div>
       </section>
 
       <section>
         <div class="container">
-        <h2 class="header1">Framing the Problem</h2>
+        <h1 class="header1">Introduction: Background</h1>
           <div class="left">
-            <p>Arctic Amplification is accelerating warming at high latitudes.  Tundra ecosystems are a hot spot for effects of climate change.</p>
+            <p><u>Arctic amplification</u> is causing rapid climate change at high latitudes.</p>
             <ul>
-              <li>Increasing permafrost temperatures and thaw depths.</li>
-              <li>Accelerating and expanding thermokarst.</li>
-              <li>Tundra greening.</li>
-              <li>Altered C balance.</li>
+              <li>Changing precipitation patterns</li>
+              <li>Decreased snow and ice cover</li>
+              <li>Longer growing seasons</li>
+              <li>Permafrost degradation</li>
             </ul>
+            <p><u>Tundra ecosystems:</u> are particularly vulnerable to climate change.</p>
           </div>
           <div class="right_fig">
-            <img src="images/Amplification.png" width="600">
-            <p class="caption">Source: <a href="https://interactive-atlas.ipcc.ch/regional-information#eyJ0eXBlIjoiQVRMQVMiLCJjb21tb25zIjp7ImxhdCI6MjA3NDEyLCJsbmciOjU0NDMzMCwiem9vbSI6MywicHJvaiI6IkVQU0c6NTQwMzAiLCJtb2RlIjoiY29tcGxldGVfYXRsYXMifSwicHJpbWFyeSI6eyJzY2VuYXJpbyI6InNzcDU4NSIsInBlcmlvZCI6Im5lYXIiLCJzZWFzb24iOiJ5ZWFyIiwiZGF0YXNldCI6IkNNSVA2IiwidmFyaWFibGUiOiJ0YXMiLCJ2YWx1ZVR5cGUiOiJBTk9NQUxZIiwiaGF0Y2hpbmciOiJTSU1QTEUiLCJyZWdpb25TZXQiOiJub25lIiwiYmFzZWxpbmUiOiJXTU8yIiwicmVnaW9uc1NlbGVjdGVkIjpbXX0sInBsb3QiOnsiYWN0aXZlVGFiIjoicGx1bWUiLCJtYXNrIjoibm9uZSIsInNjYXR0ZXJZTWFnIjpudWxsLCJzY2F0dGVyWVZhciI6bnVsbCwic2hvd2luZyI6ZmFsc2V9fQ==">IPCC Climate Atlas</a></p>
+            <img src="images/Tundra.png" width="700"; style = "border:2px solid #555">
+          </div>
+      </section>
+      
+      <section>
+        <div class="container">
+          <h1 class="header1">Introduction: Background</h1>
+          <div class="full">
+            <p>Warming can drastically alter ecosystem scale carbon balances.</p>
+            <ul>
+              <li><u>Permafrost degradation:</u> destabilizes "fossil" carbon which has been accumulating for millennia.</li>
+              <li><u>Tundra greening:</u> </li>
+            </ul>
+            <!-- <img src="images/CMIP.png" width="700"; style = "border:2px solid #555";> -->
           </div>
       </section>
 
@@ -470,13 +527,10 @@ h1 {
       overview: false,
       loop: false,
       margin: 0.03,
-      width: 1200,
-
+      width: 1300,
       height: 700,
-
       transition: 'none',
-
-    plugins: [ RevealMath.MathJax2 ]
+      plugins: [ RevealMath.MathJax2 ]
     },
 
 
