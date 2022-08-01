@@ -117,10 +117,14 @@ h2 {
 
 ul {
     padding-left: 0;
+    font-size: 90%;
+
 } 
 
 ol {
   counter-reset: item;
+    font-size: 90%;
+
   /* padding-left: 0; */
 }
 
@@ -168,17 +172,26 @@ li.nl:before {
         <h1 class="header1">Overview</h1>
           <div class="full">
             <ol>
-              <li class="nl">Introduction</li>
+              <li class="nl"><b>Introduction</b></li>
               <ol>
-                <li class="nl">Background</li>
+                <li class="nl">Tundra Carbon Fluxes</li>
+                <li class="nl">Flux Observations & Machine Learning</li>
                 <li class="nl">The Study Area</li>
-                <li class="nl">Eddy Covariance & Machine Learning</li>
                 <li class="nl">Research Objectives</li>
               </ol>
-              <li class="nl">Illsiarvik</li>
-              <li class="nl">Fish Island</li>
-              <li class="nl">Upscaling</li>
-              <li class="nl">Conclusions</li>
+              <li class="nl"><b>Data Collection & Analysis</b></li>
+              <ol>
+                <li class="nl">Measurement Campaigns at Illisarvik & Fish Island</li>
+                <li class="nl">Flux Processing, Gap Filling, Feature Detection</li>
+                <li class="nl">Flux Upscaling</li>
+              </ol>
+              <li class="nl"><b>Discussion & Conclusions</b></li>
+              <ol>
+                <li class="nl">Novel Contributions & Implications of Findings</li>
+                <li class="nl">Future Research Areas</li>
+                <li class="nl">Reflections</li>
+              </ol>
+
             </ol>
           </div>
       </section>
@@ -186,11 +199,11 @@ li.nl:before {
 
       <section>
         <div class="container">
-        <h1 class="header1">Introduction: Framing the Problem</h1>
+        <h1 class="header1">Introduction</h1>
           <div class="left">
-            <p><u>Arctic amplification</u> is causing rapid climate change at high latitudes.</p>
+            <p>Arctic amplification is causing rapid climate change in the northern high latitudes is causing:</p>
             <ul>
-              <li>Changing precipitation patterns</li>
+              <li>Shifting precipitation patterns</li>
               <li>Decreased snow and ice cover</li>
               <li>Longer growing seasons</li>
               <li>Permafrost degradation</li>
@@ -200,74 +213,62 @@ li.nl:before {
             <img src="images/CMIP.png" width="100%"; style = "border:2px solid #555">
           </div>
       </section>
-
+      
       <section>
         <div class="container">
-        <h1 class="header1">Introduction: Framing the Problem</h1>
+        <h1 class="header1">Tundra Carbon Fluxes</h1>
           <div class="left">
-            <!-- <p><u>Arctic amplification</u> is causing rapid climate change at high latitudes.</p> -->
-            <p><u>Tundra ecosystems</u> are particularly vulnerable to climate change.</p>
+            <p>Tundra spread across the Arctic following the last glacial maximum.</p>
             <ul>
-              <li><u>Permafrost degradation:</u> destabilizes "fossil" carbon which has been accumulating for millennia.</li>
-              <li><u>Tundra greening:</u> increases rates of carbon uptake, but also increases rates of C turnover.</li>
+              <li>Diverse vegetation adapted to frigid winters and short growing seasons.</li>
+              <li>Historical Carbon (C) sinks.</li>
+              <ul>
+                <li>Permafrost limits biologic activity the shallow active layer.</li>
+                <li>Widespread wetlands further inhibit decomposition.</li>
+              </ul>
             </ul>
           </div>
           <div class="right_fig">
             <img src="images/Tundra.png" width="700"; style = "border:2px solid #555">
           </div>
       </section>
-      
+
       <section>
         <div class="container">
-          <h1 class="header1">Introduction: Background</h1>
+        <h1 class="header1">Tundra Carbon Fluxes</h1>
+          <div class="left">
+            <p>Responses to climate change alter ecosystem C balances.</p>
+            <ul>
+              <li><u>Permafrost degradation</u></li>
+              <ul>
+                <li>Destabilizes fossil C pool.</li>
+                <li>Rapidly via thermokarst <b>and</b> gradually via active layer thickening.</li>
+              </ul>
+              <li><u>Tundra greening</u></li>
+              <ul>
+                <li>Increases rates of C uptake <b>and</b> turnover.</li>
+              </ul>
+            </ul>
+          </div>
+          <div class="right_fig">
+            <img src="images/Tundra_Thaw.png" width="700"; style = "border:2px solid #555">
+          </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h1 class="header1">Net Ecosystem Exchange (NEE)</h1>
           <div class="full">
-            <p>Warming can drastically alter ecosystem scale carbon balances.</p>
+            <p>The land-atmosphere exchange of carbon dioxide (CO<sub>2</sub>) is the primary component of the tundra C balance.  NEE is the difference between:</p>
             <ul>
-              <li><u>Permafrost degradation:</u> destabilizes "fossil" carbon which has been accumulating for millennia.</li>
-              <li><u>Tundra greening:</u> increases rates of carbon uptake, but also increases rates of C turnover.</li>
-            </ul>
-            <!-- <img src="images/CMIP.png" width="700"; style = "border:2px solid #555";> -->
-          </div>
-      </section>
-
-      <section>
-        <div class="container">
-        <h2 class="header1">Tundra Carbon Fluxes</h2>
-          <div class="left">
-            <p>Historically, tundra ecosystems have tended to be C sinks.</p>
-            <ul>
-              <li>Short but productive growing seasons, brief shoulder seasons, frigid winters.</li>
-              <ul>
-                <li>Limits decomposition, accumulation of C</li>
-              </ul>
-              <li>Expansive wetlands further limit aerobic decomposition</li>
-              <ul>
-                <li>Promote anaerobic decomposition</li>
-                <li>Methane Emissoins</li>
-              </ul>
-            </ul>
-          </div>
-          <div class="right_fig">
-            <img src="images/Seasons.png" width="400"></img>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="container">
-          <h2 class="header1">Tundra Carbon Fluxes</h2>
-          <div class="left">
-            <p></p>
-            <ul>
+              <li><b>Ecosystem Respiration (ER):</b> CO<sub>2</sub> emission via autotrophic and heterotrophic respiration.</li> 
+              <li><b>Gross Primary Productivity (GPP):</b> photosynthetic uptake of CO<sub>2</sub>.</li> 
+              <!-- </ul> -->
               <li>NEE = ER - GPP</li>
-              <li>ER: Ecosystem respriation</li>
-              <li>GPP: Gross prmary productivity</li>
-            </ul>
-          </div>
-          <div class="right">
-            <p>Net Methane Exchange (NME) of CH<sub>4</sub></p>
-            <ul>
-              <li>NME = Methanogenesis - Methanotropy</li>
+              <ul>
+                <li>Negative NEE indicates net CO<sub>2</sub> <b>uptake</b> by the ecosystem.</li>
+                <li>Positive NEE indicates net CO<sub>2</sub> <b>emission</b> to the atmosphere.</li> 
+              </ul>
             </ul>
           </div>
         </div>
@@ -276,38 +277,64 @@ li.nl:before {
 
       <section>
         <div class="container">
-          <h2 class="header1">Tundra Carbon Fluxes</h2>
-          <div class="left">
-            <p>The main components of the tundra ecosystem C balance:</p>
+          <h1 class="header1">Net Methane Exchange (NME)</h1>
+          <div class="full">
+            <p>Methane (CH<sub>4</sub>) is a short-lived but potent greenhouse gas produced as a byproduct of anaerobic decomposition.  NME is the difference between:</p>
             <ul>
-              <li><b>Net Ecosystem Exchange (NEE)</b> of CO<sub>2</sub> </li>
-              <li><b>Net Methane Exchange (NME)</b> of CH<sub>4</sub></li>
-            </ul>
-          </div>
-          <div class="right">
-            <p>Net Methane Exchange (NME) of CH<sub>4</sub></p>
-            <ul>
+              <li><b>Methanogenesis:</b> microbial production of CH<sub>4</sub> in anoxic soils.</li> 
+              <li><b>Methanotropy:</b> microbial consumption of CH<sub>4</sub> in aerobic soils.</li> 
               <li>NME = Methanogenesis - Methanotropy</li>
+              <ul>
+                <li>Negative NME indicates net CH<sub>4</sub> <b>uptake</b> by the ecosystem.</li>
+                <li>Positive NME indicates net CH<sub>4</sub> <b>emission</b> to the atmosphere.</li> 
+              </ul>
             </ul>
           </div>
         </div>
       </section>
-
       
 
       <section>
         <div class="container">
-        <h2 class="header1">Framing the Problem</h2>
+          <h1 class="header1">Flux Observations</h1>
           <div class="left">
-            <p>Eddy covariance (EC) is a method for measuring NEE and NME, but there is limited coverage in the Arctic.</p>
+            <p>Eddy Covariance (EC) is used to measure spatially integrated, temporally "continuous" ecosystem scale trace gas fluxes.</p>
             <ul>
-              <li>Logistical challenges in remote locations.</li>
-              <li>Extreme conditoins (frigid temps, low sun angles).</li>
-              <li>Observation bias (Alaska).</li>
+              <li>Key assumptions:</li>
+              <ul>
+                <li>Flat homogenous terrain.</li> 
+                <li>Negligible mean vertical wind & density fluctuations.</li>
+                <li>Turbulent Flow.</li>
+                <li>Stationarity.</li>
+              </ul>
+            </ul>
+          </div>
+          <div class="right">
+            <p>Gas Chambers (GC) are used to measure plot scale trace gas fluxes.</p>
+            <ul>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+        <h1 class="header1">Eddy Covariance (EC)</h1>
+          <div class="left">
+            <p>One of the primary methods for measuring ecosystem scale C fluxes.</p>
+            <ul>
+              <li></li>
+              <li></li>
+              <li>Limited coverage the Arctic.</li>
+              <ul>
+                <li>Logistical challenges.</li>
+                <li>Extreme conditions.</li>
+                <li>Observation bias.</li>
+              </ul>
             </ul>
           </div>
           <div class="right_fig">
-            <img src="images/Fig1.png" width="600" border: 3px solid black;></img>
+            <img src="images/Fig1.png" width="700" ; style = "border:2px solid #555"></img>
           </div>
         </div>
       </section>
