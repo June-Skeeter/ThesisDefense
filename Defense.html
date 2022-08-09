@@ -75,15 +75,6 @@
   text-align: left;
 }
 
-.right_fig {
-  /* width: 49%; */
-  bottom: 0%;
-  height: 75%;
-  left: 51%;
-  position: absolute;
-  /* display: flex; */
-}
-
 .caption {
   text-align: center;
   font-size: 75%;
@@ -108,6 +99,7 @@ h2 {
   margin-right: 0;
   font-weight: bold;
 }
+
 .reveal a {
   color: blue;
 }
@@ -160,8 +152,7 @@ li.nl:before {
               <li>This research was conducted in the Inuvialuit Settlement Region.</li>
               <li>During my PhD, I have been I living and working in unceded Coast Salish territory.</li>
           </div>
-          <div class="right_fig">
-              <!-- <br> -->
+          <div class="right">
               <iframe src="maps/Acknowledgement.html" style="width:20em; height: 100%; border:2px solid #555"></iframe>
           </div>
         </div>
@@ -209,7 +200,7 @@ li.nl:before {
               <li>Permafrost degradation</li>
             </ul>
           </div>
-          <div class="right_fig">
+          <div class="right">
             <img src="images/CMIP.png" width="100%"; style = "border:2px solid #555">
           </div>
       </section>
@@ -228,7 +219,7 @@ li.nl:before {
               </ul>
             </ul>
           </div>
-          <div class="right_fig">
+          <div class="right">
             <img src="images/Tundra.png" width="700"; style = "border:2px solid #555">
           </div>
       </section>
@@ -250,7 +241,7 @@ li.nl:before {
               </ul>
             </ul>
           </div>
-          <div class="right_fig">
+          <div class="right">
             <img src="images/Tundra_Thaw.png" width="700"; style = "border:2px solid #555">
           </div>
       </section>
@@ -292,13 +283,12 @@ li.nl:before {
           </div>
         </div>
       </section>
-      
 
-      <section>
+      <!-- <section>
         <div class="container">
-          <h1 class="header1">Flux Observations</h1>
-          <div class="left">
-            <p>Eddy Covariance (EC) is used to measure spatially integrated, temporally "continuous" ecosystem scale trace gas fluxes.</p>
+          <h1 class="header1">Carbon Flux Observations</h1>
+          <div class="right">
+            <p>Eddy Covariance (EC) measures spatially integrated ecosystem scale trace gas fluxes.</p>
             <ul>
               <li>Key assumptions:</li>
               <ul>
@@ -309,43 +299,74 @@ li.nl:before {
               </ul>
             </ul>
           </div>
-          <div class="right">
-            <p>Gas Chambers (GC) are used to measure plot scale trace gas fluxes.</p>
-            <ul>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="container">
-        <h1 class="header1">Eddy Covariance (EC)</h1>
           <div class="left">
-            <p>One of the primary methods for measuring ecosystem scale C fluxes.</p>
+            <p>Gas Chambers (GC) measure plot scale trace gas fluxes.</p>
             <ul>
-              <li></li>
-              <li></li>
-              <li>Limited coverage the Arctic.</li>
+              <li>Cheap and easy to implement.</li>
+              <li>Discrete "point" samples.</li> 
               <ul>
-                <li>Logistical challenges.</li>
-                <li>Extreme conditions.</li>
-                <li>Observation bias.</li>
+                <li>Isolate specific vegetation units.</li>
+                <li>Account for spatial heterogeneity.</li> 
               </ul>
             </ul>
           </div>
-          <div class="right_fig">
+        </div>
+      </section> -->
+
+
+      <section>
+        <div class="container">
+        <h1 class="header1">Flux Monitoring</h1>
+          <div class="left">
+            <p>The <b>Eddy Covariance (EC)</b> method measures ecosystem  scale (&lt; 1 km<sup>2</sup>) trace gas fluxes.</p>
+            <ul>
+              <li>Limited coverage in the Arctic.</li>
+              <ul>
+                <li>Observation bias towards accessible locations.</li>
+              </ul>
+              <li>Gas Chambers (GC) are cheap and easy to implement.</li>
+              <ul>
+                <li>More common in the Arctic.</li>
+              </ul>
+            </ul>
+          </div>
+          <div class="right">
             <img src="images/Fig1.png" width="700" ; style = "border:2px solid #555"></img>
           </div>
         </div>
       </section>
 
+
       <section>
         <div class="container">
-          <h2 class="header1">Machine Learning</h2>
-          <div class="full">
-            <p>Algorithms which build a predictive models from experience by learning patterns in training data.</p>
+        <h1 class="header1">Eddy Covariance</h1>
+          <div class="left">
+            <p>Predicated on a number of key assumptions:</p>
             <ul>
-              <li>Algorithms can learn the functional relationships (and noise) in a dataset without them being explicitly programmed in advance (Smith 1993).</li>
+              <li>Flat homogenous terrain.</li> 
+              <li>Negligible mean vertical wind & density fluctuations.</li>
+              <li>Turbulent Flow.</li>
+              <li>Stationarity.</li>
+              <li>EC data is prone to data gaps</li>
+              <ul>
+                <li>Traditional NEE gap filling methods don't work well in the Arctic</li>
+                <li>No standard methods for NME</li>
+              </ul>
+            </ul>
+          </div>
+          <div class="right">
+            <img src="images/Illisarvik_Tower.JPG" width="700" ; style = "border:2px solid #555"></img>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h1 class="header1">Machine Learning</h1>
+          <div class="full">
+            <p>Family of algorithms that build predictive models from experience by learning patterns in training data.</p>
+            <ul>
+              <li>Can learn the functional relationships in a dataset without being explicitly programmed in advance (Smith 1993).</li>
               <ul>
                 <li>Care must be taken to prevent overfitting; numerous methods available (e.g. Sarle 1995 & 2014; Khosravi and Nahavandi, 2011).</li>
               </ul>
@@ -371,7 +392,7 @@ li.nl:before {
               </ul>
               <li>Neural Networks</li>
               <ul>
-                <li>An incredibly flexible and powerful group of machine learning algorithms.. They are ideally suited for handling data with complex non-linear relationships because they make no prior assumptions about the distribution of a dataset (Hornik 1991; Melesse and Hanley 2005; Khosravi et al. 2011). They are frequently used for feature detection and pattern recognition for tasks like speech recognition and computer vision. They are much more computationally expensive than RF models and have historically been considered impractical because of the time required to train models and fine-tune hyper parameters. Recent advancements in hardware (e.g., GPU processing) and software (e.g., TensorFlow) have streamlined the NN training process.</li>
+                <li>An incredibly flexible and powerful group of machine learning algorithms. They are ideally suited for handling data with complex non-linear relationships because they make no prior assumptions about the distribution of a dataset (Hornik 1991; Melesse and Hanley 2005; Khosravi et al. 2011). They are frequently used for feature detection and pattern recognition for tasks like speech recognition and computer vision. They are much more computationally expensive than RF models and have historically been considered impractical because of the time required to train models and fine-tune hyper parameters. Recent advancements in hardware (e.g., GPU processing) and software (e.g., TensorFlow) have streamlined the NN training process.</li>
               </ul>
             </ul>
           </div>
@@ -406,16 +427,21 @@ li.nl:before {
           <div class="left">
             <p>Experimentally drained thermokarst lake basin.</p>
             <ul>
-              <li>Rapid & diverse vegetation succession since drainage (Cite McKay ...).</li>
-              <li>EC system operated from July 8th - August 7th 2016.</li>
-              <li>Reinbou ...?</li>
+              <li>Rapid vegetation succession since drainage in 1978.</li>
+              <ul>
+                <li>Diverse </li>
+              </ul>
+              <li>EC system measured CO<sub>2</sub> and CH<sub>4</sub> peak growing season fluxes.</li>
+              <ul>
+                <li>July 8th - August 7th 2016</li>
+              </ul>
             </ul>
           </div>
-          <div class="right_fig">
+          <div class="right">
             <div class="r-stack">
               <p class="fragment fade-out" data-fragment-index="0" ><img src="images/BasinPhoto.JPG"><br>Photo Credit: Antoni Lewkowicz</p>
               <p class="fragment current-visible"  data-fragment-index="0" ><img src="images/Illisarvik_Tower.JPG"></p>
-              <p class="fragment current-visible"  data-fragment-index="1" ><img src="images/Illisarvik_Sensors.jpg"></p>
+              <!-- <p class="fragment current-visible"  data-fragment-index="1" ><img src="images/Illisarvik_Sensors.jpg"></p> -->
             </div>
 
           </div>
@@ -426,7 +452,7 @@ li.nl:before {
       <section>
         <div class="container">
           <h2>Chapter 2: Illisarvik</h2>
-          <div class="right">
+          <div class="left">
             <p>1-month monitoring</p>
           </div>
           <div class="right">
@@ -439,7 +465,7 @@ li.nl:before {
       <section>
         <div class="container">
           <h2>Chapter 3: Fish Island</h2>
-          <div class="col">
+          <div class="left">
             <p>Polygonal Peatland</p>
           </div>
         </div>
@@ -449,7 +475,7 @@ li.nl:before {
       <section>
         <div class="container">
           <h2>Chapter 4: Modelling</h2>
-          <div class="col">
+          <div class="left">
             <p>Temporal upscaling</p>
           </div>
         </div>
