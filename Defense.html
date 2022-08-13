@@ -41,9 +41,9 @@
   top: 10%;
 }
 
-.header1 {
+.header {
   top: 1%;
-  height: 12%;
+  height: 10%;
   width: 100%;
   position: absolute;
   text-align: left;
@@ -58,9 +58,9 @@
 }
 
 .left {
-  width: 50%;
-  height: 75%;
-  top: 15%;
+  width: 51%;
+  height: 80%;
+  top: 12%;
   left: 0%;
   position: absolute;
   text-align: left;
@@ -68,16 +68,21 @@
 
 .right {
   width: 49%;
-  top: 15%;
-  height: 75%;
+  top: 12%;
+  height: 80%;
   left: 51%;
   position: absolute;
-  text-align: left;
+  text-align: center;
 }
 
-.caption {
-  text-align: center;
-  font-size: 75%;
+.figure {
+  
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 65%;
 }
 
 h1 {
@@ -107,6 +112,7 @@ h2 {
   background-color: #e6f9fc;
 }
 
+
 ul {
     padding-left: 0;
     font-size: 90%;
@@ -128,6 +134,7 @@ li.nl:before {
   counter-increment: item;
 }
 
+
 </style>
 </head>
 
@@ -146,7 +153,7 @@ li.nl:before {
 
       <section>
         <div class="container">
-        <h1 class="header1">Territorial Acknowledgement</h1>
+        <h1 class="header">Territorial Acknowledgement</h1>
           <div class="left">
             <ul></ul>
               <li>This research was conducted in the Inuvialuit Settlement Region.</li>
@@ -160,11 +167,12 @@ li.nl:before {
 
       <section>
         <div class="container">
-        <h1 class="header1">Overview</h1>
+        <h1 class="header">Overview</h1>
           <div class="full">
             <ol>
               <li class="nl"><b>Introduction</b></li>
               <ol>
+                <li class="nl">Framing the Problem</li>
                 <li class="nl">Tundra Carbon Fluxes</li>
                 <li class="nl">Flux Observations & Machine Learning</li>
                 <li class="nl">The Study Area</li>
@@ -187,68 +195,160 @@ li.nl:before {
           </div>
       </section>
 
-
       <section>
         <div class="container">
-        <h1 class="header1">Introduction</h1>
+        <h2 class="header">Framing the Problem</h2>
           <div class="left">
-            <p>Arctic amplification is causing rapid climate change in the northern high latitudes is causing:</p>
+            <p>Arctic amplification is accelerating climate change in the northern high latitudes, leading to:</p>
             <ul>
-              <li>Shifting precipitation patterns</li>
               <li>Decreased snow and ice cover</li>
-              <li>Longer growing seasons</li>
+              <li>Changing precipitation patterns</li>
               <li>Permafrost degradation</li>
-            </ul>
+              <li>Extending growing seasons</li>
+              <li>Changing ecosystem carbon (C) balances</li>
+              <ul>
+                <li>Influences the rate of warming globally</li>
+              </ul>
+          </ul>
           </div>
           <div class="right">
-            <img src="images/CMIP.png" width="100%"; style = "border:2px solid #555">
+            <div class="figure">
+              <img src="images/CMIP.png" width="100%"; style = "border:2px solid #555">
+              Data Source: IPCC (2021)
+            </div>
           </div>
       </section>
       
+
       <section>
         <div class="container">
-        <h1 class="header1">Tundra Carbon Fluxes</h1>
+        <h2 class="header">Framing the Problem</h2>
           <div class="left">
-            <p>Tundra spread across the Arctic following the last glacial maximum.</p>
+            <p>Eddy covariance (EC) is one of the primary techniques for measuring ecosystem carbon dioxide (CO<sub>2</sub>) and methane (CH<sub>4</sub>) fluxes.</p>
             <ul>
-              <li>Diverse vegetation adapted to frigid winters and short growing seasons.</li>
-              <li>Historical Carbon (C) sinks.</li>
+              <li>Limited coverage in the Arctic</li>
               <ul>
-                <li>Permafrost limits biologic activity the shallow active layer.</li>
-                <li>Widespread wetlands further inhibit decomposition.</li>
+                <li>Bias towards accessible sites</li>
               </ul>
-            </ul>
+              <li>Canadian Arctic is under-represented</li>
+              <ul>
+                <li>36% Arctic land area</li>
+              </ul>
+          </ul>
           </div>
           <div class="right">
-            <img src="images/Tundra.png" width="700"; style = "border:2px solid #555">
+            <div class="figure">
+              <img src="images/Fig1.png" width="575"; style = "border:2px solid #555">
+              Data Sources: Walker et al. (2005); Pallandt et al. (2021)
+            </div>
           </div>
       </section>
 
       <section>
         <div class="container">
-        <h1 class="header1">Tundra Carbon Fluxes</h1>
+        <h2 class="header">Tundra Ecosystems</h2>
           <div class="left">
-            <p>Responses to climate change alter ecosystem C balances.</p>
-            <ul>
-              <li><u>Permafrost degradation</u></li>
+            <p>Frigid winters and short growing seasons restrict biologic activity in the Arctic.</p>
               <ul>
-                <li>Destabilizes fossil C pool.</li>
-                <li>Rapidly via thermokarst <b>and</b> gradually via active layer thickening.</li>
+                <li>Latitudinal gradient of biomass and species diversity, modulated by elevation and maritime influences.</li>
+                <ul>
+                  <li>"High Arctic" (Zones A-C)</li>
+                  <ul>
+                    <li>Polar desert, limited vascular plant cover</li>
+                  </ul>
+                  <li>"Low Arctic" (Zones D-E)</li>
+                  <ul>
+                    <li>Shrub tundra and extensive wetland areas</li>
+                  </ul>
+                </ul>
               </ul>
-              <li><u>Tundra greening</u></li>
-              <ul>
-                <li>Increases rates of C uptake <b>and</b> turnover.</li>
-              </ul>
-            </ul>
           </div>
           <div class="right">
-            <img src="images/Tundra_Thaw.png" width="700"; style = "border:2px solid #555">
+            <div class="figure">
+              <img src="images/Fig1.png" width="575"; style = "border:2px solid #555">
+              Data Sources: Walker et al. (2005); Pallandt et al. (2021)
+            </div>
           </div>
       </section>
 
       <section>
         <div class="container">
-          <h1 class="header1">Net Ecosystem Exchange (NEE)</h1>
+          <h2 class="header">Tundra Carbon Balance</h2>
+          <div class="left">
+            <p>Harsh conditions limit vegetation height, biomass is concentrated below the surface.</p>
+              <ul>
+                <li><b>Permafrost</b> soils are frozen year-round</li>
+                <ul>
+                  <li>Prevent decomposition of soil C</li>
+                </ul>
+                <li>The <b>active layer</b> thaws seasonally</li>
+                <ul>
+                  <li>Root growth and microbial respiration</li>
+                </ul>
+                <li>Poor drainage > high <b>water tables</b></li>
+                <ul>
+                  <li>Anoxic conditions slow decomposition</li>
+                </ul>
+              </ul>                
+            </div>
+          <div class="right">
+            <p class="figure"><img src="images/Permafrost.png"></p>
+          </div>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="container">
+          <h2 class="header">Tundra Carbon Balance</h2>
+          <div class="left">
+            <p><b>Net Ecosystem Exchange (NEE)</b> of CO<sub>2</sub> is the primary component of the tundra C balance.</p>
+              <ul>
+                <li>NEE = ER - GPP</li>
+                <ul>
+                  <li><b>Gross Primary Productivity (GPP)</b></li> 
+                  <ul>
+                    <li>Photosynthetic uptake of CO<sub>2</sub></li>
+                  </ul>
+                  <li><b>Ecosystem Respiration (ER)</b></li> 
+                  <ul>
+                    <li>Autotrophic (RA) + Heterotrophic (RH)</li>
+                  </ul>
+                </ul>
+                <li>Negative/positive NEE indicate CO<sub>2</sub> uptake/emission by the ecosystem.</li>
+              </ul>                
+            </div>
+          <div class="right">
+            <p class="figure"><img src="images/NEE.png"></p>
+          </div>
+        </div>
+      </section>
+          
+
+      <section>
+        <div class="container">
+          <h2 class="header">Tundra Ecosystems</h2>
+          <div class="left">
+             <p>Low evapotranspiration rates and poor drainage have created expansive wetlands in the Arctic.</p>
+             
+               <ul>
+                <li>Saturated soils further limit decomposition</li>
+                <ul>
+                  <li>Anoxic conditions prevent autotrophic respiration</li>
+                  <li>Anaerobic respiration is less efficient but results in methane (CH<sub>4</sub>) emissions</li>
+                </ul>
+              </ul>                
+            </div>
+
+            <div class="right">
+              <p class="figure"><img src="images/PermafrostWetland.png"></p>
+            </div>
+          </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2 class="header">Introduction: Net Ecosystem Exchange (NEE)</h2>
           <div class="full">
             <p>The land-atmosphere exchange of carbon dioxide (CO<sub>2</sub>) is the primary component of the tundra C balance.  NEE is the difference between:</p>
             <ul>
@@ -268,7 +368,7 @@ li.nl:before {
 
       <section>
         <div class="container">
-          <h1 class="header1">Net Methane Exchange (NME)</h1>
+          <h1 class="header">Net Methane Exchange (NME)</h1>
           <div class="full">
             <p>Methane (CH<sub>4</sub>) is a short-lived but potent greenhouse gas produced as a byproduct of anaerobic decomposition.  NME is the difference between:</p>
             <ul>
@@ -286,7 +386,7 @@ li.nl:before {
 
       <!-- <section>
         <div class="container">
-          <h1 class="header1">Carbon Flux Observations</h1>
+          <h1 class="header">Carbon Flux Observations</h1>
           <div class="right">
             <p>Eddy Covariance (EC) measures spatially integrated ecosystem scale trace gas fluxes.</p>
             <ul>
@@ -316,7 +416,7 @@ li.nl:before {
 
       <section>
         <div class="container">
-        <h1 class="header1">Flux Monitoring</h1>
+        <h1 class="header">Flux Monitoring</h1>
           <div class="left">
             <p>The <b>Eddy Covariance (EC)</b> method measures ecosystem  scale (&lt; 1 km<sup>2</sup>) trace gas fluxes.</p>
             <ul>
@@ -339,7 +439,7 @@ li.nl:before {
 
       <section>
         <div class="container">
-        <h1 class="header1">Eddy Covariance</h1>
+        <h1 class="header">Eddy Covariance</h1>
           <div class="left">
             <p>Predicated on a number of key assumptions:</p>
             <ul>
@@ -362,7 +462,7 @@ li.nl:before {
 
       <section>
         <div class="container">
-          <h1 class="header1">Machine Learning</h1>
+          <h1 class="header">Machine Learning</h1>
           <div class="full">
             <p>Family of algorithms that build predictive models from experience by learning patterns in training data.</p>
             <ul>
@@ -382,7 +482,7 @@ li.nl:before {
 
       <section>
         <div class="container">
-          <h2 class="header1">Machine Learning</h2>
+          <h2 class="header">Machine Learning</h2>
           <div class="full">
             <p>Algorithms which build a predictive models from experience by learning patterns in training data.</p>
             <ul>
@@ -404,7 +504,7 @@ li.nl:before {
 
       <section>
         <div class="container">
-        <h2 class="header1">Research Objectives</h2>
+        <h2 class="header">Research Objectives</h2>
           <div class="full">
             <p>Advance our understanding of the dynamics governing growing season C exchange in remote tundra ecosystems of the Mackenzie Delta Region.</p>
             <ol>
@@ -537,7 +637,7 @@ li.nl:before {
       
       <section>
         <div class="container">
-          <h2 class="header1">Reflections</h2>
+          <h2 class="header">Reflections</h2>
           <div class="full">
             <ol>
               <li>Future work should focus on sustainable long term monitoring.</li>
