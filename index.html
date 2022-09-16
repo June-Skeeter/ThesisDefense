@@ -170,7 +170,7 @@ ol ol li.nl::before {
           <div class="title">
             <h1>Using Machine Learning to Identify and Map Controls of Growing-Season Carbon Dioxide and Methane Fluxes in the Mackenzie Delta Region</h1>
           </div>
-          <p class="subtitle">June Skeeter <br> UBC Geography Department<br> Presentation in Defenses of my PhD thesis<br>The full thesis may be viewed <a href="https://raw.githubusercontent.com/June-Skeeter/ThesisDefense/main/Data/Thesis_Current_Draft_J_Skeeter.pdf">here</a>.</p> 
+          <p class="subtitle">June Skeeter <br> UBC Geography Department<br>Presentation in defenses of my PhD thesis</p> 
 
           
 
@@ -183,11 +183,11 @@ ol ol li.nl::before {
           <div class="left">
             <p>To start, I want to acknowledge the Indigenous territories on which this work took place.</p>
             <ul>
-              <li>During my PhD, I have been I living and working in unceded Coast Salish territory.  Specifically, the: </li>
+              <li>During my PhD, I have been living and working in unceded Coast Salish territory.  Specifically, the: </li>
               <ul>
                 <li>xʷməθkʷəy̓əm, Tsleil-Waututh, Stó:lō, and Skwxwú7mesh Nations</li>
               </ul>
-              <li>Field work in 2016 and 2017 was conducted in the Inuvialuit Settlement Region.</li>
+              <li>Field work was conducted in the Inuvialuit Settlement Region in 2016 and 2017.</li>
             </ul>
           </div>
           <div class="right">
@@ -483,7 +483,7 @@ ol ol li.nl::before {
       <section>
         <div class="container">
           <div class="title">
-            <h1>Chapter 2: Vegetation influence and environmental controls on greenhouse gas fluxes from a drained thermokarst lake in the western Canadian Arctic</h1>
+            <h1>Chapter 2: Vegetation Influence and Environmental Controls on Greenhouse Gas Gluxes from a Drained Thermokarst Lake in the Western Canadian Arctic</h1>
           </div>
           <p class="subtitle">A version of chapter 2 has been published in Biogeosciences<br><a href="https://doi.org/10.5194/bg-17-4421-2020">https://doi.org/10.5194/bg-17-4421-2020</a></p> 
         </div>
@@ -520,7 +520,6 @@ ol ol li.nl::before {
         </div>
       </section>
           
-
       <section>
         <div class="container">
           <h2 class="header 1">Data & Methods</h2>
@@ -528,7 +527,11 @@ ol ol li.nl::before {
             <div class="left fragment fade-out" data-fragment-index="0">
               <p>A vegetation survey mapped the basin (Wilson et al. 2019).</p>
               <ul>
-                <li>Footprint model (Kljun et al. 2015) used to calculate source area of half hourly fluxes</li>
+                <li>Kljun et al. 2015 footprint model</li>
+                <ul>
+                  <li>Half hourly source area fractions</li>
+                  <li>Footprint climatology</li>
+                </ul>
               </ul>
               <table style = "font-size: 50%;" >
                 <tr><th>Class</th><th>Species</th><th>Basin</th><th><i>F<sub>clim</sub></i>[range]</th></tr>
@@ -542,10 +545,12 @@ ol ol li.nl::before {
             </div>
             
             <div class="left fragment fade-in" data-fragment-index="0">
-              <p>A dark chamber study measured ER and NME (LaForce 2018).</p>
+              <p>ER and NME measured at 10 plots using vegetated and clipped dark chambers (LaForce 2018).</p>
               <ul>
-                <li>10 plots around the basin</li>
-                <img src="images/Chambers.jPG" width="80%" ; style = "border:2px solid #555"></img>
+                <li>Only vegetated cambers included</li>
+                <ul>
+                  <img src="images/Chambers.jPG" width="80%" ; style = "border:2px solid #555"></img>
+                </ul>
               </ul>
             </div>
 
@@ -555,7 +560,7 @@ ol ol li.nl::before {
               <img src="images/Illisarvik_Map.png" height="1200" ; style = "border:2px solid #555"></img>
             </div>
             <div class="figure_full fragment current-visible" data-fragment-index="1">
-              Mean chamber fluxes by vegetation class
+              Camber fluxes aggregated by vegetation class
             <img src="images/Chamber_Flux.png" width="80%" ; style = "border:2px solid #555"></img>
             </div>
           </div>
@@ -578,40 +583,9 @@ ol ol li.nl::before {
               </ul>
             </ul>
           </div>
-          <!-- <div class="figure_full">
-            <img src="images/NN_Illisarvik.png" width="100%" ; style = "border:2px solid #555"></img>
-          </div> -->
         </div>
       </section>   
       
-
-
-
-      <section>
-        <div class="container">
-          <h2 class="header 1">Data & Methods</h2>
-          <div class="left">
-            <p>NN models were used to:</p>
-            <ul>
-              <li>Identify the dominant flux drivers </li>
-              <ul>
-                <li>Climate, soil, and source area used as inputs</li>
-                <li>Iteratively built more complex models</li>
-                <ul>
-                  <li>"1 Standard Error" rule identified the most parsimonious models</li>
-                </ul>
-              </ul>
-              <li>Selected inputs used to gap fill the fluxes</li>
-              <ul>
-                <li>Estimate NEE and NME</li>
-              </ul>
-            </ul>
-          </div>
-          <div class="figure_full">
-            <img src="images/NN_Illisarvik.png" width="100%" ; style = "border:2px solid #555"></img>
-          </div>
-        </div>
-      </section>   
       
       <section>
         <div class="container">
@@ -637,19 +611,61 @@ ol ol li.nl::before {
         </div>
       </section>
 
+      
       <section>
         <div class="container">
           <h2 class="header 1">Results</h2>
           <div class="left">
-            <p>Mapping fluxes over driver domains and plotting their derivatives shows response functions by m.</p>
+            <p>Peak growing season drivers:</p>
             <ul>
-              <li>The NN analysis identified four key divers of NEE</li>
+              <li><b>NEE</b>: four key divers </li>
               <ul>
-                <li>PPFD and VPD were the primary drivers of GPP</li>
-                <li>VWC and Shrub fraction influenced ER</li>
+                <li>PPFD was the primary driver of GPP</li>
                 <ul>
-                  <li>Source area had a relatively minor influence over CO<sub>2</sub> fluxes</li>
+                  <li>Modulated by VPD</li>
                 </ul>
+                <li>VWC influenced ER</li>
+                <li>F<sub>Shrub</sub> had weak influence</li>
+              </ul>
+              <li><b>NME</b>: five key divers </li>
+              <ul>
+                <li>F<sub>Sedge</sub> was had strongest influence</li>
+                <ul>
+                  <li>Along with F<sub>Shrub</sub> (strong correlation)</li>
+                </ul>
+                <li>VWC and T<sub>s</sub> drove fluxes</li>
+                <li>U had a weak influence</li>
+                <ul>
+                  <li>Possibly influenced transport</li>
+                </ul>
+                <ul>
+              </ul>
+            </ul>
+          </div>
+          <div class="figure_full">
+            <img src="images/NN_Illisarvik.png" width="100%" ; style = "border:2px solid #555"></img>
+          </div>
+        </div>
+      </section>   
+
+      <section>
+        <div class="container">
+          <h2 class="header 1">Results</h2>
+          <div class="left">
+            <p>Mapping fluxes over the domain of one driver, with the others fixed gives the response function under specific conditions.</p>
+            <ul>
+              <li>NEE responds to PPFD as expected</li>
+              <ul>
+                <li>Highlights influence of VPD</li>
+                <li>Not a true "light response curve"</li>
+                <ul>
+                  <li>GPP is not isolated</li>
+                </ul>
+              </ul>
+              <li>VWC: night (dashed) vs. day (solid)</li>
+              <ul>
+                <li>More positive at high F<sub>Shrub</sub></li>
+                <li>Less straightforward at low </li>
               </ul>
             </ul>
           </div>
@@ -690,7 +706,7 @@ ol ol li.nl::before {
 
       <section>
         <div class="container">
-          <h2 class="header 1">Discussion & Conclusions</h2>
+          <h2 class="header 1">Conclusions</h2>
           <div class="full">
             <p>Presently, peak growing season carbon uptake at Illisarvik is greater than similarly aged landscape features in Alaska.</p>
             <ul>
