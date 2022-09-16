@@ -50,7 +50,7 @@
 }
 
 .full {
- width: 95%;
+ width: 100%;
  top:  12%;
  left: 0%;
  text-align: left;
@@ -363,13 +363,9 @@ ol ol li.nl::before {
           <div class="left">
             <p>CH<sub>4</sub> fluxes are a secondary component in tundra wetlands.</p>
               <ul>
-                <li>Anoxic soils inhibit autotrophic respiration</li>
+                <li>Methanogenesis occurs in anoxic soils</li>
                 <ul>
-                  <li>Methanogenesis is an alternate pathway</li>
-                  <ul>
-                    <li>Rate of decomposition is slower</li>
-                    <li>CH<sub>4</sub> is a potent greenhouse gas</li> 
-                  </ul>
+                  <li>Slower, but CH<sub>4</sub> is a potent greenhouse gas</li>
                   <li>Methanotrophs breakdown CH<sub>4</sub></li>
                 </ul>
                 <li>CH<sub>4</sub> uptake/emission (-/+ NME)</li>
@@ -385,7 +381,7 @@ ol ol li.nl::before {
         <div class="container">
         <h2 class="header">The Study Area</h2>
           <div class="left">
-            <p>The Mackenzie Delta (13,000 km<sup>2</sup> ) is the 2nd largest Arctic Delta.</p>
+            <p>The Mackenzie Delta (13,000 km<sup>2</sup>) is the 2<sup>nd</sup> largest Arctic Delta.</p>
             <ul>
               <li>One of the fastest warming regions in North America</li>
               <li>No existing studies of NEE in the Delta</li>
@@ -406,15 +402,12 @@ ol ol li.nl::before {
         <div class="container">
         <h2 class="header">The Study Area</h2>
           <div class="left">
-            <p>We measured CO<sub>2</sub> and CH<sub>4</sub> fluxes with at two tundra sites.</p>
+            <p>We measured CO<sub>2</sub> and CH<sub>4</sub> fluxes at two tundra sites.</p>
             <ul>
-              <li>Illisarvik is a <b>Drained Thermokarst Lake Basin (DTLB)</b> on Richards Island</li>
-              <ul>
-                <li>Experimentally drained in 1978</li>
-              </ul>
+              <li>Illisarvik is an experimentally <b>Drained Thermokarst Lake Basin (DTLB)</b> on Richards Island</li>
               <li>Undisturbed <b>Low center polygon (LCP)</b> tundra on the Big Lake Delta Plain</li>
               <ul>
-                <li>Permafrost peatland that experiences infrequent episodic flooding</li>
+                <li>Permafrost peatland subject to infrequent episodic flooding</li>
               </ul>
             </ul>
           </div>
@@ -430,15 +423,18 @@ ol ol li.nl::before {
           <div class="full">
             <p>Algorithms that build models from experience without making prior assumptions about the distribution of a dataset.</p>
             <ul>
-              <li>Gap filling is essential when working with EC data because flux estimation requires specific conditions that can't always be met</li>
+              <li>EC flux estimation requires specific conditions that can't always be met</li>
               <ul>
                 <li>Stationarity, turbulent flow, etc.</li>
+                <li>Gap filling is essential for calculating daily/seasonal/annual budgets</li>
+                <li>Flux partitioning is the standard approach for NEE</li>
+                <ul>
+                  <li>Night-time methods not possible during polar summer</li>
+                  <li>Rapid phenology changes make day-time methods not impractical too</li>
+                </ul>
+                <li>No standard methods for NME</li>
               </ul>
-              <li>Flux partitioning is the standard approach for NEE, not practical during polar summer</li>
-              <ul>
-                <li>No standard gap filling method for NME</li>
-              </ul>
-              <li>Machine learning methods can identify flux drivers and map flux responses</li>
+              <li>Machine learning methods can identify flux drivers and map responses</li>
             </ul>
           </div>
         </div>
@@ -448,14 +444,18 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header">Machine Learning</h2>
           <div class="full">
-            <p><b>Random Forests (RF)</b> are ensembles of bootstrapped regression trees which can be trained quickly and easily deployed.</p>
+            <p><b>Random Forests (RF)</b>: ensembles of bootstrapped regression trees which can be easily deployed and quickly trained.</p>
             <ul>
-              <li>Two key drawbacks: incapable of extrapolation, no interpretable response functions</li>
+              <li>Limitations: incapable of extrapolation, no interpretable response functions</li>
             </ul>
-            <p><b>Neural Networks (NN)</b> are non-linear regression models which can approximate any continuous function and extrapolate beyond their training domain.</p>
+            <p><b>Neural Networks (NN)</b>: computationally intensive non-linear regression models which can approximate any continuous function.</p>
             <ul>
-              <li>Computationally intensive and care must be taken to prevent over fitting</li>
-              <li><b>Weights method</b> (Gevery et al. 2003) allows inspection of response functions to verify relationships are physically plausible</li>
+              <li>Care must be taken to prevent over fitting</li>
+              <li><b>Weights method</b>: inspection of response functions (Gevery et al. 2003)</li>
+              <ul>
+                <li>Verify physical plausibility</li>
+              </ul>
+              <li><i>Potentially</i> useful for extrapolation</li>
             </ul>
           </div>
         </div>
@@ -467,7 +467,7 @@ ol ol li.nl::before {
           <div class="full">
             <p>Advance our understanding of the dynamics governing growing season C exchange in the Mackenzie Delta Region.</p>
             <ol>
-              <li class="nl">Measure growing season CO<sub>2</sub> and CH<sub>4</sub> fluxes at Illisarvik and Fish Island, use gap-filling to estimate NEE and NME, and quantify the portion of CO<sub>2</sub> uptake offset by CH<sub>4</sub> emissions at both sites.</li>
+              <li class="nl">Measure growing season CO<sub>2</sub> and CH<sub>4</sub> fluxes at Illisarvik and Fish Island, use gap-filling to estimate NEE and NME, and quantify the portion of CO<sub>2</sub> uptake offset by CH<sub>4</sub> emissions.</li>
               <li class="nl">Use NN models to gain insight into the controls of ecosystem scale NEE and NME at Illisarvik and Fish Island.</li>
                 <ol>
                   <li class="nl">Identify bio-climate drivers and map their functional relationships.</li>
@@ -506,10 +506,15 @@ ol ol li.nl::before {
                 </ul>
             </ul>
           </div>
-          <div class="figure_full">
-            <div class="r-stack">
-              <img class="fragment fade-out" data-fragment-index="0" src="images/Illisarvik_Tower.jpg" width="100%" ; style = "border:2px solid #555">
-              <img class="fragment current-visible" data-fragment-index="0" src="images/Illisarvik_Sensors.jpg" width="100%" ; style = "border:2px solid #555">
+          <div class="r-stack">
+            <div class="figure_short fragment fade-out" data-fragment-index="0">
+              <img src="images/Illisarvik_Tower.jpg" width="100%" ; style = "border:2px solid #555">
+              EC station at Illisarvik
+            </div>
+            <div class="figure_short fragment current-visible" data-fragment-index="0">
+              <img src="images/Illisarvik_Sensors.jpg" width="100%" ; style = "border:2px solid #555">
+              Fish eye view of EC system, feat reindeer
+
             </div>
           </div>
         </div>
@@ -519,7 +524,10 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header 1">Data & Methods</h2>
           <div class="left">
-            <p>A vegetation survey (Wilson et al. 2019) mapped the basin and a footprint model (Kljun et al. 2015) was used to calculate half-hourly source area fractions.</p>
+            <p>A vegetation survey mapped the basin (Wilson et al. 2019).</p>
+            <ul>
+              <li>Footprint model (Kljun et al. 2015) used to calculate source area of half hourly fluxes</li>
+            </ul>
             <table style = "font-size: 50%;" >
               <tr><th>Class</th><th>Species</th><th>Basin</th><th><i>F<sub>clim</sub></i>[range]</th></tr>
               <tr><td>Shrub</td><td><i>Salix</i> spp. & <i>Alnus viridis</i></td><td>48%</td><td>36%[0–79]</td></tr>
@@ -540,7 +548,7 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header 1">Data & Methods</h2>
           <div class="left">
-            <p>Dark chambers measured ER and NME at 10 plots</p>
+            <p>A dark chamber study measured ER and NME at 10 representative plots around the basin (LaForce 2018).</p>
             <ul>
               <img src="images/Chambers.jPG" width="80%" ; style = "border:2px solid #555"></img>
             </ul>
