@@ -51,8 +51,8 @@
 
 .full {
  width: 100%;
- height: 88%;
- top:  12%;
+ height: 85%;
+ top:  15%;
  left: 0%;
  text-align: left;
  position: absolute; 
@@ -189,6 +189,17 @@ ol ol li.nl::before {
     content: counters(item, ".") " ";
 }
 
+
+.hangingindent {
+    float: left;
+    padding-left: 5em ;
+    text-indent: -5em ;
+    text-align: left;
+    left:0%;
+    orphans: 3;
+  } 
+
+
 #main img {
     float: left;
 }
@@ -204,24 +215,18 @@ ol ol li.nl::before {
           <div class="title">
             <h1>Using Machine Learning to Identify and Map Controls of Growing-Season Carbon Dioxide and Methane Fluxes in the Mackenzie Delta Region</h1>
           </div>
-          <p class="subtitle">June Skeeter <br> UBC Geography Department<br>Presentation in defense of my PhD thesis</p> 
-
-          
-
+          <p class="subtitle">June Skeeter <br> UBC Geography Department<br>Presentation in defense of my PhD thesis</p>
         </div>
       </section>
-
+      
       <section>
         <div class="container">
         <h1 class="header">Territorial Acknowledgement</h1>
           <div class="left">
-            <p>To start, I want to acknowledge the Indigenous territories on which this work took place.</p>
+            <p>I would like to acknowledge the Indigenous territories on which this work took place.</p>
             <ul>
-              <li>During my PhD, I have been living and working in unceded Coast Salish territory.  Specifically, the: </li>
-              <ul>
-                <li>xʷməθkʷəy̓əm, Tsleil-Waututh, Stó:lō, and Skwxwú7mesh Nations</li>
-              </ul>
-              <li>Field work was conducted in the Inuvialuit Settlement Region in 2016 and 2017.</li>
+              <li>I have been living and working in unceded Coast Salish territory</li>
+              <li>Field work was conducted in the Inuvialuit Settlement Region</li>
             </ul>
           </div>
           <div class="right">
@@ -234,36 +239,18 @@ ol ol li.nl::before {
       <section>
         <div class="container">
         <h1 class="header">Overview</h1>
-          <div class="full">
-            <ol>
-              <li class="nl"><b>Introduction</b></li>
-              <ol>
-                <li class="nl">Framing the Problem</li>
-                <li class="nl">Tundra Carbon Fluxes</li>
-                <li class="nl">Flux Observations & Machine Learning</li>
-                <li class="nl">The Study Area</li>
-                <li class="nl">Research Objectives</li>
-              </ol>
-              <li class="nl"><b>Data Collection & Analysis</b></li>
-              <ol>
-                <li class="nl">Measurement Campaigns at Illisarvik & Fish Island</li>
-                <li class="nl">Flux Processing, Gap Filling, Feature Detection</li>
-                <li class="nl">Flux Upscaling</li>
-              </ol>
-              <li class="nl"><b>Discussion & Conclusions</b></li>
-              <ol>
-                <li class="nl">Novel Contributions & Implications of Findings</li>
-                <li class="nl">Future Research Areas</li>
-                <li class="nl">Reflections</li>
-              </ol>
-
-            </ol>
+          <div class="full" style="font-size: 85%">
+            <p class="hangingindent"><b>Chapter 1:</b> Introduction</p>
+            <p class="hangingindent"><b>Chapter 2:</b> Vegetation Influence and Environmental Controls on Greenhouse Gas Fluxes from a Drained Thermokarst Lake in the Western Canadian Arctic</p>
+            <p class="hangingindent"><b>Chapter 3:</b> Controls on Carbon Dioxide and Methane Fluxes from a Low-Center Polygonal Peatland in the Mackenzie River Delta</p>
+            <p class="hangingindent"><b>Chapter 4:</b> Modeling Interannual Variability of Carbon Fluxes at a Low-Center Polygon Ecosystem in the Mackenzie River Delta</p>
+            <p class="hangingindent"><b>Chapter 5:</b> Conclusions</p>
           </div>
       </section>
 
       <section>
         <div class="container">
-        <h2 class="header">Framing the Problem</h2>
+        <h2 class="header">Introduction: Framing the Problem</h2>
           <div class="left">
             <p>Arctic amplification is accelerating climate change in the northern high latitudes, leading to:</p>
             <ul>
@@ -285,7 +272,7 @@ ol ol li.nl::before {
       
       <section>
         <div class="container">
-        <h2 class="header">Framing the Problem</h2>
+        <h2 class="header">Limited Observations</h2>
           <div class="left">
             <p>Eddy covariance (EC) is a method to measure carbon dioxide (CO<sub>2</sub>) and methane (CH<sub>4</sub>) fluxes.</p>
             <ul>
@@ -293,11 +280,6 @@ ol ol li.nl::before {
               <ul>
                 <li>Bias towards accessible sites</li>
                 <li>Canadian Arctic is under-represented</li>
-              </ul>
-              <li>Ecosystems characterized by limited productivity</li>
-              <ul>
-                <li>Latitudinal gradient</li>
-                <li>Modulated by elevation and maritime influences</li>
               </ul>
           </ul>
           </div>
@@ -311,50 +293,36 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header">Tundra Ecosystems</h2>
           <div class="left">
-            <p>Harsh conditions limit vegetation growth in tundra ecosystems.</p>
+            <p>Harsh conditions limit vegetation growth.</p>
               <ul>
-                <li class="fragment fade-up" data-fragment-index="0">Summers are brief but productive</li>
+                <li>Summers are brief but productive</li>
+                <li>Winters are long, dark, and frigid</li>
                 <ul>
-                  <li class="fragment fade-up" data-fragment-index="0">24hr daylight</li>
-                  <li class="fragment fade-up" data-fragment-index="0">Rapid green up after snowmelt</li> 
-                  <li class="fragment fade-up" data-fragment-index="0">Photosynthesis decreases after senescence</li> 
-                </ul>
-                <li class="fragment fade-up" data-fragment-index="0">Winters are long, dark, and frigid</li>
-                <ul>
-                  <li class="fragment fade-up" data-fragment-index="0">Microbial activity continue through early winter as soils freeze</li>
+                  <img src="images/Seasons.png" height="100%"; style = "border:2px solid #555">
                 </ul>
               </ul>
-              </ul>                
             </div>
-          <div class="r-stack">
-            <div class="figure_short figure fragment fade-out" data-fragment-index="0">
+            <div class="figure_short">
               <img src="images/Tundra_Veg.JPG" width="575"; style = "border:2px solid #555">
-              Reindeer grazing on willows at Illisarvik
+              Reindeer grazing on willow shrubs at Illisarvik
             </div>
-            <div class="figure_short figure fragment fade-in" data-fragment-index="0">
-              Mean Daily temperatures by month <br>Fish Island AWS, Mackenzie Delta, NWT, CA <br> 69&deg; N 134&deg; W
-              <img src="images/Seasons.png" width="700"; style = "background:'white, border:2px solid #555">
-            </div>
-          </div>
         </div>
       </section>
 
       <section>
         <div class="container">
-          <h2 class="header">Tundra Carbon Ballance</h2>
+          <h2 class="header">Tundra Ecosystems</h2>
           <div class="left">
-            <p>Permafrost limits root growth, inhibits decomposition, and restricts drainage.</p>
+            <p><b>Permafrost</b> is widespread in tundra environments.</p>
               <ul>
-                <li>The <b>active layer</b> thaws seasonally</li>
+                <li>Root growth and microbial activity occur in the <b>active layer</b></li>
                 <ul>
-                  <li>Root growth and microbial activity</li>
+                  <li>Thaws seasonally</li>
                 </ul>
-                <li>Elevated <b>water tables</b></li>
+                <li>Restricted drainage leads to elevated <b>water tables</b></li>
                 <ul>
-                  <li>Further inhibit decomposition</li>
-                </ul>
-                
-                <li>Many tundra ecosystems are/were net carbon sinks</li>
+                  <li>Inhibits decomposition</li>
+                </ul>                
               </ul>                
           </div>
           <div class="figure_full">
@@ -366,9 +334,9 @@ ol ol li.nl::before {
 
       <section>
         <div class="container">
-          <h2 class="header">Net Ecosystem Exchange</h2>
+          <h2 class="header">Tundra Carbon Balance</h2>
           <div class="left">
-            <p>CO<sub>2</sub> fluxes are the primary component of the tundra C balance</p>
+            <p>Net Ecosystem Exchange (NEE) of CO<sub>2</sub> is the primary component.</p>
               <ul>
                 <li>NEE = ER - GPP</li>
                 <ul>
@@ -381,28 +349,31 @@ ol ol li.nl::before {
                     <li>Autotrophic (RA) + Heterotrophic (RH)</li>
                   </ul>
                 </ul>
-                <li>CO<sub>2</sub> uptake/emission (-/+ NEE)</li>
+                <li>-/+ NEE (uptake/emission)</li>
               </ul>                
           </div>
           <div class="figure_full">
             <img src="images/Permafrost_NEE.png" width="575"; style = "border:2px solid #555">
-            <!-- <img src="images/Permafrost_Cbal.png" width="575"; style = "border:2px solid #555"> -->
           </div>
         </div>
       </section>
           
       <section>
         <div class="container">
-          <h2 class="header">Net Methane Exchange</h2>
+          <h2 class="header">Tundra Carbon Balance</h2>
           <div class="left">
-            <p>CH<sub>4</sub> fluxes are a secondary component in tundra wetlands.</p>
+            <p>Net Methane Exchange (NEE) of CH<sub>4</sub> is a secondary component.</p>
               <ul>
-                <li>Methanogenesis occurs in anoxic soils</li>
+                <li>NME = Production - Consumption</li>
                 <ul>
-                  <li>Slower, but CH<sub>4</sub> is a potent greenhouse gas</li>
-                  <li>Methanotrophs breakdown CH<sub>4</sub></li>
+                  <li>Methanogenesis in anoxic soils</li>
+                  <ul>
+                    <li>Slower pathway</li>
+                  </ul>
+                  <li>Methanotropy in aerobic soils</li>
+                  <li>Complex non-linear dynamics</li>
                 </ul>
-                <li>CH<sub>4</sub> uptake/emission (-/+ NME)</li>
+                <li>-/+ NME (uptake/emission)</li>
               </ul>                
           </div>
           <div class="figure_full">
@@ -413,17 +384,16 @@ ol ol li.nl::before {
 
       <section>
         <div class="container">
-        <h2 class="header">The Study Area</h2>
+        <h2 class="header">Mackenzie Delta</h2>
           <div class="left">
-            <p>The Mackenzie Delta (13,000 km<sup>2</sup>) is the 2<sup>nd</sup> largest Arctic Delta.</p>
+            <p>The Arctic's 2<sup>nd</sup> largest river delta.</p>
             <ul>
-              <li>One of the fastest warming regions in North America</li>
-              <li>No existing studies of NEE in the Delta</li>
               <li>Aircraft observations of NME (Kohnert et al. 2017 & 2018)</li>
               <ul>
                 <li>Gas hydrate seeps in south / west</li>
                 <li>Significant biologic emissions north of tree line (31.8 - 58.4 mg CH<sub>4</sub> m<sup>−2</sup> d<sup>−1</sup>)</li>
               </ul>
+              <li>No prior studies of NEE</li>
             </ul>
           </div>
           <div class="figure_full">
@@ -434,14 +404,17 @@ ol ol li.nl::before {
 
       <section>
         <div class="container">
-        <h2 class="header">The Study Area</h2>
+        <h2 class="header">Study Sites</h2>
           <div class="left">
-            <p>We measured CO<sub>2</sub> and CH<sub>4</sub> fluxes at two tundra sites.</p>
+            <p>Fluxes of CO<sub>2</sub> and CH<sub>4</sub> were measured at two sites.</p>
             <ul>
-              <li>Illisarvik is an experimentally <b>Drained Thermokarst Lake Basin (DTLB)</b> on Richards Island</li>
-              <li>Undisturbed <b>Low center polygon (LCP)</b> tundra on the Big Lake Delta Plain</li>
+              <li>Illisarvik in 2016</li>
               <ul>
-                <li>Permafrost peatland subject to infrequent episodic flooding</li>
+                <li><b>Drained Thermokarst Lake Basin (DTLB)</b></li>
+              </ul>
+              <li>Fish Island in 2017</li>
+              <ul>
+                <li><b>Low Center Polygon (LCP)</b> tundra peatland</li>
               </ul>
             </ul>
           </div>
@@ -453,22 +426,20 @@ ol ol li.nl::before {
 
       <section>
         <div class="container">
-        <h2 class="header">Machine Learning</h2>
+        <h2 class="header">Gap Filling</h2>
           <div class="full">
-            <p>Algorithms that build models from experience without making prior assumptions about the distribution of a dataset.</p>
+            <p>Gap filling is essential for calculating daily/seasonal/annual budgets from EC observations.</p>
             <ul>
               <li>EC flux estimation requires specific conditions that can't always be met</li>
               <ul>
-                <li>Stationarity, turbulent flow, etc.</li>
-                <li>Gap filling is essential for calculating daily/seasonal/annual budgets</li>
-                <li>Flux partitioning is the standard approach for NEE</li>
-                <ul>
-                  <li>Night-time methods not possible during polar summer</li>
-                  <li>Rapid phenology changes make day-time methods not impractical too</li>
-                </ul>
-                <li>No standard methods for NME</li>
+                <li>Stationarity, turbulent flow, homogenous terrain, etc.</li>
               </ul>
-              <li>Machine learning methods can identify flux drivers and map responses</li>
+              <li>Flux partitioning is the standard approach for NEE</li>
+              <ul>
+                <li>Night-time methods not possible during polar summer</li>
+                <li>Rapid phenology changes make day-time methods not impractical too</li>
+              </ul>
+              <li>No standard methods for NME</li>
             </ul>
           </div>
         </div>
@@ -476,20 +447,35 @@ ol ol li.nl::before {
 
       <section>
         <div class="container">
-          <h2 class="header">Machine Learning</h2>
-          <div class="full">
-            <p><b>Random Forests (RF)</b>: ensembles of bootstrapped regression trees which can be easily deployed and quickly trained.</p>
+          <h2 class="header">Machine Learning Methods</h2>
+          <div class="left">
+            <p><b>Random Forests (RF)</b>:</p>
             <ul>
-              <li>Limitations: incapable of extrapolation, no interpretable response functions</li>
-            </ul>
-            <p><b>Neural Networks (NN)</b>: computationally intensive non-linear regression models which can approximate any continuous function.</p>
-            <ul>
-              <li>Care must be taken to prevent over fitting</li>
-              <li><b>Weights method</b>: inspection of response functions (Gevery et al. 2003)</li>
+              <li>Ensembles of bootstrapped regression trees</li>
               <ul>
+                <li>Easy to train and implement</li>
+                <li>Resistant to over fitting</li>
+              </ul>
+              <li>Limitations</li>
+              <ul>
+                <li>Incapable of extrapolation</li>
+                <li>No interpretable response functions</li>
+              </ul>
+            </ul>
+          </div>
+          <div class="right">
+            <p><b>Neural Networks (NN)</b>:</p>
+            <ul>
+              <li>Computationally intensive non-linear regression</li>
+              <ul>
+                <li>Universal approximators</li>
+                <li>Prone to over fitting</li>
+              </ul>
+              <li><b>Weights method</b> (Gevery et al. 2003)</li>
+              <ul>
+                <li>Inspection of response functions</li>
                 <li>Verify physical plausibility</li>
               </ul>
-              <li><i>Potentially</i> useful for extrapolation</li>
             </ul>
           </div>
         </div>
@@ -501,23 +487,22 @@ ol ol li.nl::before {
           <div class="full">
             <p>Advance our understanding of the dynamics governing growing season C exchange in the Mackenzie Delta Region.</p>
             <ol>
-              <li class="nl">Measure growing season CO<sub>2</sub> and CH<sub>4</sub> fluxes at Illisarvik and Fish Island, use gap-filling to estimate NEE and NME, and quantify the portion of CO<sub>2</sub> uptake offset by CH<sub>4</sub> emissions.</li>
-              <li class="nl">Use NN models to gain insight into the controls of ecosystem scale NEE and NME at Illisarvik and Fish Island.</li>
+              <li class="nl">Measure CO<sub>2</sub> and CH<sub>4</sub> fluxes and use gap-filling to estimate NEE and NME at Illisarvik and Fish Island</li>
+              <li class="nl">Use NN models to study controls of ecosystem scale NEE and NME</li>
                 <ol>
-                  <li class="nl">Identify bio-climate drivers and map their functional relationships.</li>
-                  <li class="nl">Investigate the influence of spatial heterogeneity over fluxes.</li>
+                  <li class="nl">Identify flux drivers and map functional relationships</li>
+                  <li class="nl">Investigate the influence of spatial heterogeneity</li>
                 </ol>
-              <li class="nl">Investigate inter-annual climate variability at Fish Island and conduct a temporal upscaling experiment to estimate the possible influence of variability on growing season NEE and NME.</li>
+              <li class="nl">Conduct a temporal upscaling experiment to study the possible influence of climate variability on growing season NEE and NME at Fish Island</li>
             </ol>
           </div>
         </div>
       </section>
-
-      
+  
       <section>
         <div class="container">
           <div class="title">
-            <h1>Chapter 2: Vegetation Influence and Environmental Controls on Greenhouse Gas Gluxes from a Drained Thermokarst Lake in the Western Canadian Arctic</h1>
+            <h1>Chapter 2: Vegetation Influence and Environmental Controls on Greenhouse Gas Fluxes from a Drained Thermokarst Lake in the Western Canadian Arctic</h1>
           </div>
           <p class="subtitle">A version of chapter 2 has been published in Biogeosciences<br><a href="https://doi.org/10.5194/bg-17-4421-2020">https://doi.org/10.5194/bg-17-4421-2020</a></p> 
         </div>
@@ -532,9 +517,6 @@ ol ol li.nl::before {
                 <li>July 8<sup>th</sup> to August 7<sup>th</sup>, 2016</li>
                 <ul>
                   <li>CSAT3, LI-7500, and LI-7700</li>
-                  <ul>
-                    <li>z<sub>m</sub> = 3m, sampled at 10 Hz</li>
-                  </ul>
                   <li>Collocated climate sensors</li>
                   <li>Two satellite soil stations</li>
                 </ul>
@@ -555,7 +537,7 @@ ol ol li.nl::before {
             </div>
             <div class="figure_short fragment current-visible" data-fragment-index="0">
               <img src="images/Illisarvik_Sensors.jpg" width="100%" ; style = "border:2px solid #555">
-              Fish eye view of EC system, feat reindeer
+              Fish eye view of EC system, feat. reindeer
 
             </div>
           </div>
@@ -565,48 +547,22 @@ ol ol li.nl::before {
       <section>
         <div class="container">
           <h2 class="header 1">Data & Methods</h2>
-          <div class="r-stack">
-            <div class="left fragment fade-out" data-fragment-index="0">
-              <p>A vegetation survey mapped the basin (Wilson et al. 2019).</p>
-              <ul>
-                <li>Kljun et al. 2015 footprint model</li>
-                <ul>
-                  <li>Half hourly source area fractions</li>
-                  <li>Footprint climatology</li>
-                </ul>
-              </ul>
-              <table style = "font-size: 50%;" >
-                <tr><th>Class</th><th>Species</th><th>Basin</th><th><i>F<sub>clim</sub></i>[range]</th></tr>
-                <tr><td>Shrub</td><td><i>Salix</i> spp. & <i>Alnus viridis</i></td><td>48%</td><td>36%[0–79]</td></tr>
-                <tr><td>Sedge</td><td><i>Carex aquatilis</i> & <i>Arctophila fulva</i></td><td>29%</td><td>39%[1–78]</td></tr>
-                <tr><td>Grass</td><td><i>Pocacea</i> spp. & <i>Eriophorum angustifolium</i></td><td>12%</td><td>11%[0–56]</td></tr>
-                <tr><td>Sparse</td><td>Sparse veg. & bare ground</td><td>8%</td><td>2%[0–34]</td></tr>
-                <tr><td>Water</td><td><i>Hippuris vulgaris</i> & Open Water</td><td>3%</td><td>0%[0–4]</td></tr>
-                <tr><td>Upland</td><td><i>Salix</i> spp. & <i>Betula nana</i></td><td>0%</td><td>6%[0–15]</td></tr>
-              </table>
-            </div>
-            
-            <div class="left fragment fade-in" data-fragment-index="0">
-              <p>ER and NME measured at 10 plots using vegetated and clipped dark chambers (LaForce 2018).</p>
-              <ul>
-                <li>Only vegetated cambers included</li>
-                <ul>
-                  <img src="images/Chambers.JPG" width="80%" ; style = "border:2px solid #555"></img>
-                </ul>
-              </ul>
-            </div>
-
-          </div>
-          <div class="r-stack">
-            <div class="figure_full fragment fade-out" data-fragment-index="1">
-              <img src="images/Illisarvik_Map.png" height="1200" ; style = "border:2px solid #555"></img>
-            </div>
-            <div class="figure_full fragment current-visible" data-fragment-index="1">
-              Camber fluxes aggregated by vegetation class
-            <img src="images/Chamber_Flux.png" width="80%" ; style = "border:2px solid #555"></img>
-            </div>
+          <div class="left" data-fragment-index="0">
+            <p>Vegetation map (Wilson et al. 2019) was overlaid with flux footprints (Kljun et al. 2015).</p>
+            <table style = "font-size: 60%;" >
+              <tr><th>Class</th><th>Species</th><th>Basin</th><th><i>F<sub>clim</sub></i>[range]</th></tr>
+              <tr><td>Shrub</td><td><i>Salix</i> spp. & <i>Alnus viridis</i></td><td>48%</td><td>36%[0–79]</td></tr>
+              <tr><td>Sedge</td><td><i>Carex aquatilis</i> & <i>Arctophila fulva</i></td><td>29%</td><td>39%[1–78]</td></tr>
+              <tr><td>Grass</td><td><i>Pocacea</i> spp. & <i>Eriophorum angustifolium</i></td><td>12%</td><td>11%[0–56]</td></tr>
+              <tr><td>Sparse</td><td>Sparse veg. & bare ground</td><td>8%</td><td>2%[0–34]</td></tr>
+              <tr><td>Water</td><td><i>Hippuris vulgaris</i> & Open Water</td><td>3%</td><td>0%[0–4]</td></tr>
+              <tr><td>Upland</td><td><i>Salix</i> spp. & <i>Betula nana</i></td><td>0%</td><td>6%[0–15]</td></tr>
+            </table>
           </div>
           
+          <div class="figure_full">
+            <img src="images/Illisarvik_Map.png" height="1200" ; style = "border:2px solid #555"></img>
+          </div>
         </div>
       </section>
 
@@ -614,14 +570,17 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header 1">Data & Methods</h2>
           <div class="full">
-            <p>NN models were used to:</p>
+            <p>Neural Network models were used to:</p>
             <ul>
-              <li>Identify the dominant flux drivers by iteratively built more complex models</li>
+              <li>Identify the dominant flux drivers</li>
               <ul>
-                <li>Climate, soil, and source area were used as model inputs</li>
-                <li>"1 Standard Error" rule identified the most parsimonious models</li>
+                <li>Climate, soil, and source area fractions were used as model inputs</li>
+                <ul>
+                  <li>iteratively built models</li>
+                </ul>
               </ul>
-              <li>Selected sets of inputs for CO<sub>2</sub> and CH<sub>4</sub> were then used to gap fill the respective flux time series to estimate NEE and NME</li>
+              <li>Selected inputs used to estimate NEE and NME</li>
+              <li>Response functions inspected to investigate functional relationships</li>
               </ul>
             </ul>
           </div>
@@ -635,15 +594,18 @@ ol ol li.nl::before {
           <div class="left">
             <p>Observations over the peak growing season in 2016.</p>
             <ul>
+              <li>Mean T<sub>a</sub> 9.5 &deg;C</li>
+              <li>Gradual drying</li>
+              <ul>
+                <li>limited precipitation</li>
+              </ul>
               <li>The site was a net CO<sub>2</sub> sink</li>
               <ul>
-                <li>NEE: -1.5 CI<sub>95%</sub> ±0.2 g C-CO<sub>2</sub> m<sup>-2</sup>d<sup>-1</sup></li>
-                <li>NN estimates in good agreement with F<sub>CO<sub>2</sub></sub> observations (r<sup>2</sup> = 0.91)</li>
+                <li>-1.56 CI<sub>95%</sub> ±0.17 μmol m<sup>-2</sup>s<sup>-1</sup></li>
               </ul>
               <li>The site was a weak CH<sub>4</sub> source</li>
               <ul>
-                <li>NME: 8.7 CI<sub>95%</sub> ±0.4 mg C-CH<sub>4</sub> m<sup>-2</sup>d<sup>-1</sup></li>
-                <li>NN estimates in reasonable agreement with F<sub>CH<sub>4</sub></sub> observations (r<sup>2</sup> = 0.62)</li>
+                <li>8.67 CI<sub>95%</sub> ±0.43 nmol m<sup>-2</sup>s<sup>-1</sup></li>
               </ul>
             </ul>
           </div>
@@ -653,48 +615,11 @@ ol ol li.nl::before {
         </div>
       </section>
 
-      
       <section>
         <div class="container">
-          <h2 class="header 1">Results</h2>
+          <h2 class="header 1">Flux response functions</h2>
           <div class="left">
-            <p>Peak growing season drivers:</p>
-            <ul>
-              <li><b>NEE</b>: four key divers </li>
-              <ul>
-                <li>PPFD was the primary driver of GPP</li>
-                <ul>
-                  <li>Modulated by VPD</li>
-                </ul>
-                <li>VWC influenced ER</li>
-                <li>F<sub>Shrub</sub> had weak influence</li>
-              </ul>
-              <li><b>NME</b>: five key divers </li>
-              <ul>
-                <li>F<sub>Sedge</sub> was had strongest influence</li>
-                <ul>
-                  <li>Along with F<sub>Shrub</sub> (strong correlation)</li>
-                </ul>
-                <li>VWC and T<sub>s</sub> drove fluxes</li>
-                <li>U had a weak influence</li>
-                <ul>
-                  <li>Possibly influenced transport</li>
-                </ul>
-                <ul>
-              </ul>
-            </ul>
-          </div>
-          <div class="figure_full">
-            <img src="images/NN_Illisarvik.png" width="100%" ; style = "border:2px solid #555"></img>
-          </div>
-        </div>
-      </section>   
-
-      <section>
-        <div class="container">
-          <h2 class="header 1">Results</h2>
-          <div class="left">
-            <p>Mapping fluxes over the domain of one driver, with the others fixed gives the response function under specific conditions.</p>
+            <p>Four key drivers of <b>NEE</b>: <br> PPFD, VPD, VWC, & F<sub>Shrub</sub>.</p>
             <ul>
               <li>NEE responds to PPFD as expected</li>
               <ul>
@@ -702,20 +627,18 @@ ol ol li.nl::before {
                 <li>Not a true "light response curve"</li>
                 <ul>
                   <li>GPP is not isolated</li>
+                  <li>Conflated with ER</li>
                 </ul>
               </ul>
-              <li>VWC: night (dashed) vs. day (solid)</li>
+              <li>VWC influences ER</li>
               <ul>
-                <li>More positive at high F<sub>Shrub</sub></li>
-                <li>Less straightforward at low F<sub>Shrub</sub></li>
+                <li>Night (dashed) vs. day (solid)</li>
+                <li>Contrary influence depending on source area</li>
               </ul>
             </ul>
           </div>
           <div class="figure_full">
-            <div class="r-stack">
-              <img class="fragment fade-out" data-fragment-index="0" src="images/Results_Illisarvik_co2.png" width="100%" ; style = "border:2px solid #555">
-              <img class="fragment current-visible" data-fragment-index="0" src="images/Chamber_Flux.png" width="100%" ; style = "border:2px solid #555">
-            </div>
+            <img src="images/Results_Illisarvik_CO2.png" width="100%" ; style = "border:2px solid #555">
           </div>
         </div>
       </section>
@@ -724,25 +647,26 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header 1">Results</h2>
           <div class="left">
-            <p>Mapping fluxes over the domain of one driver, with the others fixed gives the response function under specific conditions.</p>
+            <p>Five key drivers of <b>NNE</b>: <br>F<sub>Sedge</sub>, VWC, T<sub>s</sub>, F<sub>Shrub</sub> & U.</p>
             <ul>
               <li>NME responds to VWC as expected</li>
               <ul>
                 <li>Highlights influence of source area</li>
                 <ul>
-                  <li>100% F<sub>Sedge</sub> is a projection</li>
+                  <li>Projection to 100% F<sub>Sedge</sub></li>
                   <li>Supported by chamber results</li>
                 </ul>
               </ul>
-              <li>Inverse association with T <sub>S</sub></li>
+              <li>Inverse association with T<sub>S</sub></li>
               <ul>
-                <li>Unexpected, possibly byproduct of short sampling period</li>
+                <li>Possibly byproduct of short sampling period</li>
+                <li>Drying + increased methanotrophy</li>
               </ul>
             </ul>
           </div>
           <div class="figure_full">
             <div class="r-stack">
-              <img class="fragment fade-out" data-fragment-index="0" src="images/Results_Illisarvik_ch4.png" width="100%" ; style = "border:2px solid #555">
+              <img class="fragment fade-out" data-fragment-index="0" src="images/Results_Illisarvik_CH4.png" width="100%" ; style = "border:2px solid #555">
               <img class="fragment current-visible" data-fragment-index="0" src="images/Chamber_Flux.png" width="100%" ; style = "border:2px solid #555">
             </div>
           </div>
@@ -751,24 +675,26 @@ ol ol li.nl::before {
       
       <section>
         <div class="container">
-          <h2 class="header 1">Conclusions</h2>
+          <h2 class="header 1">Discussion</h2>
           <div class="full">
-            <p>Peak growing season carbon uptake at Illisarvik is greater than similarly aged landscape features in Alaska.</p>
+            <p>Peak growing season C uptake at Illisarvik is greater than DTLB young studied in Alaska.</p>
             <ul>
-              <li>NME is below levels observed in other DTLB studied</li>
-              <li>Illisarvik will continue to evolve, its trajectory could alter it's carbon balance</li>
+              <li>NME was lower than observed in other young DTLB</li>
+              <li>Illisarvik will continue to evolve, taking one of two paths:</li>
               <ul>
-                <li>If it follows the trajectory of older DTLB in the area and becomes a sedge wetlands</li>
+                <li>Sedge wetlands</li>
                 <ul>
                   <li>NME will increase significantly</li>
                 </ul>
-                <li>If it transitions into a shrub dominated DTLB</li>
+                <li>Shrub dominated</li>
                 <ul>
                   <li>NME would remain similar to current levels</li>
                 </ul>
+              </ul>
+              <li>Long-term observation needed to better understand the implications</li>
+              <ul>
                 <li>Effects of changing shrub/sedge cover on NEE are less straightforward</li>
               </ul>
-              <li>Longer term observation needed to better understand the implications of vegetation change on DTLB carbon balances</li>
             </ul>
           </div>
         </div>
@@ -777,12 +703,11 @@ ol ol li.nl::before {
       <section>
         <div class="container">
           <div class="title">
-            <h1>Chapter 3: Controls on Carbon Dioxide and Methane fluxes from a Low-Center Polygonal Peatland in the Mackenzie River Delta</h1>
+            <h1>Chapter 3: Controls on Carbon Dioxide and Methane Fluxes from a Low-Center Polygonal Peatland in the Mackenzie River Delta</h1>
           </div>
           <p class="subtitle">A version of chapter 3 has been published in Arctic Science<br><a href="https://doi.org/10.1139/as-2021-0034">https://doi.org/10.1139/as-2021-0034</a></p> 
         </div>
       </section>
-
 
       <section>
         <div class="container">
@@ -790,12 +715,9 @@ ol ol li.nl::before {
           <div class="left">
             <p>EC system measured growing season CO<sub>2</sub> and CH<sub>4</sub> fluxes.</p>
             <ul>
-              <li>June 23<sup>th</sup> to September 13<sup>th</sup>, 2017</li>
+              <li>June 23<sup>rd</sup> to September 13<sup>th</sup>, 2017</li>
               <ul>
                 <li>CSAT3, LI-7200, and LI-7700</li>
-                <ul>
-                  <li>z<sub>m</sub> = 2.89m, sampled at 10 Hz<sup>*</sup></li>
-                </ul>
                 <li>Collocated climate sensors</li>
                 <li>Three satellite soil stations</li>
               </ul>
@@ -820,20 +742,8 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header 1">Data & Methods</h2>
           <div class="left">
-            <p>A map LCP of microtopography was created from drone imagery.</p>
-            <ul>
-              <li>Open drone map orthomosaic</li>
-              <ul>
-                <li>Manually digitzed boundaries</li>
-              </ul>
-              <li>Kljun et al. 2015 footprint model</li>
-              <ul>
-                <li>Half hourly source area fractions</li>
-                <li>Footprint climatology</li>
-              </ul>
-              <!-- <li> mapped area  within 150 m of the tripod and a footprint model (Kljun et al. 2015) was used to calculate half-hourly source area fractions</li> -->
-            </ul>
-            <table style = "font-size: 50%;" >
+            <p>A map LCP of features was created from drone imagery; overlaid with flux footprints (Kljun et al. 2015).</p>
+            <table style = "font-size: 60%;" >
               <tr><th>Class</th><th>Species</th><th>Distribution</th><th><i>F<sub>clim</sub></i>[range]</th></tr>
               <tr><td>Polygon Centers</td><td><i>Sphagnum</i> spp., <i>Equisetum</i> spp., & <i>Carex </i> spp.</td><td>66%</td><td>64%[33–78]</td></tr>
               <tr><td>Polygon Rims</td><td><i>Salix</i> spp.</td><td>29%</td><td>22%[5–56]</td></tr>
@@ -850,23 +760,25 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header 1">Data & Methods</h2>
           <div class="full">
-            <p>NN models were used to:</p>
+            <p>Neural Network models were used to:</p>
             <ul>
-              <li>Identified the dominant flux drivers by pruning over-parametrized models</li>
+              <li>Identify the dominant flux drivers</li>
               <ul>
-                <li>21 climate, soil, and source area inputs were used</li>
-                <li>Weights method (Gevery et al. 2003) was used for pruning</li>
+                <li>Pruned over-parametrized models using the <b>Weights Method</b> (Gevery et al. 2003)</li>
                 <ul>
-                  <li>Removed inputs with a <b>Relative Importance (RI)</b> &lt; 2.5%</li>
-                  <li>RI is based on the sum of the squared partial derivatives</li>
+                  <li>21 climate, soil, and source area inputs</li>
+                  <li>Calculated <b>Relative Importance (RI)</b> from sum of the squared partial derivatives</li>
+                  <ul>
+                    <li>Removed inputs with RI &lt; 2.5%</li>
+                  </ul>
                 </ul>
               </ul>
-              <li>New models were trained with the remaining inputs for CO<sub>2</sub> and CH<sub>4</sub> respectively</li>
+              <li>Pruned models were re-trained</li>
               <ul>
-                <li>Used to gap fill the flux time series to estimate NEE and NME</li>
+                <li>Used to estimate NEE and NME</li>
                 <li>The RI and partial derivatives were inspected</li>
                 <ul>
-                  <li>More explicit look at functional relationships than methods from Chapter 2</li>
+                  <li>More explicit and detailed than Chapter 2</li>
                 </ul>
               </ul>
             </ul>
@@ -897,22 +809,21 @@ ol ol li.nl::before {
           <h2 class="header 1">Results</h2>
           <div class="r-stack">
           <div class="left_skinny">
-              <p>Net C sink over the 2017 growing season.</p>
+            <p>Net C sink over the 2017 growing season.</p>
+            <ul>
+              <li>Net CO<sub>2</sub> sink</li>
               <ul>
-                <li>Net CO<sub>2</sub> sink</li>
-                <ul>
-                  <li>-0.60 CI<sub>95%</sub> ±0.04 μmol m<sup>-2</sup>s<sup>-1</sup></li>
-                </ul>
-                <li>Net CH<sub>4</sub> source</li>
-                <ul>
-                  <li>27.7 CI<sub>95%</sub> ±0.35 nmol m<sup>-2</sup>s<sup>-1</sup></li>
-                </ul>
-                <li class="fragment fade-in" data-fragment-index="0">Deil cycle for NEE <b>and</b> NME</li>
-                <ul>
-                  <li class="fragment fade-in" data-fragment-index="0">CO<sub>2</sub> and CH<sub>4</sub> fluxes were negatively correlated <br>(r<sup>2</sup> = 0.40)</li>
-                </ul>
+                <li>-0.60 CI<sub>95%</sub> ±0.04 μmol m<sup>-2</sup>s<sup>-1</sup></li>
               </ul>
-            </div>
+              <li>Net CH<sub>4</sub> source</li>
+              <ul>
+                <li>27.7 CI<sub>95%</sub> ±0.35 nmol m<sup>-2</sup>s<sup>-1</sup></li>
+              </ul>
+              <li class="fragment fade-in" data-fragment-index="0">Diel cycle for NEE <b>and</b> NME</li>
+              <ul>
+                <li class="fragment fade-in" data-fragment-index="0">CO<sub>2</sub> and CH<sub>4</sub> fluxes were negatively correlated <br>(r<sup>2</sup> = 0.40)</li>
+              </ul>
+            </ul>
           </div>
           <div class="figure_wide">
             <div class="r-stack">
@@ -928,7 +839,7 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header 1">Results</h2>
           <div class="left_skinny">
-            <p>Weights method identified 8 drivers of NEE.</p>
+            <p>Key drivers of NEE.</p>
             
             <table style = "font-size: 60%;">
               <tr><th></th><th>Factor</th><th>RI</th><th>Sign</th></tr>
@@ -953,41 +864,17 @@ ol ol li.nl::before {
             </div>        
           </div>
       </section>
-      
-      <section>
-        <div class="container">
-          <h2 class="header 1">Results</h2>
-          <div class="left">
-            <p>Estimating ER by projecting to "nighttime" conditions: </p>
-            <ul>
-              <li>The NN outperformed two common partitioning methods </li>
-              <table style="font-size: 70%;">
-                <tr><td>NN</td><td>r<sup>2</sup> = 0.58</td><td>RMSE = 0.23 μmol m<sup>-2</sup> s<sup>-1</sup></td></tr>
-                <tr><td>Q10</td><td>r<sup>2</sup> = 0.32</td><td>RMSE = 0.28 μmol m<sup>-2</sup> s<sup>-1</sup></td></tr>
-                <tr><td>Logistic</td><td>r<sup>2</sup> = 0.45</td><td>RMSE = 0.24 μmol m<sup>-2</sup> s<sup>-1</sup></td></tr>
-              </table>
-              <li>Mean ER estimated to be:</li>
-              <ul>
-                <li>1.54 CI<sub>95%</sub> ± 0.87 μmol m<sup>-2</sup> s<sup>-1</sup></li>
-              </ul>
-              <li>Limited chamber samples (2 days) suggest rim/center difference</li>
-            </ul>
-          </div>
-          <div class="figure_full">
-            <img src="images/ER.jpg" height="100%" ; style = "border:2px solid #555">
-        </div>
-      </section>
-      
+            
       <section>
         <div class="container">
           <h2 class="header 1">Results</h2>
           <div class="left_skinny">
-            <p>Weights method identified 8 drivers of NME.</p>
+            <p>Key drivers of NME.</p>
             <table style = "font-size: 60%;">
               <tr><th>Rank</th><th>Factor</th><th>RI</th><th>Sign</th></tr>
               <tr><td>1</td><td>Net Radiation (R<sub>n</sub>)</td><td>34%</td><td>+</td></tr>
-              <tr><td>2</td><td>Friction Velocity (u<sub>*</sub>)</td><td>20%%</td><td>+</td></tr>
-              <tr><td>8</td><td>Wind (U)</td><td>17%</td><td>-</td></tr>
+              <tr><td>2</td><td>Friction Velocity (u<sub>*</sub>)</td><td>20%</td><td>+</td></tr>
+              <tr><td>3</td><td>Wind (U)</td><td>17%</td><td>-</td></tr>
               <tr><td>4</td><td>Thaw Depth (T<sub>D</sub>)</td><td>12%</td><td>-</td></tr>
               <tr><td>5</td><td>Polygon Center Temp. 15cm (T<sub>Cnt15</sub>)</td><td>6%</td><td>-</td></tr>
               <tr><td>6</td><td>Water Table (W<sub>TD</sub>)</td><td>5%</td><td>-</td></tr>
@@ -1009,15 +896,18 @@ ol ol li.nl::before {
 
       <section>
         <div class="container">
-          <h2 class="header 1">Discussion & Conclusions</h2>
+          <h2 class="header 1">Discussion</h2>
           <div class="left">
-            <p>Methane had a minor impact on net C uptake (-49.5 g C m<sup>-2</sup>).</p>
+            <p>Methane only had a minor impact on net C uptake (-49.5 g C m<sup>-2</sup>).</p>
             <ul>
-              <li>NME matches well with aircraft fluxes in the area (Kohnert et al. 2017)</li>
-              <li>Spatial heterogeneity had a significant impact on NME</li>
-              <li>NEE was more negative than similar landscapes</li>
+              <li>NME matched well with aircraft flux observations</li>
               <ul>
-                <li>Growing season may be more productive than LCP ecosystems</li>
+                <li>July 2013/14 (Kohnert et al. 2017)</li>
+              </ul>
+              <li>Spatial heterogeneity had a significant impact on NME</li>
+              <li>NEE was more negative than LCP ecosystems in Alaska and Siberia</li>
+              <ul>
+                <li>Growing season may be more productive than sites farther north</li>
               </ul>
             </ul>
           </div>
@@ -1031,7 +921,7 @@ ol ol li.nl::before {
       <section>
         <div class="container">
           <div class="title">
-            <h1>Chapter 4: Controls on Carbon Dioxide and Methane fluxes from a Low-Center Polygonal Peatland in the Mackenzie River Delta</h1>
+            <h1>Chapter 4: Modeling Interannual Variability of Carbon Fluxes at a Low-Center Polygon Ecosystem in the Mackenzie River Delta</h1>
           </div>
           <p class="subtitle">A version of chapter 4 has been submitted to Arctic Science and is currently under review</p> 
         </div>
@@ -1041,11 +931,11 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header 1">Data & Methods</h2>
           <div class="full">
-            <p>Eleven yeas of climate data were available from an automated weather station (AWS) at Fish Island</p>
+            <p>Eleven years of climate data were available from an automated weather station (AWS) at Fish Island</p>
             <ul>
               <li>Data was paired with ECMWF reanalysis and MODIS data to conduct a temporal upscaling experiment</li>
               <ul>
-                <li>Constructed a Flux Driver Time Series spanning "snow free" seasons from 2009 - 2019</li>
+                <li>Constructed a Flux Driver Time Series spanning "snow-free" seasons from 2009 - 2019</li>
                 <ul>
                   <li>Investigated inter-annual variability</li>
                   <li>Estimated NEE and NME using NN models described in Chapter 3</li>
@@ -1131,10 +1021,19 @@ ol ol li.nl::before {
                 <li> Climate warming could reduce the CO<sub>2</sub> sink strength of Fish Island.</li>
                 <li>Compared to two similar low center polygon ecosystems with long-term eddy covariance records:</li>
                 <ul>
-                  <li>Fish Island is likely a weaker growing season CO<sub>2</sub> sink and stronger growing season CH4 source than a low center polygon ecosystem near Utqiagvik, Alaska.</li>
-                  <li>Fish Island may be both a stronger growing season CO<sub>2</sub> sink CH4 source than a low center polygon ecosystem at Samoylov Island, in the Lena River Delta.</li>
+                  <li>Fish Island is likely a weaker growing season CO<sub>2</sub> sink and stronger growing season CH<sub>4</sub> source than a low center polygon ecosystem near Utqiagvik, Alaska.</li>
+                  <li>Fish Island may be both a stronger growing season CO<sub>2</sub> sink CH<sub>4</sub> source than a low center polygon ecosystem at Samoylov Island, in the Lena River Delta.</li>
               </ul>
           </div>
+        </div>
+      </section>
+      
+      <section>
+        <div class="container">
+          <div class="title">
+            <h1>Chapter 5: Conclusions</h1>
+          </div>
+          <p class="subtitle">Summary of findings, key contributions, future research, and reflections</p> 
         </div>
       </section>
 
@@ -1142,10 +1041,10 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header 1">Overarching Conclusions</h2>
           <div class="full">
-            <p>Both Illisarvik and Fish Island were growing season CO2 sinks and CH4 sources.</p>
+            <p>Both Illisarvik and Fish Island were growing season CO<sub>2</sub> sinks and CH<sub>4</sub> sources.</p>
               <ul>
-                <li>Illisarvik was a weak CH4 source with patches of very high fluxes in wet areas dominated by sedges</li>
-                <li>Fish Island is likely a stronger CH4 source than comparable ecosystems in Alaska and Siberia</li>
+                <li>Illisarvik was a weak CH<sub>4</sub> source with patches of very high fluxes in wet areas dominated by sedges</li>
+                <li>Fish Island is likely a stronger CH<sub>4</sub> source than comparable ecosystems in Alaska and Siberia</li>
               </ul>
           </div>
         </div>
@@ -1159,7 +1058,7 @@ ol ol li.nl::before {
               <ul>
                 <li>Both NEE and NME at Illisarvik varied significantly between different vegetation types</li>
                 <li>At Fish Island, polygonal microtopography had a significant influence over NME but had no influence over NEE.</li>
-                <li>Neural network analysis and footprint modelling can be combined with to help account for, and model the influence of, spatial heterogeneity on eddy covariance flux observations.</li>
+                <li>Neural network analysis and footprint modelling can be combined to help account for, and model the influence of, spatial heterogeneity on eddy covariance flux observations.</li>
               </ul>
             </ol>
           </div>
@@ -1170,7 +1069,7 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header 1">Future Research</h2>
           <div class="full">
-            <ol>
+            <ul>
               <li>Long-term flux data needed:</li>
               <ul>
                 <li>Chapter 4 shows that interannual variability can have a significant impact on fluxes</li>
@@ -1188,9 +1087,9 @@ ol ol li.nl::before {
               <li>Network architecture</li>
               <ul>
                 <li>Multi-layer models to simulate GPP and ER separately</li>
-                <li>Time lagged models</li>
+                <li>Time-lagged models to account for CH<sub>4</sub> dynamics</li>
               </ul>
-            </ol>
+            </ul>
           </div>
         </div>
       </section>
@@ -1200,7 +1099,7 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header 1">Reflections</h2>
           <div class="full">
-            <p>Future work should focus on sustainable longer term flux monitoring</p>
+            <p>Future work should focus on sustainable longer-term flux monitoring</p>
               <li>Short, resource intensive campaigns are a misallocation of resources</li>
               <ul>
                 <li>Tens of thousands of dollars worth of equipment, fuel, & labor for only 4 months of flux data</li>
@@ -1210,6 +1109,152 @@ ol ol li.nl::before {
                 <li>Technical training & employment will benefit communities</li>
               </ul>
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="title">
+            <h1>Thank you!</h1>
+          </div>
+          <p class="subtitle">Questions?</p> 
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="title">
+            <h1>Appendix</h1>
+          </div>
+          <p class="subtitle">Extra content that could not be discussed in the time allotted.</p> 
+        </div>
+      </section>
+
+         
+      <section>
+        <div class="container">
+          <h2 class="header 1">Chapter 2</h2>
+          <div class="r-stack">
+            <div class="left fragment fade-out" data-fragment-index="0">
+              <p>A vegetation survey mapped the basin (Wilson et al. 2019).</p>
+              <ul>
+                <li>Kljun et al. 2015 footprint model</li>
+                <ul>
+                  <li>Half-hourly source area fractions</li>
+                  <li>Footprint climatology</li>
+                </ul>
+              </ul>
+              <table style = "font-size: 50%;" >
+                <tr><th>Class</th><th>Species</th><th>Basin</th><th><i>F<sub>clim</sub></i>[range]</th></tr>
+                <tr><td>Shrub</td><td><i>Salix</i> spp. & <i>Alnus viridis</i></td><td>48%</td><td>36%[0–79]</td></tr>
+                <tr><td>Sedge</td><td><i>Carex aquatilis</i> & <i>Arctophila fulva</i></td><td>29%</td><td>39%[1–78]</td></tr>
+                <tr><td>Grass</td><td><i>Pocacea</i> spp. & <i>Eriophorum angustifolium</i></td><td>12%</td><td>11%[0–56]</td></tr>
+                <tr><td>Sparse</td><td>Sparse veg. & bare ground</td><td>8%</td><td>2%[0–34]</td></tr>
+                <tr><td>Water</td><td><i>Hippuris vulgaris</i> & Open Water</td><td>3%</td><td>0%[0–4]</td></tr>
+                <tr><td>Upland</td><td><i>Salix</i> spp. & <i>Betula nana</i></td><td>0%</td><td>6%[0–15]</td></tr>
+              </table>
+            </div>
+            
+            <div class="left fragment fade-in" data-fragment-index="0">
+              <p>ER and NME measured at 10 plots using vegetated and clipped dark chambers (LaForce 2018).</p>
+              <ul>
+                <li>Only vegetated chambers included</li>
+                <ul>
+                  <img src="images/Chambers.JPG" width="80%" ; style = "border:2px solid #555"></img>
+                </ul>
+              </ul>
+            </div>
+
+          </div>
+          <div class="r-stack">
+            <div class="figure_full fragment fade-out" data-fragment-index="1">
+              <img src="images/Illisarvik_Map.png" height="1200" ; style = "border:2px solid #555"></img>
+            </div>
+            <div class="figure_full fragment current-visible" data-fragment-index="1">
+              Camber fluxes aggregated by vegetation class
+            <img src="images/Chamber_Flux.png" width="80%" ; style = "border:2px solid #555"></img>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2 class="header 1">Chapter 2</h2>
+          <div class="left">
+            <p>Neural Network models were used to:</p>
+            <ul>
+              <li>Identify the dominant flux drivers by iteratively building more complex models</li>
+              <ul>
+                <li>Climate, soil, and source area were used as model inputs</li>
+                <li>"1 Standard Error" rule identified the most parsimonious models</li>
+              </ul>
+              <li>Selected sets of inputs for CO<sub>2</sub> and CH<sub>4</sub> were then used to gap fill the respective flux time series to estimate NEE and NME</li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </section>   
+
+        
+      <section>
+        <div class="container">
+          <h2 class="header 1">Chapter 2</h2>
+          <div class="left">
+            <ul>
+              <li><b>NEE</b>: good agreement with F<sub>CO<sub>2</sub></sub> observations (r<sup>2</sup> = 0.91)</li>
+              <ul>
+                <li>PPFD was the primary driver of GPP</li>
+                <ul>
+                  <li>Modulated by VPD</li>
+                </ul>
+                <li>VWC influenced ER</li>
+                <li>F<sub>Shrub</sub> had weak influence</li>
+              </ul>
+              <li><b>NME</b>: reasonable agreement with F<sub>CH<sub>4</sub></sub> observations (r<sup>2</sup> = 0.62)</li>
+              <ul>
+                <li>F<sub>Sedge</sub> was had strongest influence</li>
+                <ul>
+                  <li>Along with F<sub>Shrub</sub> (strong correlation)</li>
+                </ul>
+                <li>VWC and T<sub>s</sub> drove fluxes</li>
+                <li>U had a weak influence</li>
+                <ul>
+                  <li>Possibly influenced transport</li>
+                </ul>
+                <ul>
+              </ul>
+            </ul>
+          </div>
+          <div class="figure_full">
+            <img src="images/NN_Illisarvik.png" width="100%" ; style = "border:2px solid #555"></img>
+          </div>
+        </div>
+      </section>   
+
+      
+      <section>
+        <div class="container">
+          <h2 class="header 1">Chapter 3</h2>
+          <div class="left">
+            <p>Estimating ER by projecting to "nighttime" conditions: </p>
+            <ul>
+              <li>The NN outperformed two common partitioning methods </li>
+              <table style="font-size: 70%;">
+                <tr><td>NN</td><td>r<sup>2</sup> = 0.58</td><td>RMSE = 0.23 μmol m<sup>-2</sup> s<sup>-1</sup></td></tr>
+                <tr><td>Q10</td><td>r<sup>2</sup> = 0.32</td><td>RMSE = 0.28 μmol m<sup>-2</sup> s<sup>-1</sup></td></tr>
+                <tr><td>Logistic</td><td>r<sup>2</sup> = 0.45</td><td>RMSE = 0.24 μmol m<sup>-2</sup> s<sup>-1</sup></td></tr>
+              </table>
+              <li>Mean ER estimated to be:</li>
+              <ul>
+                <li>1.54 CI<sub>95%</sub> ± 0.87 μmol m<sup>-2</sup> s<sup>-1</sup></li>
+              </ul>
+              <li>Limited chamber samples (2 days) suggest rim/center difference</li>
+            </ul>
+          </div>
+          <div class="figure_full">
+            <img src="images/ER.jpg" height="100%" ; style = "border:2px solid #555">
         </div>
       </section>
 
