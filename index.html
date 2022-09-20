@@ -94,7 +94,7 @@
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  font-size: 65%;
+  /* font-size: 65%; */
   text-align: center;
   display: block;
 }
@@ -108,7 +108,7 @@
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  font-size: 65%;
+  /* font-size: 65%; */
   text-align: center;
   display: block;
 }
@@ -122,7 +122,7 @@
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  font-size: 65%;
+  /* font-size: 65%; */
   text-align: center;
   display: block;
 }
@@ -284,7 +284,7 @@ ol ol li.nl::before {
           </ul>
           </div>
           <div class="figure_full">
-            <img src="images/Fig1.png" width="100%"; style = "border:2px solid #555">
+            <img src="images/Fig1.png" width="90f%"; style = "border:2px solid #555">
             Data Sources: Walker et al. (2005); Pallandt et al. (2021)
           </div>
       </section>
@@ -430,56 +430,21 @@ ol ol li.nl::before {
           <div class="full">
             <p>Gap filling is essential for calculating daily/seasonal/annual budgets from EC observations.</p>
             <ul>
-              <li>EC flux estimation requires specific conditions that can't always be met</li>
-              <ul>
-                <li>Stationarity, turbulent flow, homogenous terrain, etc.</li>
-              </ul>
               <li>Flux partitioning is the standard approach for NEE</li>
               <ul>
                 <li>Night-time methods not possible during polar summer</li>
                 <li>Rapid phenology changes make day-time methods not impractical too</li>
               </ul>
               <li>No standard methods for NME</li>
+              <li><b>Machine Learning</b> approaches</li>
+              <ul>
+                <li>Neural Network (NN) or Random Forest (RF) models</li>
+              </ul>
             </ul>
           </div>
         </div>
       </section>
 
-      <section>
-        <div class="container">
-          <h2 class="header">Machine Learning Methods</h2>
-          <div class="left">
-            <p><b>Random Forests (RF)</b>:</p>
-            <ul>
-              <li>Ensembles of bootstrapped regression trees</li>
-              <ul>
-                <li>Easy to train and implement</li>
-                <li>Resistant to over fitting</li>
-              </ul>
-              <li>Limitations</li>
-              <ul>
-                <li>Incapable of extrapolation</li>
-                <li>No interpretable response functions</li>
-              </ul>
-            </ul>
-          </div>
-          <div class="right">
-            <p><b>Neural Networks (NN)</b>:</p>
-            <ul>
-              <li>Computationally intensive non-linear regression</li>
-              <ul>
-                <li>Universal approximators</li>
-                <li>Prone to over fitting</li>
-              </ul>
-              <li><b>Weights method</b> (Gevery et al. 2003)</li>
-              <ul>
-                <li>Inspection of response functions</li>
-                <li>Verify physical plausibility</li>
-              </ul>
-            </ul>
-          </div>
-        </div>
-      </section>  
 
       <section>
         <div class="container">
@@ -537,7 +502,7 @@ ol ol li.nl::before {
             </div>
             <div class="figure_short fragment current-visible" data-fragment-index="0">
               <img src="images/Illisarvik_Sensors.jpg" width="100%" ; style = "border:2px solid #555">
-              Fish eye view of EC system, feat. reindeer
+              Fish eye view of EC system <br>f feat. reindeer
 
             </div>
           </div>
@@ -586,7 +551,6 @@ ol ol li.nl::before {
           </div>
         </div>
       </section>   
-      
       
       <section>
         <div class="container">
@@ -732,7 +696,7 @@ ol ol li.nl::before {
           </ul>
           </div>
           <div class="figure_short">
-            Drone video from Fish Island, July 2017
+            Drone video from Fish Island <br> July 2017
             <iframe src="videos/SiteTour.mp4" style="width:100%; height: 70%; border:2px solid #555"></iframe>
           </div>
         </div>
@@ -751,7 +715,7 @@ ol ol li.nl::before {
             </table>
           </div>
           <div class="figure_full">
-            <img src="images/FI_Survey.jpg" height="1200" ; style = "border:2px solid #555"></img>
+            <img src="images/FI_Survey.jpg" height="100%" ; style = "border:2px solid #555"></img>
           </div>
         </div>
       </section>
@@ -929,61 +893,62 @@ ol ol li.nl::before {
 
       <section>
         <div class="container">
-          <h2 class="header 1">Data & Methods</h2>
+          <h2 class="header 1">Objectives</h2>
           <div class="full">
-            <p>Eleven years of climate data were available from an automated weather station (AWS) at Fish Island</p>
+            <p>The observations from Fish Island help to fill a knowledge gap.</p>
             <ul>
-              <li>Data was paired with ECMWF reanalysis and MODIS data to conduct a temporal upscaling experiment</li>
+              <li><b>However</b>, one growing season of data is insufficient</li>
               <ul>
-                <li>Constructed a Flux Driver Time Series spanning "snow-free" seasons from 2009 - 2019</li>
-                <ul>
-                  <li>Investigated inter-annual variability</li>
-                  <li>Estimated NEE and NME using NN models described in Chapter 3</li>
-                  <li>Compared growing seasons to shoulder seasons</li>
-                </ul>
+                <li>Observations require more context</li>
               </ul>
-              <li>Additional LANDSAT8 data were used to create landscape classification</li>
+              <li>Eleven years of climate data are available for Fish Island</li>
               <ul>
-                <li>Estimate coverage of LCP ecosystem across Fish Island</li>
+                <li>The EC station was close to an automated weather station (AWS)</li>
+                <ul>
+                  <li>R<sub>N</sub>, T<sub>a</sub>, U, and Rainfall</li>
+                  <li>Can be used to provide context and expand upon observations</li>
+                </ul>
               </ul>
             </ul>
           </div>
         </div>
       </section>
 
-      
+      <section>
+        <div class="container">
+          <h2 class="header 1">Data & Methods</h2>
+          <div class="full">
+            <p>A <b>Flux Driver Time Series (FDTS)</b> was constructed to conduct a temporal upscaling experiment.</p>
+            <ul>
+              <li>Spanned 2009 - 2019 "snow-free" seasons</li>
+              <li>AWS data paired with ECMWF reanalysis and MODIS data</li>
+              <li>Ordinary Least Squares (OLS) regression models were trained on 2017 bio-climate data</li>
+              <ul>
+                <li>Estimated NEE and NME using NN models described in Chapter 3</li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section>
         <div class="container">
           <h2 class="header 1">Data & Methods</h2>
           <div class="left">
-            <p>MODIS data shows snow-free season climatology.</p>
+            <p>LANDSAT8 data were also used to create landscape classification map of Fish Island.</p>
             <ul>
-              <li>Also suggests return interval for flooding was ~ 7 years</li>
+              <li>LCP ecosystem covers majority of the land area</li>
+              <br>
             </ul>
-            <img src="images/snow_season.png" width="90%" ; style = "border:2px solid #555">
-          </div>
-          <div class="figure_full">
-            <img src="images/Map.png" height="75%" ; style = "border:2px solid #555">
-            <table style = "font-size: 75%;" >
+            <table style = "font-size: 70%;" >
               <tr><th>Class</th><th>Coverage</th></tr>
               <tr><td>Low Center Polygons</td><td>53%</td></tr>
               <tr><td>Shrub Tundra</td><td>42%</td></tr>
               <tr><td>Open Water</td><td>5%</td></tr>
             </table>
           </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="container">
-          <h2 class="header 1">Interannual Variability</h2>
-          <div class="left">
-            <img src="images/variability1.png" width="100%" ; style = "border:2px solid #555">
-            </ul>
-          </div>
-          <div class="figure_short">
-            <br>
-            <img src="images/variability.png" width="100%" ; style = "border:2px solid #555">
+          <div class="figure_full">
+            <img src="images/Map.png" height="100%" ; style = "border:2px solid #555">
           </div>
         </div>
       </section>
@@ -992,37 +957,67 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header 1">Results</h2>
           <div class="left">
-            <p>It is unclear whether Fish Island is a net carbon sink.</p>
+            <p>The FDTS gives context to the 2017 field season.</p>
             <ul>
+              <li>MODIS data also gives us snow-free season climatology</li>
+            </ul>
+            <img src="images/snow_season.png" width="90%" ; style = "border:2px solid #555">
+          </div>
+          <div class="figure_full">
+            <img src="images/variability1.png" width="100%" ; style = "border:2px solid #555">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2 class="header 1">Results</h2>
+          <div class="left">
+            <p>It is not clear whether Fish Island is a net carbon sink.</p>
+            <ul>
+              <li>Shoulder season CO<sub>2</sub> emissions may offset growing season uptake</li>
               <li>Fairly consistent growing CO<sub>2</sub> sink and CH<sub>4</sub> source</li>
               <ul>
-                <li>Significant inter-annual variability for CO<sub>2</sub></li>
+                <li>Significant inter-annual variability</li>
               </ul>
-              <li class="fragment current-visible" data-fragment-index="0">Shoulder season CO<sub>2</sub> emissions may offset growing season uptake</li>
             </ul>
           </div>
-          <div class="r-stack">
-            <div class="figure_full fragment fade-out" data-fragment-index="0">
-              <img src="images/variability2.png" height="100%" ; style = "border:2px solid #555">
-            </div>
-            <div class="figure_full fragment current-visible" data-fragment-index="0">
-              <img src="images/range.png" height="100%" ; style = "border:2px solid #555">
-            </div>
+          <div class="figure_full">
+            <img src="images/range.png" width="100%" ; style = "border:2px solid #555">
           </div>
         </div>
       </section>
       
       <section>
         <div class="container">
+          <h2 class="header 1">Interannual Variability</h2>
+          <div class="full">
+            <table style = "font-size: 100%;" >
+              <tr><th>Factor</th><th>NEE</th><th>NME</th><th>Net C</th></tr>
+              <tr><td>Snowmelt Date</td><td>--</td><td>+0.65</td><td>--</td></tr>
+              <tr><td>Flood Date</td><td>--</td><td><b>+0.79</b></td><td>--</td></tr>
+              <tr><td>Max NDVI</td><td><b>-0.71</b></td><td>--</td><td><b>-0.73</b></td></tr>
+              <tr><td>Snowfall</td><td>-0.57</td><td>--</td><td>--</td></tr>
+              <tr><td>Snow-free Season Lenght</td><td><b>+0.64</b></td><td>--</td><td>--</td></tr>
+              <tr><td>Mean July T<sub>a</sub></td><td><b>+0.68</b></td><td>--</td><td><b>+0.64</b></td></tr>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
           <h2 class="header 1">Discussion</h2>
           <div class="full">
-            <p>Temporal upscaling indicated significant interannual variability in growing season NEE and NME at Fish Island.</p>
+            <p>Temporal upscaling indicated significant interannual variability in growing season C exchange.</p>
               <ul>
-                <li> Climate warming could reduce the CO<sub>2</sub> sink strength of Fish Island.</li>
-                <li>Compared to two similar low center polygon ecosystems with long-term eddy covariance records:</li>
+                <li>Climate warming could reduce the CO<sub>2</sub> sink strength</li>
+                <li>Compared to two similar LCP ecosystems with long-term records:</li>
                 <ul>
-                  <li>Fish Island is likely a weaker growing season CO<sub>2</sub> sink and stronger growing season CH<sub>4</sub> source than a low center polygon ecosystem near Utqiagvik, Alaska.</li>
-                  <li>Fish Island may be both a stronger growing season CO<sub>2</sub> sink CH<sub>4</sub> source than a low center polygon ecosystem at Samoylov Island, in the Lena River Delta.</li>
+                  <li>Weaker CO<sub>2</sub> sink and stronger CH<sub>4</sub> source than LCP ecosystem near Utqiagvik, AK.</li>
+                  <li>Stronger CO<sub>2</sub> sink and CH<sub>4</sub> source than LCP ecosystem at Samoylov Island, RU.</li>
+                </ul>
+                <li>Highlights need for long-term monitoring</li>
               </ul>
           </div>
         </div>
@@ -1039,12 +1034,39 @@ ol ol li.nl::before {
 
       <section>
         <div class="container">
-          <h2 class="header 1">Overarching Conclusions</h2>
+          <h2 class="header 1">Summary of Findings</h2>
           <div class="full">
-            <p>Both Illisarvik and Fish Island were growing season CO<sub>2</sub> sinks and CH<sub>4</sub> sources.</p>
+            <p>Both sites were growing season CO<sub>2</sub> sinks and CH<sub>4</sub> sources.</p>
               <ul>
-                <li>Illisarvik was a weak CH<sub>4</sub> source with patches of very high fluxes in wet areas dominated by sedges</li>
-                <li>Fish Island is likely a stronger CH<sub>4</sub> source than comparable ecosystems in Alaska and Siberia</li>
+                <li><b>Illisarvik:</b></li>
+                <ul>
+                  <li>Greater CO<sub>2</sub> uptake and less CH<sub>4</sub> emission than other DTLB studied</li>
+                </ul>
+                <li><b>Fish Island:</b></li>
+                <ul>
+                  <li>Higher CH<sub>4</sub> fluxes than LCP ecosystems in Alaska and Siberia</li>
+                  <li>Mixed results for CO<sub>2</sub> uptake</li>
+                </ul>
+              </ul>
+          </div>
+        </div>
+      </section>
+      
+      <section>
+        <div class="container">
+          <h2 class="header 1">Summary of Findings</h2>
+          <div class="full">
+            <p>Spatial heterogeneity had significant influence over fluxes at both sites.</p>
+              <ul>
+                <li><b>Illisarvik:</b></li>
+                <ul>
+                  <li>Both NEE and NME varied between different vegetation types</li>
+                </ul>
+                <li><b>Fish Island:</b></li>
+                <ul>
+                  <li>Polygonal microtopography had a significant influence over NME</li>
+                  <li>Less significant influence over NEE</li>
+                </ul>
               </ul>
           </div>
         </div>
@@ -1052,13 +1074,22 @@ ol ol li.nl::before {
             
       <section>
         <div class="container">
-          <h2 class="header 1">Overarching Conclusions</h2>
+          <h2 class="header 1">Methodological Contributions</h2>
           <div class="full">
-              <p>Spatial heterogeneity was a significant factor influencing carbon fluxes at Fish Island and Illisarvik.</p>
+              <p>Neural Networks are not "black-box" models when applied carefully.</p>
               <ul>
-                <li>Both NEE and NME at Illisarvik varied significantly between different vegetation types</li>
-                <li>At Fish Island, polygonal microtopography had a significant influence over NME but had no influence over NEE.</li>
-                <li>Neural network analysis and footprint modelling can be combined to help account for, and model the influence of, spatial heterogeneity on eddy covariance flux observations.</li>
+                <li>The weights method helps us understand what the models are actually doing</li>
+                <ul>
+                  <li>To date, had not been applied to EC data</li>
+                </ul>
+                <li>Mapping response functions is a key advantage over Random Forest Models</li>
+                <li>Meticulous application is the key to success</li>
+                <ul>
+                  <li>Repetition (ensembles, bootstrapping, etc.)</li>
+                  <li>Cross validation and early stopping</li>
+                </ul>
+                
+                <li>Can be paired with footprint modelling to help account for spatial heterogeneity</li>
               </ul>
             </ol>
           </div>
@@ -1093,20 +1124,19 @@ ol ol li.nl::before {
           </div>
         </div>
       </section>
-
       
       <section>
         <div class="container">
           <h2 class="header 1">Reflections</h2>
           <div class="full">
-            <p>Future work should focus on sustainable longer-term flux monitoring</p>
-              <li>Short, resource intensive campaigns are a misallocation of resources</li>
+            <p>Future work in the Arctic should focus on long-term flux monitoring.</p>
+            <ul>
+              <li>Short, resource intensive campaigns are not sustainable</li>
+              <li>Prioritize involvement of local stakeholders</li>
               <ul>
-                <li>Tens of thousands of dollars worth of equipment, fuel, & labor for only 4 months of flux data</li>
-              </ul>
-              <li>Prioritize engagement & involvement of local communities for more sustainable research</li>
-              <ul>
-                <li>Technical training & employment will benefit communities</li>
+                <li>Technical training & employment</li>
+                <li>Engagement and education</li>
+                <li>Community support = longer-term viability</li>
               </ul>
           </div>
         </div>
@@ -1130,6 +1160,41 @@ ol ol li.nl::before {
         </div>
       </section>
 
+      <section>
+        <div class="container">
+          <h2 class="header">Machine Learning Methods</h2>
+          <div class="left">
+            <p><b>Random Forests (RF)</b>:</p>
+            <ul>
+              <li>Ensembles of bootstrapped regression trees</li>
+              <ul>
+                <li>Easy to train and implement</li>
+                <li>Resistant to over fitting</li>
+              </ul>
+              <li>Limitations</li>
+              <ul>
+                <li>Incapable of extrapolation</li>
+                <li>No interpretable response functions</li>
+              </ul>
+            </ul>
+          </div>
+          <div class="right">
+            <p><b>Neural Networks (NN)</b>:</p>
+            <ul>
+              <li>Computationally intensive non-linear regression</li>
+              <ul>
+                <li>Universal approximators</li>
+                <li>Prone to over fitting</li>
+              </ul>
+              <li><b>Weights method</b> (Gevery et al. 2003)</li>
+              <ul>
+                <li>Inspection of response functions</li>
+                <li>Verify physical plausibility</li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </section>  
          
       <section>
         <div class="container">
@@ -1182,7 +1247,7 @@ ol ol li.nl::before {
       <section>
         <div class="container">
           <h2 class="header 1">Chapter 2</h2>
-          <div class="left">
+          <div class="full">
             <p>Neural Network models were used to:</p>
             <ul>
               <li>Identify the dominant flux drivers by iteratively building more complex models</li>
@@ -1196,7 +1261,6 @@ ol ol li.nl::before {
           </div>
         </div>
       </section>   
-
         
       <section>
         <div class="container">
@@ -1255,6 +1319,22 @@ ol ol li.nl::before {
           </div>
           <div class="figure_full">
             <img src="images/ER.jpg" height="100%" ; style = "border:2px solid #555">
+        </div>
+      </section>
+
+
+      <section>
+        <div class="container">
+          <h2 class="header 1">Chapter 4</h2>
+          <div class="left">
+            <p>Wide range of possible conditions.</p>
+            <img src="images/variability.png" width="100%" ; style = "border:2px solid #555">
+          </div>
+          <div class="figure_full">
+            <br>
+            <br>
+            <img src="images/variability2.png" width="100%" ; style = "border:2px solid #555">
+          </div>
         </div>
       </section>
 

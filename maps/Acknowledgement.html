@@ -17,14 +17,14 @@ body { margin: 0; padding: 0; }
 mapboxgl.accessToken = 'pk.eyJ1IjoianVuZXNwYWNlYm9vdHMiLCJhIjoiY2twY3g4aXloMWFlcDJzbXN3aG95aG5uZiJ9.mFiJt0MIfL1MiJ2rB2xhKQ';
 
 const Inuvialuit = 'https://native-land.ca/wp-json/nativeland/v1/api/index.php?maps=territories&name=inuvialuit';
-const Salish = 'https://native-land.ca/wp-json/nativeland/v1/api/index.php?maps=territories&name=puget-sound-salish';
+const Salish = 'https://native-land.ca/wp-json/nativeland/v1/api/index.php?maps=territories&position=49.26,-123.26';
 const Sites = 'https://raw.githubusercontent.com/June-Skeeter/ThesisDefense/main/Data/FieldSites.json';
 
-async function getGeoJson(layer) {
+async function getGeoJson(layer, l=0) {
         const data = await fetch(layer);
         const geojson = await data.json();
         if (geojson.constructor === Array){
-            return geojson[0];
+            return geojson[l];
         } else {
             return geojson;
         };
@@ -33,7 +33,7 @@ async function getGeoJson(layer) {
 
 async function mapData(){
     const Inuvialuit_geoJson = await getGeoJson(Inuvialuit)
-    const Salish_geoJson = await getGeoJson(Salish)
+    const Salish_geoJson = await getGeoJson(Salish,l=3)
     const Sites_geoJson = await getGeoJson(Sites)
     console.log(Sites_geoJson)
 
