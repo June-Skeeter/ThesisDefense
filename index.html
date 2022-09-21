@@ -108,7 +108,6 @@
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  /* font-size: 65%; */
   text-align: center;
   display: block;
 }
@@ -135,6 +134,10 @@
  text-align: left;
  position: absolute; 
   display: flex;
+}
+
+.caption {
+  font-size: 70%;
 }
 
 h1 {
@@ -198,7 +201,18 @@ ol ol li.nl::before {
     left:0%;
     orphans: 3;
   } 
+  
+sup {
+  line-height: 0;
+  vertical-align: top;
+  font-size: 0.6em !important;
+  }
 
+sub {
+  line-height: 0;
+  vertical-align: bottom;
+  font-size: 0.6em !important;
+  }
 
 #main img {
     float: left;
@@ -225,8 +239,8 @@ ol ol li.nl::before {
           <div class="left">
             <p>I would like to acknowledge the Indigenous territories on which this work took place.</p>
             <ul>
+              <li>The study area was in the Inuvialuit Settlement Region</li>
               <li>I have been living and working in unceded Coast Salish territory</li>
-              <li>Field work was conducted in the Inuvialuit Settlement Region</li>
             </ul>
           </div>
           <div class="right">
@@ -266,7 +280,7 @@ ol ol li.nl::before {
           </div>
             <div class="figure_short">
               <img src="images/CMIP.png" width="100%"; style = "border:2px solid #555">
-              Data Source: IPCC (2021)
+              <p class="caption">Source: IPCC (2021)</p>
             </div>
       </section>
       
@@ -284,8 +298,8 @@ ol ol li.nl::before {
           </ul>
           </div>
           <div class="figure_full">
-            <img src="images/Fig1.png" width="90f%"; style = "border:2px solid #555">
-            Data Sources: Walker et al. (2005); Pallandt et al. (2021)
+            <img src="images/Fig1.png" width="100%"; style = "border:2px solid #555">
+            <p class="caption">Sources: Walker et al. (2005); Pallandt et al. (2021)</p>
           </div>
       </section>
 
@@ -293,7 +307,7 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header">Tundra Ecosystems</h2>
           <div class="left">
-            <p>Harsh conditions limit vegetation growth.</p>
+            <p>Harsh conditions stunt vegetation.</p>
               <ul>
                 <li>Summers are brief but productive</li>
                 <li>Winters are long, dark, and frigid</li>
@@ -304,7 +318,7 @@ ol ol li.nl::before {
             </div>
             <div class="figure_short">
               <img src="images/Tundra_Veg.JPG" width="575"; style = "border:2px solid #555">
-              Reindeer grazing on willow shrubs at Illisarvik
+              <p class="caption">Reindeer grazing at Illisarvik</p>
             </div>
         </div>
       </section>
@@ -313,20 +327,24 @@ ol ol li.nl::before {
         <div class="container">
           <h2 class="header">Tundra Ecosystems</h2>
           <div class="left">
-            <p><b>Permafrost</b> is widespread in tundra environments.</p>
+            <p><b>Permafrost</b> is nearly ubiquitous in the Arctic.</p>
               <ul>
-                <li>Root growth and microbial activity occur in the <b>active layer</b></li>
+                <li><b>Active layer</b> thaws seasonally</li>
                 <ul>
-                  <li>Thaws seasonally</li>
+                  <li>Root growth</li>
+                  <li>Microbial activity</li>
                 </ul>
-                <li>Restricted drainage leads to elevated <b>water tables</b></li>
+                <li><b>Water tables</b> are often elevated</li>
                 <ul>
-                  <li>Inhibits decomposition</li>
+                  <li>Restricted drainage</li>
+                  <li>Low evapotranspiration</li>
                 </ul>                
               </ul>                
           </div>
           <div class="figure_full">
-            <img src="images/Permafrost.png" width="575"; style = "border:2px solid #555">
+            <br>
+            <br>
+            <img src="images/Permafrost.png" width="100%"; style = "border:2px solid #555">
           </div>
 
         </div>
@@ -334,64 +352,77 @@ ol ol li.nl::before {
 
       <section>
         <div class="container">
-          <h2 class="header">Tundra Carbon Balance</h2>
+          <h2 class="header">Net Ecosystem Exchange (NEE)</h2>
           <div class="left">
-            <p>Net Ecosystem Exchange (NEE) of CO<sub>2</sub> is the primary component.</p>
+            <p>NEE = ER - GPP</p>
               <ul>
-                <li>NEE = ER - GPP</li>
+                <li><b>GPP</b>: Gross Primary Productivity</li> 
                 <ul>
-                  <li><b>GPP</b>: Gross Primary Productivity</li> 
-                  <ul>
-                    <li>Photosynthetic uptake of CO<sub>2</sub></li>
-                  </ul>
-                  <li><b>ER</b>: Ecosystem Respiration</li> 
-                  <ul>
-                    <li>Autotrophic (RA) + Heterotrophic (RH)</li>
-                  </ul>
+                  <li>Photosynthetic uptake of CO<sub>2</sub></li>
                 </ul>
-                <li>-/+ NEE (uptake/emission)</li>
+                <li><b>ER</b>: Ecosystem Respiration</li> 
+                <ul>
+                  <li>Autotrophic (RA)</li>
+                  <li>Heterotrophic (RH)</li>
+                </ul>
+                <li>Sign convention</li>
+                <ul>
+                  <li>-NEE = uptake</li>
+                  <li>+NEE = emission</li>
+                </ul>
               </ul>                
           </div>
           <div class="figure_full">
-            <img src="images/Permafrost_NEE.png" width="575"; style = "border:2px solid #555">
+            <br>
+            <br>
+            <img src="images/Permafrost_NEE.png" width="100%"; style = "border:2px solid #555">
           </div>
         </div>
       </section>
           
       <section>
         <div class="container">
-          <h2 class="header">Tundra Carbon Balance</h2>
+          <h2 class="header">Net Methane Exchange (NME)</h2>
           <div class="left">
-            <p>Net Methane Exchange (NEE) of CH<sub>4</sub> is a secondary component.</p>
+            <p>NME = Production - Consumption</p>
               <ul>
-                <li>NME = Production - Consumption</li>
+                <li><b>Methanogenesis</b> </li>
                 <ul>
-                  <li>Methanogenesis in anoxic soils</li>
-                  <ul>
-                    <li>Slower pathway</li>
-                  </ul>
-                  <li>Methanotropy in aerobic soils</li>
-                  <li>Complex non-linear dynamics</li>
+                  <li>CH<sub>4</sub> production in anoxic soils</li>
                 </ul>
-                <li>-/+ NME (uptake/emission)</li>
+                <li><b>Methanotropy</b></li>
+                <ul>
+                  <li>CH<sub>4</sub> consumption in aerobic soils</li>
+                  <li>CH<sub>4</sub> converted to CO<sub>2</sub></li>
+                </ul>
+                <li>Sign convention</li>
+                <ul>
+                  <li>-NME = uptake</li>
+                  <li>+NME = emission</li>
+                </ul>
               </ul>                
           </div>
           <div class="figure_full">
-            <img src="images/Permafrost_Cbal.png" width="575"; style = "border:2px solid #555">
+            <br>
+            <br>
+            <img src="images/Permafrost_Cbal.png" width="100%"; style = "border:2px solid #555">
           </div>
         </div>
       </section>
 
       <section>
         <div class="container">
-        <h2 class="header">Mackenzie Delta</h2>
+        <h2 class="header">Mackenzie River Delta</h2>
           <div class="left">
             <p>The Arctic's 2<sup>nd</sup> largest river delta.</p>
             <ul>
               <li>Aircraft observations of NME (Kohnert et al. 2017 & 2018)</li>
               <ul>
                 <li>Gas hydrate seeps in south / west</li>
-                <li>Significant biologic emissions north of tree line (31.8 - 58.4 mg CH<sub>4</sub> m<sup>−2</sup> d<sup>−1</sup>)</li>
+                <li>Biologic emissions north of tree line</li>
+                <ul>
+                  <li>31.8 - 58.4 mg CH<sub>4</sub> m<sup>−2</sup> d<sup>−1</sup></li>
+                </ul>
               </ul>
               <li>No prior studies of NEE</li>
             </ul>
@@ -411,10 +442,15 @@ ol ol li.nl::before {
               <li>Illisarvik in 2016</li>
               <ul>
                 <li><b>Drained Thermokarst Lake Basin (DTLB)</b></li>
+                <li>Tuktoyaktuk Costal Plain</li>
+                <ul>
+                  <li>Not technically in the Delta</li>
+                </ul>
               </ul>
               <li>Fish Island in 2017</li>
               <ul>
                 <li><b>Low Center Polygon (LCP)</b> tundra peatland</li>
+                <li>Big Lake Delta Plain</li>
               </ul>
             </ul>
           </div>
