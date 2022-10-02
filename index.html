@@ -67,6 +67,15 @@
   text-align: left;
 }
 
+.left_wide {
+  width: 59%;
+  height: 80%;
+  top: 12%;
+  left: 0%;
+  position: absolute;
+  text-align: left;
+}
+
 .left_skinny {
   width: 39%;
   height: 80%;
@@ -112,6 +121,20 @@
   display: block;
 }
 
+.figure_narrow {
+  width: 40%;
+  height: 95%;
+  left: 60%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  /* font-size: 65%; */
+  text-align: center;
+  display: block;
+}
+
 .figure_wide {
   width: 60%;
   height: 70%;
@@ -137,7 +160,9 @@
 }
 
 .caption {
-  font-size: 70%;
+  text-align: center;
+  font-weight: bold;
+  /* font-size: 70%; */
 }
 
 h1 {
@@ -186,6 +211,7 @@ li.nl {
 li.nl:before {
   content: counters(item, ".") ". ";
   counter-increment: item;
+  font-weight: bold;
 }
 
 ol ol li.nl::before {
@@ -268,13 +294,10 @@ sub {
           <div class="left">
             <p>Arctic amplification is accelerating climate change in the northern high latitudes, leading to:</p>
             <ul>
-              <li>Decreased snow and ice cover</li>
-              <li>Changing precipitation patterns</li>
-              <li>Permafrost degradation</li>
-              <li>Extending growing seasons</li>
-              <li>Changing carbon (C) balances</li>
+              <li>Permafrost degradation, extending growing seasons, etc.</li>
               <ul>
-                <li>Influences the rate of warming globally</li>
+                <li>Changing ecosystem carbon (C) balances</li>
+                <li>Influencing the rate of warming globally</li>
               </ul>
           </ul>
           </div>
@@ -336,8 +359,8 @@ sub {
                 </ul>
                 <li><b>Water tables</b> are often elevated</li>
                 <ul>
-                  <li>Restricted drainage</li>
-                  <li>Low evapotranspiration</li>
+                  <li>Inhibits decomposition</li>
+                  <li>Promotes C accumulation</li>
                 </ul>                
               </ul>                
           </div>
@@ -412,22 +435,21 @@ sub {
 
       <section>
         <div class="container">
-        <h2 class="header">Mackenzie River Delta</h2>
-          <div class="left">
-            <p>The Arctic's 2<sup>nd</sup> largest river delta.</p>
+        <h2 class="header">Study Area</h2>
+          <div class="left_wide">
+            <p>Two ecosystems in the Mackenzie Delta Region we studied.</p>
             <ul>
-              <li>Aircraft observations of NME (Kohnert et al. 2017 & 2018)</li>
+              <li>Arctic's 2<sup>nd</sup> largest river delta</li>
               <ul>
-                <li>Gas hydrate seeps in south / west</li>
-                <li>Biologic emissions north of tree line</li>
+                <li>No prior studies of NEE</li>
+                <li>Kohnert et al. (2018) measured summer NME with aircraft</li>
                 <ul>
-                  <li>31.8 - 58.4 mg CH<sub>4</sub> m<sup>−2</sup> d<sup>−1</sup></li>
+                  <li>Estimated fluxes were [31.8 - 58.4 mg] CH<sub>4</sub> m<sup>−2</sup> d<sup>−1</sup> north of the tree line</li>
                 </ul>
               </ul>
-              <li>No prior studies of NEE</li>
             </ul>
           </div>
-          <div class="figure_full">
+          <div class="figure_narrow">
             <img src="images/DeltaMap.png" height="1200" ; style = "border:2px solid #555"></img>
           </div>
         </div>
@@ -435,9 +457,9 @@ sub {
 
       <section>
         <div class="container">
-        <h2 class="header">Study Sites</h2>
-          <div class="left">
-            <p>Fluxes of CO<sub>2</sub> and CH<sub>4</sub> were measured at two sites.</p>
+        <h2 class="header">Study Area</h2>
+          <div class="left_wide">
+            <p>Two ecosystems in the Mackenzie Delta Region we studied.</p>
             <ul>
               <li>Illisarvik in 2016</li>
               <ul>
@@ -454,7 +476,7 @@ sub {
               </ul>
             </ul>
           </div>
-          <div class="figure_full">
+          <div class="figure_narrow">
             <img src="images/DeltaMap.png" height="1200" ; style = "border:2px solid #555"></img>
           </div>
         </div>
@@ -462,25 +484,23 @@ sub {
 
       <section>
         <div class="container">
-        <h2 class="header">Gap Filling</h2>
+        <h2 class="header">Machine Learning</h2>
           <div class="full">
             <p>Gap filling is essential for calculating daily/seasonal/annual budgets from EC observations.</p>
             <ul>
-              <li>Flux partitioning is the standard approach for NEE</li>
+              <li>Flux partitioning is the standard approach for NEE, no standard methods for NME</li>
               <ul>
-                <li>Night-time methods not possible during polar summer</li>
-                <li>Rapid phenology changes make day-time methods not impractical too</li>
+                <li>Night-time partitioning not possible during polar summer</li>
+                <li>Rapid phenology changes make day-time methods impractical too</li>
               </ul>
-              <li>No standard methods for NME</li>
-              <li><b>Machine Learning</b> approaches</li>
+              <li>Neural Network (NN) methods offer a flexible alternative</li>
               <ul>
-                <li>Neural Network (NN) or Random Forest (RF) models</li>
+                <li>Universal approximators that make no prior assumptions</li>
               </ul>
             </ul>
           </div>
         </div>
       </section>
-
 
       <section>
         <div class="container">
@@ -489,11 +509,13 @@ sub {
             <p>Advance our understanding of the dynamics governing growing season C exchange in the Mackenzie Delta Region.</p>
             <ol>
               <li class="nl">Measure CO<sub>2</sub> and CH<sub>4</sub> fluxes and use gap-filling to estimate NEE and NME at Illisarvik and Fish Island</li>
+              &nbsp;
               <li class="nl">Use NN models to study controls of ecosystem scale NEE and NME</li>
                 <ol>
                   <li class="nl">Identify flux drivers and map functional relationships</li>
                   <li class="nl">Investigate the influence of spatial heterogeneity</li>
                 </ol>
+                &nbsp;
               <li class="nl">Conduct a temporal upscaling experiment to study the possible influence of climate variability on growing season NEE and NME at Fish Island</li>
             </ol>
           </div>
@@ -521,14 +543,15 @@ sub {
                   <li>Collocated climate sensors</li>
                   <li>Two satellite soil stations</li>
                 </ul>
-                  <li>Fluxes calculated with EddyPro</li>
+                <li>Fluxes calculated with EddyPro</li>
+                <ul>
+                  <li>Post processing:</li>
                   <ul>
-                    <li>Post processing:</li>
-                    <ul>
-                      <li>QC filtering (Mauder and Foken 2004)</li>
-                      <li>Storage correction, u<sub><sub>*</sub></sub> filtering, and spike removal (Papale et al. 2006)</li>
-                    </ul>
-                </ul>
+                    <li>QC filtering</li>
+                    <li>u<sub>*</sub> filtering</li>
+                    <li>Spike removal</li>
+                  </ul>
+              </ul>
             </ul>
           </div>
           <div class="r-stack">
@@ -538,7 +561,7 @@ sub {
             </div>
             <div class="figure_short fragment current-visible" data-fragment-index="0">
               <img src="images/Illisarvik_Sensors.jpg" width="100%" ; style = "border:2px solid #555">
-              Fish eye view of EC system <br>f feat. reindeer
+              Fish eye view of EC system <br>feat. reindeer
 
             </div>
           </div>
@@ -577,12 +600,11 @@ sub {
               <ul>
                 <li>Climate, soil, and source area fractions were used as model inputs</li>
                 <ul>
-                  <li>iteratively built models</li>
+                  <li>Iteratively built models</li>
                 </ul>
               </ul>
-              <li>Selected inputs used to estimate NEE and NME</li>
+              <li>Estimate NEE and NME with selected drivers</li>
               <li>Response functions inspected to investigate functional relationships</li>
-              </ul>
             </ul>
           </div>
         </div>
@@ -617,7 +639,7 @@ sub {
 
       <section>
         <div class="container">
-          <h2 class="header 1">Flux response functions</h2>
+          <h2 class="header 1">Response Functions</h2>
           <div class="left">
             <p>Four key drivers of <b>NEE</b>: <br> PPFD, VPD, VWC, & F<sub>Shrub</sub>.</p>
             <ul>
@@ -645,7 +667,7 @@ sub {
       
       <section>
         <div class="container">
-          <h2 class="header 1">Results</h2>
+          <h2 class="header 1">Response Functions</h2>
           <div class="left">
             <p>Five key drivers of <b>NNE</b>: <br>F<sub>Sedge</sub>, VWC, T<sub>s</sub>, F<sub>Shrub</sub> & U.</p>
             <ul>
@@ -682,14 +704,8 @@ sub {
               <li>NME was lower than observed in other young DTLB</li>
               <li>Illisarvik will continue to evolve, taking one of two paths:</li>
               <ul>
-                <li>Sedge wetlands</li>
-                <ul>
-                  <li>NME will increase significantly</li>
-                </ul>
-                <li>Shrub dominated</li>
-                <ul>
-                  <li>NME would remain similar to current levels</li>
-                </ul>
+                <li>Sedge wetlands > NME will increase significantly</li>
+                <li>Shrub dominated > NME would remain similar to current levels</li>
               </ul>
               <li>Long-term observation needed to better understand the implications</li>
               <ul>
@@ -719,21 +735,22 @@ sub {
               <ul>
                 <li>CSAT3, LI-7200, and LI-7700</li>
                 <li>Collocated climate sensors</li>
-                <li>Three satellite soil stations</li>
+                <li>Two satellite soil stations</li>
               </ul>
-                <li>Fluxes calculated with EddyPro</li>
+              <li>Fluxes calculated with EddyPro</li>
+              <ul>
+                <li>Post processing:</li>
                 <ul>
-                  <li>Post processing:</li>
-                  <ul>
-                    <li>QC filtering (Mauder and Foken 2004)</li>
-                    <li>Storage correction, u<sub><sub>*</sub></sub> filtering, and spike removal (Papale et al. 2006)</li>
-                  </ul>
-              </ul>
+                  <li>QC filtering</li>
+                  <li>u<sub>*</sub> filtering</li>
+                  <li>Spike removal</li>
+                </ul>
+            </ul>
           </ul>
           </div>
           <div class="figure_short">
-            Drone video from Fish Island <br> July 2017
-            <iframe src="videos/SiteTour.mp4" style="width:100%; height: 70%; border:2px solid #555"></iframe>
+             Fish Island EC Station July 2017
+            <iframe src="videos/SiteTour.mp4" style="width:100%; height: 75%; border:2px solid #555"></iframe>
           </div>
         </div>
       </section>
@@ -995,12 +1012,13 @@ sub {
           <div class="left">
             <p>The FDTS gives context to the 2017 field season.</p>
             <ul>
-              <li>MODIS data also gives us snow-free season climatology</li>
+              <li>MODIS data also gives snow-free season climatology</li>
             </ul>
             <img src="images/snow_season.png" width="90%" ; style = "border:2px solid #555">
           </div>
           <div class="figure_full">
-            <img src="images/variability1.png" width="100%" ; style = "border:2px solid #555">
+            <p>Conditions by Snow-free Season </p>
+            <img src="images/variability1.png" width="90%" ; style = "border:2px solid #555">
           </div>
         </div>
       </section>
@@ -1028,6 +1046,7 @@ sub {
         <div class="container">
           <h2 class="header 1">Interannual Variability</h2>
           <div class="full">
+            <p class="caption">Spearman Correlation Analysis</p>
             <table style = "font-size: 100%;" >
               <tr><th>Factor</th><th>NEE</th><th>NME</th><th>Net C</th></tr>
               <tr><td>Snowmelt Date</td><td>--</td><td>+0.65</td><td>--</td></tr>
