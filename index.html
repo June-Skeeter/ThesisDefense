@@ -445,7 +445,7 @@ sub {
                 <li>No prior assumptions</li>
                 <li>Universal approximators</li>
                 <ul>
-                  <li>Capable of mapping any continuous function to an arbitrary degree of accuracy </li>
+                  <li>Capable of mapping any continuous function to an arbitrary degree of accuracy</li>
                 </ul>
               </ul>
             </ul>
@@ -570,21 +570,28 @@ sub {
       <section>
         <div class="container">
           <h2 class="header 1">Data & Methods</h2>
-          <div class="left" data-fragment-index="0">
-            <p>Kljun et al. (2015) flux footprints overlaid on vegetation map.</p>
+          <div class="left_wide" data-fragment-index="0">
+            <p>Kljun et al. (2015) flux footprints overlaid on Wilson et al. (2019) vegetation map.</p>
             <table style = "font-size: 60%;" >
-              <tr><th>Class</th><th>Species</th><th>Basin</th><th><i>F<sub>clim</sub></i>[range]</th></tr>
+              <colgroup>
+                <col span="1" width="15%">
+                <col span="1" width="40%">
+                <col span="1" width="15%">
+                <col span="1" width="30%">
+              </colgroup>
+              <tr><th>Class</th><th>Dominant Species</th><th>Landscape Fraction</th><th>Flux Climatology F<sub>clim</sub> [min - max]</th></tr>
               <tr><td>Shrub</td><td><i>Salix</i> spp. & <i>Alnus viridis</i></td><td>48%</td><td>36%[0–79]</td></tr>
               <tr><td>Sedge</td><td><i>Carex aquatilis</i> & <i>Arctophila fulva</i></td><td>29%</td><td>39%[1–78]</td></tr>
               <tr><td>Grass</td><td><i>Pocacea</i> spp. & <i>Eriophorum angustifolium</i></td><td>12%</td><td>11%[0–56]</td></tr>
-              <tr><td>Sparse</td><td>Sparse veg. & bare ground</td><td>8%</td><td>2%[0–34]</td></tr>
-              <tr><td>Water</td><td><i>Hippuris vulgaris</i> & Open Water</td><td>3%</td><td>0%[0–4]</td></tr>
+              <tr><td>Sparse</td><td>Sparse veg. / bare ground</td><td>8%</td><td>2%[0–34]</td></tr>
+              <tr><td>Water</td><td><i>Hippuris vulgaris</i></td><td>3%</td><td>0%[0–4]</td></tr>
               <tr><td>Upland</td><td><i>Salix</i> spp. & <i>Betula nana</i></td><td>0%</td><td>6%[0–15]</td></tr>
             </table>
           </div>
           
-          <div class="figure_full">
-            <img src="images/Illisarvik_Map.png" height="1200" ; style = "border:2px solid #555"></img>
+          <div class="figure_narrow">
+            <br>
+            <img src="images/Illisarvik_Map.png" width="100%" ; style = "border:2px solid #555"></img>
           </div>
         </div>
       </section>
@@ -814,7 +821,7 @@ sub {
                 <li>Senescence in late August</li>
               </ul>
             </div>
-            <img src="images/FI_wx.jpg" height="100%" ; style = "border:2px solid #555">
+            <img src="images/Fig3.jpg" height="100%" ; style = "border:2px solid #555">
           </div>
         </div>
       </section>
@@ -822,21 +829,25 @@ sub {
       <section>
         <div class="container">
           <h2 class="header 1">Results</h2>
-          <div class="r-stack">
           <div class="left_skinny">
-            <p>Net C sink over the 2017 growing season.</p>
+            <p>Net growing season C sink.</p>
             <ul>
-              <li>Net CO<sub>2</sub> sink</li>
+              <li>NEE</li>
               <ul>
                 <li>-0.60 CI<sub>95%</sub> ±0.04 μmol m<sup>-2</sup>s<sup>-1</sup></li>
               </ul>
-              <li>Net CH<sub>4</sub> source</li>
+              <li>NME</li>
               <ul>
                 <li>27.7 CI<sub>95%</sub> ±0.35 nmol m<sup>-2</sup>s<sup>-1</sup></li>
               </ul>
-              <li class="fragment fade-in" data-fragment-index="0">Diel cycle for NEE <b>and</b> NME</li>
+              <li>Data gaps</li>
               <ul>
-                <li class="fragment fade-in" data-fragment-index="0">CO<sub>2</sub> and CH<sub>4</sub> fluxes were negatively correlated <br>(r<sup>2</sup> = 0.40)</li>
+                <li>Power supply</li>
+                <li>Low signal strength (NME)</li>
+              </ul>
+              <li class="fragment fade-in" data-fragment-index="0">Diel cycles</li>
+              <ul>
+                <li class="fragment fade-in" data-fragment-index="0">CO<sub>2</sub> and CH<sub>4</sub> were negatively correlated (r<sup>2</sup> = 0.40)</li>
               </ul>
             </ul>
           </div>
@@ -870,8 +881,8 @@ sub {
           </div>
           <div class="r-stack">
             <div class="figure_wide fragment fade-out" data-fragment-index="0">
-              <p>First derivatives of selected flux drivers</p>
-              <img src="images/NEE_deriv.jpg" width="100%" ; style = "border:2px solid #555">
+              <p>First derivatives of selected drivers</p>
+              <img src="images/Fig6_Revised.jpg" width="100%" ; style = "border:2px solid #555">
             </div>
             <div class="figure_wide fragment current-visible" data-fragment-index="0">
               <p>Flux response functions</p>
@@ -899,8 +910,8 @@ sub {
           </div>
           <div class="r-stack">
             <div class="figure_wide fragment fade-out" data-fragment-index="0">
-              <p>First derivatives of selected flux drivers</p>
-              <img src="images/NME_deriv.jpg" width="100%" ; style = "border:2px solid #555">
+              <p>First derivatives of selected drivers</p>
+              <img src="images/Fig9_Revised.jpg" width="100%" ; style = "border:2px solid #555">
             </div>
             <div class="figure_wide fragment current-visible" data-fragment-index="0">
               <p>Flux response functions</p>
