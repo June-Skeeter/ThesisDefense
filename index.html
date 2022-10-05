@@ -314,7 +314,6 @@ sub {
           </div>
             <div class="figure_short">
               <img src="images/CMIP.png" width="100%"; style = "border:2px solid #555">
-              <!-- <p class="caption">Source: IPCC (2021)</p> -->
             </div>
       </section>
       
@@ -333,7 +332,6 @@ sub {
           </div>
           <div class="figure_short">
             <img src="images/Fig1.png" height="100%"; style = "border:2px solid #555">
-            <!-- <p class="caption">Sources: Walker et al. (2005); Pallandt et al. (2021)</p> -->
           </div>
       </section>
 
@@ -473,7 +471,7 @@ sub {
                 <li>No prior studies of NEE</li>
                 <li>Kohnert et al. (2018) measured summer NME with aircraft</li>
                 <ul>
-                  <li>Estimated fluxes were [31.8 - 58.4 mg] CH<sub>4</sub> m<sup>−2</sup> d<sup>−1</sup> north of the tree line</li>
+                  <li>[31.8 - 58.4 mg] CH<sub>4</sub> m<sup>−2</sup> d<sup>−1</sup> north of the tree line</li>
                 </ul>
               </ul>
             </ul>
@@ -934,7 +932,7 @@ sub {
               <!-- <p>First derivatives of selected drivers</p> -->
             </div>
             <div class="figure_short fragment current-visible" data-fragment-index="0">
-              <img src="images/NME_project.jpg" width="100%" ; style = "border:2px solid #555">
+              <img src="images/Fig10_Revised.jpg" width="100%" ; style = "border:2px solid #555">
               <p>Flux response functions</p>
             </div>            
           </div>
@@ -958,7 +956,7 @@ sub {
               <ul>
                 <li>Location bias had minor influence over NME</li>
                 <ul>
-                  <li>NN projections suggest landscape scale NME ~1 nmol m<sup>-2</sup> s<sup>-1</sup> lower</li>
+                  <li>NN projections suggest landscape scale NME was ~1 nmol m<sup>-2</sup> s<sup>-1</sup> lower</li>
                 </ul>
               </ul>
             </ol>
@@ -1029,11 +1027,10 @@ sub {
         <div class="container">
           <h2 class="header"><b>Chapter 4:</b> Results</h2>
           <div class="left">
-            <!-- <p>Red lines/stars correspond to 2017.</p> -->
+            <p>Substantial inter-annual variability.</p>
             <img src="images/DailyValues.png" width="90%" ; style = "border:2px solid #555">
           </div>
           <div class="figure_full">
-            <!-- <p>Conditions by Snow-free Season </p> -->
             <img src="images/AnnualDrivers.png" width="90%" ; style = "border:2px solid #555">
           </div>
         </div>
@@ -1120,7 +1117,7 @@ sub {
                 <tr><th></th><th>Illisarvik</th><th>Fish Island</th></tr>
                 <tr><td>NEE</td><td>Greater uptake than DTLB studied elsewhere</td><td>Mixed finding</td></tr>
                 <tr><td>NME</td><td>Lower emission than DTLB studied elsewhere</td><td>Higher emission than LCP ecosystems studied elsewhere</td></tr>
-                <tr><td>Spatial Heterogeneity</td><td>Substantial variability, diverse vegetation communities</td><td>Small scale variability, regularly repeating features &thickapprox; heterogeneous at larger scale</td></tr>
+                <tr><td>Spatial Heterogeneity</td><td>Substantial variability, diverse vegetation communities</td><td>Small scale variability, repeating features &thickapprox; heterogeneous at larger scale</td></tr>
                 <tr><td>Long-term Outlook</td><td>Depends on trajectory (shrub/sedge)</td><td>Potentially reduced C uptake with climate warming</td></tr>
               </table>
           </div>
@@ -1161,14 +1158,17 @@ sub {
               <ul>
                 <li>Interannual variability can have a significant impact on net fluxes</li>
               </ul>
+              &nbsp;
               <li class="nl">Cold season dynamics:</li>
               <ul>
                 <li>Extended senescent periods could offset growing season uptake</li>
               </ul>
+              &nbsp;
               <li class="nl">Methane fluxes:</li>
               <ul>
                 <li>Pressure pumping</li>
               </ul>
+              &nbsp;
               <li class="nl">Network architecture</li>
               <ul>
                 <li>Multi-layer models to simulate GPP and ER separately</li>
@@ -1191,8 +1191,7 @@ sub {
               </ul>
               <li>Prioritize involvement of local stakeholders</li>
               <ul>
-                <li>Technical training & employment</li>
-                <li>Engagement and education</li>
+                <li>Technical training, employment, & education</li>
                 <li>Community support = longer-term viability</li>
               </ul>
           </div>
@@ -1244,24 +1243,12 @@ sub {
               </ul>
             </ul>
           </div>
-          <div class="right">
-            <p><b>Neural Networks (NN)</b>:</p>
-            <ul>
-              <li>Computationally intensive non-linear regression</li>
-              <ul>
-                <li>Universal approximators</li>
-                <li>Prone to over fitting</li>
-              </ul>
-              <li><b>Weights method</b> (Gevery et al. 2003)</li>
-              <ul>
-                <li>Inspection of response functions</li>
-                <li>Verify physical plausibility</li>
-              </ul>
-            </ul>
+          <div class="figure_short">
+            <img src="images/RF_ex.png" width="70%" ; style = "border:2px solid #555"></img>
           </div>
         </div>
       </section>  
-         
+
       <section>
         <div class="container">
           <h2 class="header">Chapter 2</h2>
@@ -1297,6 +1284,20 @@ sub {
         </div>
       </section>   
 
+      <section>
+        <div class="container">
+          <h2 class="header">Chapter 3</h2>
+          <div class="left">
+            <p>Impact of sensor location bias at Fish Island.</p>
+            <ul>
+              <li>Projecting over full range of source area fractions shows how the model maps these relationships</li>
+              <li>Troughs were not explicitly selected, but were an important feature</li>
+            </ul>
+          </div>
+          <div class="figure_full">
+            <img src="images/FI_projection.jpg" height="100%" ; style = "border:2px solid #555">
+        </div>
+      </section>
       
       <section>
         <div class="container">
@@ -1328,7 +1329,7 @@ sub {
           <h2 class="header">Chapter 4</h2>
           <div class="left">
             <p>Wide range of possible conditions.</p>
-            <img src="images/variability.png" width="100%" ; style = "border:2px solid #555">
+            <img src="images/CH4_Val.png" width="100%" ; style = "border:2px solid #555">
           </div>
           <div class="figure_full">
             <br>
