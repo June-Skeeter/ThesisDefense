@@ -42,11 +42,40 @@
 }
 
 .header {
-  top: 1%;
-  height: 10%;
-  width: 100%;
+  /* border:2px solid; */
+  top: 0%;
+  height: 15%;
+  width: 60%;
   position: absolute;
   text-align: left;
+
+  padding-left: 5em ;
+  text-indent: -5em ;
+  text-align: left;
+  /* left:0%; */
+  orphans: 3;
+
+
+}
+
+h1 {
+  display: block;
+  font-size: 1.75em !important;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+  
+h2 {
+  display: block;
+  font-size: 1.25em !important;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 .full {
@@ -110,13 +139,13 @@
 
 .figure_short {
   width: 50%;
-  height: 70%;
+  height: 80%;
   left: 50%;
   margin: 0;
   position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 65%;
+  -ms-transform: translateY(-60%);
+  transform: translateY(-60%);
   text-align: center;
   display: block;
 }
@@ -165,29 +194,11 @@
   font-size: 70%;
 }
 
-h1 {
-  display: block;
-  font-size: 1.75em !important;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: bold;
-}
-  
-h2 {
-  display: block;
-  font-size: 1.5em !important;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: bold;
-}
 
 .reveal a {
   color: blue;
 }
+
 .reveal {
   background-color: #e6f9fc;
 }
@@ -261,7 +272,7 @@ sub {
       
       <section>
         <div class="container">
-        <h1 class="header">Territorial Acknowledgement</h1>
+        <h2 class="header">Territorial Acknowledgement</h2>
           <div class="left">
             <p>This work was conducted in Indigenous territories.</p>
             <ul>
@@ -278,7 +289,7 @@ sub {
 
       <section>
         <div class="container">
-        <h1 class="header">Overview</h1>
+        <h2 class="header">Overview</h2>
           <div class="full" style="font-size: 85%">
             <p class="hangingindent"><b>Chapter 1:</b> <i>Introduction</i></p>
             <p class="hangingindent"><b>Chapter 2:</b> <i>Vegetation Influence and Environmental Controls on Greenhouse Gas Fluxes from a Drained Thermokarst Lake in the Western Canadian Arctic</i></p>
@@ -290,7 +301,7 @@ sub {
 
       <section>
         <div class="container">
-        <h2 class="header">Framing the Problem</h2>
+        <h2 class="header"><b>Chapter 1:</b> Framing the Problem</h2>
           <div class="left">
             <p>Arctic amplification is accelerating climate change in the northern high latitudes, leading to:</p>
             <ul>
@@ -303,13 +314,13 @@ sub {
           </div>
             <div class="figure_short">
               <img src="images/CMIP.png" width="100%"; style = "border:2px solid #555">
-              <p class="caption">Source: IPCC (2021)</p>
+              <!-- <p class="caption">Source: IPCC (2021)</p> -->
             </div>
       </section>
       
       <section>
         <div class="container">
-        <h2 class="header">Limited Observations</h2>
+        <h2 class="header"><b>Chapter 1:</b> Limited Observations</h2>
           <div class="left">
             <p>Eddy covariance (EC) is a method to measure carbon dioxide (CO<sub>2</sub>) and methane (CH<sub>4</sub>) fluxes.</p>
             <ul>
@@ -320,15 +331,15 @@ sub {
               </ul>
           </ul>
           </div>
-          <div class="figure_full">
-            <img src="images/Fig1.png" width="100%"; style = "border:2px solid #555">
-            <p class="caption">Sources: Walker et al. (2005); Pallandt et al. (2021)</p>
+          <div class="figure_short">
+            <img src="images/Fig1.png" height="100%"; style = "border:2px solid #555">
+            <!-- <p class="caption">Sources: Walker et al. (2005); Pallandt et al. (2021)</p> -->
           </div>
       </section>
 
       <section>
         <div class="container">
-          <h2 class="header">Tundra Ecosystems</h2>
+          <h2 class="header"><b>Chapter 1:</b> Tundra Ecosystems</h2>
           <div class="left">
             <p>Harsh conditions stunt vegetation.</p>
               <ul>
@@ -348,7 +359,7 @@ sub {
 
       <section>
         <div class="container">
-          <h2 class="header">Tundra Ecosystems</h2>
+          <h2 class="header"><b>Chapter 1:</b> Tundra Ecosystems</h2>
           <div class="left_wide">
             <p><b>Permafrost</b> inhibits decomposition; <br> tundra soils are often C rich.</p>
               <ul>
@@ -372,7 +383,7 @@ sub {
 
       <section>
         <div class="container">
-          <h2 class="header">Tundra Carbon Balance</h2>
+          <h2 class="header"><b>Chapter 1:</b> Tundra Carbon Fluxes</h2>
           <div class="left_wide">
             <p><b>NEE</b> of CO<sub>2</sub> is the primary component of the C balance.</p>
               <ul>
@@ -400,7 +411,7 @@ sub {
           
       <section>
         <div class="container">
-          <h2 class="header">Tundra Carbon Balance</h2>
+          <h2 class="header"><b>Chapter 1:</b> Tundra Carbon Fluxes</h2>
           <div class="left_wide">
             <p><b>NME</b> of CH<sub>4</sub> is an important secondary component in tundra wetlands.</p>
               <ul>
@@ -428,20 +439,22 @@ sub {
 
       <section>
         <div class="container">
-        <h2 class="header">Machine Learning</h2>
+        <h2 class="header"><b>Chapter 1:</b> Machine Learning</h2>
           <div class="full">
             <p>Algorithms that build predictive models from experience.</p>
             <ul>
               <li>Neural Network (NN) are universal approximators</li>
               <ul>
-                <li>Single layer with H "hidden" nodes and M independent inputs: <br>
-                $f(X,w)= \sum_{h=1}^Hβ_hg(\sum_{m=0}^M\gamma_{hm}x_m)$</li>
+                <li>Often treated as "black box models"</li>
+                <li>Single layer with H "hidden" nodes and M independent inputs:</li>
+                <p style="text-align: center">$f(X,w)= \sum_{h=1}^Hβ_hg(\sum_{m=0}^M\gamma_{hm}x_m)$</p>
               </ul>
-              &nbsp;
               <li>Gap filling is essential for calculating C budgets from EC observations</li>
               <ul>
-                <li>Flux partitioning is the standard approach for NEE</li>
-                <li>No standard approach for NME</li>
+                <li>Flux partitioning is the standard approach for NEE, no standard for NME</li>
+                <ul>
+                  <li>Not practical during polar summer</li>
+                </ul>
                 <li>NN methods offer a flexible alternative</li>
               </ul>
             </ul>
@@ -451,7 +464,7 @@ sub {
 
       <section>
         <div class="container">
-        <h2 class="header">Study Area</h2>
+        <h2 class="header"><b>Chapter 1:</b> Study Area</h2>
           <div class="left_wide">
             <p>Two ecosystems in the Mackenzie Delta Region we studied.</p>
             <ul>
@@ -473,7 +486,7 @@ sub {
 
       <section>
         <div class="container">
-        <h2 class="header">Study Area</h2>
+        <h2 class="header"><b>Chapter 1:</b> Study Area</h2>
           <div class="left_wide">
             <p>Two ecosystems in the Mackenzie Delta Region we studied.</p>
             <ol>
@@ -500,7 +513,7 @@ sub {
 
       <section>
         <div class="container">
-        <h2 class="header">Research Objectives</h2>
+        <h2 class="header"><b>Chapter 1:</b> Research Objectives</h2>
           <div class="full">
             <p>Advance our understanding of the growing season C exchange in the Mackenzie Delta Region.</p>
             <ol>
@@ -518,18 +531,18 @@ sub {
         </div>
       </section>
   
-      <section>
+      <!-- <section>
         <div class="container">
           <div class="title">
             <h1>Chapter 2: Vegetation Influence and Environmental Controls on Greenhouse Gas Fluxes from a Drained Thermokarst Lake in the Western Canadian Arctic</h1>
           </div>
           <p class="subtitle">A version of chapter 2 has been published in Biogeosciences<br><a href="https://doi.org/10.5194/bg-17-4421-2020">https://doi.org/10.5194/bg-17-4421-2020</a></p> 
         </div>
-      </section>
+      </section> -->
                   
       <section>
         <div class="container">
-          <h2 class="header 1">Data & Methods</h2>
+          <h2 class="header"><b>Chapter 2:</b> Data & Methods</h2>
           <div class="left">
             <p>EC system measured peak growing season CO<sub>2</sub> and CH<sub>4</sub> fluxes.</p>
               <ul>
@@ -565,7 +578,7 @@ sub {
           
       <section>
         <div class="container">
-          <h2 class="header 1">Data & Methods</h2>
+          <h2 class="header"><b>Chapter 2:</b> Data & Methods</h2>
           <div class="left_wide" data-fragment-index="0">
             <p>Kljun et al. (2015) flux footprints intersected with vegetation map.</p>
             <table style = "font-size: 60%;" >
@@ -594,7 +607,7 @@ sub {
 
       <section>
         <div class="container">
-          <h2 class="header 1">Data & Methods</h2>
+          <h2 class="header"><b>Chapter 2:</b> Data & Methods</h2>
           <div class="full">
             <p>Neural Network (NN) models were used to:</p>
             <ol>
@@ -614,7 +627,7 @@ sub {
       
       <section>
         <div class="container">
-          <h2 class="header 1">Results</h2>
+          <h2 class="header"><b>Chapter 2:</b> Results</h2>
           <div class="left">
             <p>Conditions over the peak growing season in 2016.</p>
             <ul>
@@ -637,7 +650,7 @@ sub {
 
       <section>
         <div class="container">
-          <h2 class="header 1">Flux Drivers</h2>
+          <h2 class="header"><b>Chapter 2:</b> Flux Drivers</h2>
           <div class="left">
             <p>NEE had four key drivers: <br> PPFD, VPD, VWC, and F<sub>Shrub</sub></p>
             <ul>
@@ -664,7 +677,7 @@ sub {
       
       <section>
         <div class="container">
-          <h2 class="header 1">Flux Drivers</h2>
+          <h2 class="header"><b>Chapter 2:</b> Flux Drivers</h2>
           <div class="left">
             <p>NME had five key drivers: <br>F<sub>Sedge</sub>, VWC, T<sub>s</sub>, F<sub>Shrub</sub> & U</p>
             <ul>
@@ -696,39 +709,38 @@ sub {
       
       <section>
         <div class="container">
-          <h2 class="header 1">Discussion</h2>
+          <h2 class="header"><b>Chapter 2:</b> Discussion</h2>
           <div class="full">
             <p>Long-term observations are needed to better contextualize results.</p>
             <ol>
               <li class="nl">Compared to young DTLB (&lt; 50 yrs) studied in Alaska:</li>
-              <ol>
-                <li class="nl">Greater shrub cover and higher CO<sub>2</sub> uptake</li>
-                <li class="nl">Drier soil conditions and lower CH<sub>4</sub> emission</li>
-              </ol>
+              <ul>
+                <li>Greater shrub cover and higher CO<sub>2</sub> uptake</li>
+                <li>Drier soil conditions and lower CH<sub>4</sub> emission</li>
+              </ul>
               &nbsp;
               <li class="nl">Illisarvik will continue to evolve, following one of two trajectories:</li>
-              <ol>
-                <li class="nl">Sedge dominated > NME will increase significantly</li>
-                <li class="nl">Shrub dominated > NME will remain low</li>
-                <li class="nl">Effects on NEE are less straightforward</li>
-              </ol>
+              <ul>
+                <li>Sedge dominated > NME will increase significantly</li>
+                <li>Shrub dominated > NME will remain low</li>
+              </ul>
             </ol>
           </div>
         </div>
       </section>
 
-      <section>
+      <!-- <section>
         <div class="container">
           <div class="title">
             <h1>Chapter 3: Controls on Carbon Dioxide and Methane Fluxes from a Low-Center Polygonal Peatland in the Mackenzie River Delta</h1>
           </div>
           <p class="subtitle">A version of chapter 3 has been published in Arctic Science<br><a href="https://doi.org/10.1139/as-2021-0034">https://doi.org/10.1139/as-2021-0034</a></p> 
         </div>
-      </section>
+      </section> -->
 
       <section>
         <div class="container">
-          <h2 class="header 1">Data & Methods</h2>
+          <h2 class="header"><b>Chapter 3:</b> Data & Methods</h2>
           <div class="left_skinny">
             <p>Similar Setup as Illisarvik.</p>
             <ul>
@@ -758,7 +770,7 @@ sub {
       
       <section>
         <div class="container">
-          <h2 class="header 1">Data & Methods</h2>
+          <h2 class="header"><b>Chapter 3:</b> Data & Methods</h2>
           <div class="left_wide">
             <p>Kljun et al. (2015) flux footprints intersected with landscape classification.</p>
             <table style = "font-size: 60%;" >
@@ -782,25 +794,23 @@ sub {
 
       <section>
         <div class="container">
-          <h2 class="header 1">Data & Methods</h2>
+          <h2 class="header"><b>Chapter 3:</b> Data & Methods</h2>
           <div class="full">
-            <p>More explicit and detailed NN analysis than Chapter 2:</p>
+            <p>Similar approach to Chapter 2, but a more robust NN was used to identify flux drivers.  <b>Weights Method</b> (Gevery et al. 2003):</p>
             <ol>
-              <li class="nl">Identify flux drivers using the <b>Weights Method</b> (Gevery et al. 2003)</li>
+              <li class="nl">Start by training over-parametrized models</li>
               <ul>
-                <li>Started with over-parametrized models</li>
-                <ul>
-                  <li>21 climate, soil, and source area inputs</li>
-                </ul>
-                <li>Calculated Relative Importance (RI) from sum of the squared partial derivatives</li>
-                <ul>
-                  <li>Pruned inputs with RI &lt; 2.5%</li>
-                </ul>
+                <li>21 climate, soil, and source area inputs</li>
               </ul>
-              &nbsp;
-              <li class="nl">Derivatives were inspected to ensure response functions were plausible</li>
-              &nbsp;
-              <li class="nl">Gap-fill CO<sub>2</sub> and CH<sub>4</sub> fluxes to estimate NEE and NME</li>
+              <li class="nl">Calculate Relative Importance (RI) from the sums the squared partial derivatives</li>
+              <ul>
+                <li>Pruned inputs with RI &lt; 2.5%</li>
+                <li>Limited to one pruning iteration for expedience</li>
+              </ul>
+              <li class="nl">Retrain model and gap-fill CO<sub>2</sub> and CH<sub>4</sub> fluxes to estimate NEE and NME</li>
+              <ul>
+                <li>Derivatives were inspected to ensure response functions were plausible</li>
+              </ul>
             </ol>
           </div>
         </div>
@@ -808,7 +818,7 @@ sub {
          
       <section>
         <div class="container">
-          <h2 class="header 1">Results</h2>
+          <h2 class="header"><b>Chapter 3:</b> Results</h2>
           <div class="flex-container">
             <div>
               <p>Conditions over the 2017 growing season.</p>
@@ -826,7 +836,7 @@ sub {
        
       <section>
         <div class="container">
-          <h2 class="header 1">Results</h2>
+          <h2 class="header"><b>Chapter 3:</b> Results</h2>
           <div class="left_skinny">
             <p>Net growing season C sink.</p>
             <ul>
@@ -862,7 +872,7 @@ sub {
       
       <section>
         <div class="container">
-          <h2 class="header 1">Flux Drivers</h2>
+          <h2 class="header"><b>Chapter 3:</b> Flux Drivers</h2>
           <div class="left">
             <p>Net Ecosystem Exchange</p>
             <table style = "font-size: 60%;">
@@ -897,7 +907,7 @@ sub {
             
       <section>
         <div class="container">
-          <h2 class="header 1">Flux Drivers</h2>
+          <h2 class="header"><b>Chapter 3:</b> Flux Drivers</h2>
           <div class="left">
             <p>Net Methane Exchange</p>
             <table style = "font-size: 60%;">
@@ -932,36 +942,46 @@ sub {
 
       <section>
         <div class="container">
-          <h2 class="header 1">Discussion</h2>
-          <div class="left">
+          <h2 class="header"><b>Chapter 3:</b> Discussion</h2>
+          <div class="left_wide">
             <p>Long-term observations are needed.</p>
             <ol>
               <li class="nl">NEE was more negative than LCP ecosystems in Alaska and Siberia</li>
+              <ul>
+                <li>Growing season CO<sub>2</sub> sink</li>
+              </ul>
               <li class="nl">NME had a minor impact on net C uptake (-49.5 g C m<sup>-2</sup>)</li>
               <ul>
-                <li>Matched with aircraft observations Kohnert et al. (2018)</li>
-                <li>Spatial heterogeneity had a significant impact</li>
+                <li>Matched aircraft fluxes Kohnert et al. (2018)</li>
+              </ul>
+              <li class="nl">Spatial heterogeneity</li>
+              <ul>
+                <li>Location bias had minor influence over NME</li>
+                <ul>
+                  <li>NN projections suggest landscape scale NME ~1 nmol m<sup>-2</sup> s<sup>-1</sup> lower</li>
+                </ul>
               </ul>
             </ol>
           </div>
-          <div class="right" style="text-align: center">
-              <img src="images/C_bal.jpg" height="100%" ; style = "border:2px solid #555">
+          <div class="figure_narrow" style="text-align: center">
+            <br>
+            <img src="images/C_bal.jpg" width="100%" ; style = "border:2px solid #555">
           </div>
         </div>
       </section>
 
-      <section>
+      <!-- <section>
         <div class="container">
           <div class="title">
             <h1>Chapter 4: Modeling Interannual Variability of Carbon Fluxes at a Low-Center Polygon Ecosystem in the Mackenzie River Delta</h1>
           </div>
           <p class="subtitle">A version of chapter 4 has been submitted to Arctic Science and is currently under review</p> 
         </div>
-      </section>
+      </section> -->
 
       <section>
         <div class="container">
-          <h2 class="header 1">Objectives</h2>
+          <h2 class="header"><b>Chapter 4:</b> Objectives</h2>
           <div class="left">
             <p>Chapter 3 fills a knowledge gap, <b>but</b> more context is needed.</p>
             <ul>
@@ -987,7 +1007,7 @@ sub {
 
       <section>
         <div class="container">
-          <h2 class="header 1">Temporal Upscaling</h2>
+          <h2 class="header"><b>Chapter 4:</b> Temporal Upscaling</h2>
           <div class="left">
             <p>A <b>Flux Driver Time Series (FDTS)</b> was created spanning 2009-2019 snow-free seasons.</p>
             <ul>
@@ -1007,7 +1027,7 @@ sub {
 
       <section>
         <div class="container">
-          <h2 class="header 1">Results</h2>
+          <h2 class="header"><b>Chapter 4:</b> Results</h2>
           <div class="left">
             <!-- <p>Red lines/stars correspond to 2017.</p> -->
             <img src="images/DailyValues.png" width="90%" ; style = "border:2px solid #555">
@@ -1021,7 +1041,7 @@ sub {
 
       <section>
         <div class="container">
-          <h2 class="header 1">Results</h2>
+          <h2 class="header"><b>Chapter 4:</b> Results</h2>
           <div class="left">
             <p>It is not clear whether Fish Island is a net carbon sink.</p>
             <ul>
@@ -1032,7 +1052,7 @@ sub {
               </ul>
             </ul>
           </div>
-          <div class="figure_full">
+          <div class="right">
             <img src="images/Seasonal.png" width="100%" ; style = "border:2px solid #555">
           </div>
         </div>
@@ -1040,7 +1060,7 @@ sub {
       
       <section>
         <div class="container">
-          <h2 class="header 1">Interannual Variability</h2>
+          <h2 class="header"><b>Chapter 4:</b> Interannual Variability</h2>
           <div class="full">
             <p class="caption">Spearman Correlation Analysis</p>
             <table style = "font-size: 100%;" >
@@ -1058,90 +1078,75 @@ sub {
 
       <section>
         <div class="container">
-          <h2 class="header 1">Discussion</h2>
+          <h2 class="header"><b>Chapter 4:</b> Discussion</h2>
           <div class="full">
             <p>Temporal upscaling indicated significant interannual variability in growing season C exchange.</p>
-              <ul>
-                <li>Climate warming could reduce the CO<sub>2</sub> sink strength</li>
-                <li>Compared to two similar LCP ecosystems with long-term records:</li>
+              <ol>
+                <li class="nl">Climate warming could reduce the CO<sub>2</sub> sink strength</li>
+                <ul>
+                  <li>Highlights need for long-term monitoring</li>
+                </ul>
+                &nbsp;
+                <li class="nl">Compared to two similar LCP ecosystems with long-term records:</li>
                 <ul>
                   <li>Weaker CO<sub>2</sub> sink and stronger CH<sub>4</sub> source than LCP ecosystem near Utqiagvik, AK.</li>
                   <li>Stronger CO<sub>2</sub> sink and CH<sub>4</sub> source than LCP ecosystem at Samoylov Island, RU.</li>
                 </ul>
-                <li>Highlights need for long-term monitoring</li>
-              </ul>
+              </ol>
           </div>
         </div>
       </section>
       
-      <section>
+      <!-- <section>
         <div class="container">
           <div class="title">
             <h1>Chapter 5: Conclusions</h1>
           </div>
           <p class="subtitle">Summary of findings, key contributions, future research, and reflections</p> 
         </div>
-      </section>
+      </section> -->
 
       <section>
         <div class="container">
-          <h2 class="header 1">Summary of Findings</h2>
+          <h2 class="header"><b>Chapter 5:</b> Summary of Findings</h2>
           <div class="full">
-            <p>Both sites were growing season CO<sub>2</sub> sinks and CH<sub>4</sub> sources.</p>
-              <ul>
-                <li><b>Illisarvik:</b></li>
-                <ul>
-                  <li>Greater CO<sub>2</sub> uptake and less CH<sub>4</sub> emission than other DTLB studied</li>
-                </ul>
-                <li><b>Fish Island:</b></li>
-                <ul>
-                  <li>Higher CH<sub>4</sub> fluxes than LCP ecosystems in Alaska and Siberia</li>
-                  <li>Mixed results for CO<sub>2</sub> uptake</li>
-                </ul>
-              </ul>
+              <table style = "font-size: 80%;">
+                <colgroup>
+                  <col span="1" width="10%">
+                  <col span="1" width="45%">
+                  <col span="1" width="45%">
+                  <!-- <col span="1" width="1%"> -->
+                </colgroup>
+                <tr><th></th><th>Illisarvik</th><th>Fish Island</th></tr>
+                <tr><td>NEE</td><td>Greater uptake than DTLB studied elsewhere</td><td>Mixed finding</td></tr>
+                <tr><td>NME</td><td>Lower emission than DTLB studied elsewhere</td><td>Higher emission than LCP ecosystems studied elsewhere</td></tr>
+                <tr><td>Spatial Heterogeneity</td><td>Substantial variability, diverse vegetation communities</td><td>Small scale variability, regularly repeating features &thickapprox; heterogeneous at larger scale</td></tr>
+                <tr><td>Long-term Outlook</td><td>Depends on trajectory (shrub/sedge)</td><td>Potentially reduced C uptake with climate warming</td></tr>
+              </table>
           </div>
         </div>
       </section>
       
       <section>
         <div class="container">
-          <h2 class="header 1">Summary of Findings</h2>
-          <div class="full">
-            <p>Spatial heterogeneity had significant influence over fluxes at both sites.</p>
-              <ul>
-                <li><b>Illisarvik:</b></li>
-                <ul>
-                  <li>Both NEE and NME varied between different vegetation types</li>
-                </ul>
-                <li><b>Fish Island:</b></li>
-                <ul>
-                  <li>Polygonal microtopography had a significant influence over NME</li>
-                  <li>Less significant influence over NEE</li>
-                </ul>
-              </ul>
-          </div>
-        </div>
-      </section>
-            
-      <section>
-        <div class="container">
-          <h2 class="header 1">Methodological Contributions</h2>
+          <h2 class="header"><b>Chapter 5:</b> Methodological Contributions</h2>
           <div class="full">
               <p>Neural Networks are not "black-box" models when applied carefully.</p>
-              <ul>
-                <li>The weights method helps us understand what the models are actually doing</li>
+              <ol>
+                <li class="nl">The weights method helps us understand what the models are doing</li>
                 <ul>
+                  <li>Ability to map response functions is a key advantage over other common methods (i.e.random forests)</li>
                   <li>To date, had not been applied to EC data</li>
                 </ul>
-                <li>Mapping response functions is a key advantage over Random Forest Models</li>
-                <li>Meticulous application is the key to success</li>
+                &nbsp;
+                <li class="nl">Can be paired with footprint modelling to account for spatial heterogeneity</li>
+                &nbsp;
+                <li class="nl">Meticulous application is the key to success</li>
                 <ul>
-                  <li>Repetition (ensembles, bootstrapping, etc.)</li>
-                  <li>Cross validation and early stopping</li>
+                  <li>Bootstrapping, cross validation and early stopping</li>
                 </ul>
                 
-                <li>Can be paired with footprint modelling to help account for spatial heterogeneity</li>
-              </ul>
+              </ol>
             </ol>
           </div>
         </div>
@@ -1149,7 +1154,7 @@ sub {
 
       <section>
         <div class="container">
-          <h2 class="header 1">Future Research</h2>
+          <h2 class="header"><b>Chapter 5:</b> Future Research</h2>
           <div class="full">
             <ol>
               <li class="nl">Long-term flux data needed:</li>
@@ -1176,7 +1181,7 @@ sub {
       
       <section>
         <div class="container">
-          <h2 class="header 1">Final Reflections</h2>
+          <h2 class="header"><b>Chapter 5:</b> Final Reflections</h2>
           <div class="full">
             <p>If our priority is just extracting information, the research only serves to perpetuate colonialism (Liboiron 2021).</p>
             <ul>
@@ -1196,10 +1201,19 @@ sub {
 
       <section>
         <div class="container">
-          <div class="title">
-            <h1>Thank you!</h1>
+          <h1 class="header">Thank you! Questions?</h1>
+          <div class="full">
+            <p>I would like to thank:</p>
+            <ul>
+              <li>My supervisors and committee members</li>
+              <li>Friends and family</li>
+              <li>Funding agencies</li>
+              <ul>
+                <li>NSERC</li>
+                <li>CFI</li>
+              </ul>
+            </ul>
           </div>
-          <p class="subtitle">Questions?</p> 
         </div>
       </section>
 
@@ -1250,73 +1264,7 @@ sub {
          
       <section>
         <div class="container">
-          <h2 class="header 1">Chapter 2</h2>
-          <div class="r-stack">
-            <div class="left fragment fade-out" data-fragment-index="0">
-              <p>A vegetation survey mapped the basin (Wilson et al. 2019).</p>
-              <ul>
-                <li>Kljun et al. 2015 footprint model</li>
-                <ul>
-                  <li>Half-hourly source area fractions</li>
-                  <li>Footprint climatology</li>
-                </ul>
-              </ul>
-              <table style = "font-size: 50%;" >
-                <tr><th>Class</th><th>Species</th><th>Basin</th><th><i>F<sub>clim</sub></i>[range]</th></tr>
-                <tr><td>Shrub</td><td><i>Salix</i> spp. & <i>Alnus viridis</i></td><td>48%</td><td>36%[0–79]</td></tr>
-                <tr><td>Sedge</td><td><i>Carex aquatilis</i> & <i>Arctophila fulva</i></td><td>29%</td><td>39%[1–78]</td></tr>
-                <tr><td>Grass</td><td><i>Pocacea</i> spp. & <i>Eriophorum angustifolium</i></td><td>12%</td><td>11%[0–56]</td></tr>
-                <tr><td>Sparse</td><td>Sparse veg. & bare ground</td><td>8%</td><td>2%[0–34]</td></tr>
-                <tr><td>Water</td><td><i>Hippuris vulgaris</i> & Open Water</td><td>3%</td><td>0%[0–4]</td></tr>
-                <tr><td>Upland</td><td><i>Salix</i> spp. & <i>Betula nana</i></td><td>0%</td><td>6%[0–15]</td></tr>
-              </table>
-            </div>
-            
-            <div class="left fragment fade-in" data-fragment-index="0">
-              <p>ER and NME measured at 10 plots using vegetated and clipped dark chambers (LaForce 2018).</p>
-              <ul>
-                <li>Only vegetated chambers included</li>
-                <ul>
-                  <img src="images/Chambers.JPG" width="80%" ; style = "border:2px solid #555"></img>
-                </ul>
-              </ul>
-            </div>
-
-          </div>
-          <div class="r-stack">
-            <div class="figure_full fragment fade-out" data-fragment-index="1">
-              <img src="images/Illisarvik_Map.png" height="1200" ; style = "border:2px solid #555"></img>
-            </div>
-            <div class="figure_full fragment current-visible" data-fragment-index="1">
-              Camber fluxes aggregated by vegetation class
-            <img src="images/Chamber_Flux.png" width="80%" ; style = "border:2px solid #555"></img>
-            </div>
-          </div>
-          
-        </div>
-      </section>
-
-      <section>
-        <div class="container">
-          <h2 class="header 1">Chapter 2</h2>
-          <div class="full">
-            <p>Neural Network models were used to:</p>
-            <ul>
-              <li>Identify the dominant flux drivers by iteratively building more complex models</li>
-              <ul>
-                <li>Climate, soil, and source area were used as model inputs</li>
-                <li>"1 Standard Error" rule identified the most parsimonious models</li>
-              </ul>
-              <li>Selected sets of inputs for CO<sub>2</sub> and CH<sub>4</sub> were then used to gap fill the respective flux time series to estimate NEE and NME</li>
-              </ul>
-            </ul>
-          </div>
-        </div>
-      </section>   
-        
-      <section>
-        <div class="container">
-          <h2 class="header 1">Chapter 2</h2>
+          <h2 class="header">Chapter 2</h2>
           <div class="left">
             <ul>
               <li><b>NEE</b>: good agreement with F<sub>CO<sub>2</sub></sub> observations (r<sup>2</sup> = 0.91)</li>
@@ -1352,7 +1300,7 @@ sub {
       
       <section>
         <div class="container">
-          <h2 class="header 1">Chapter 3</h2>
+          <h2 class="header">Chapter 3</h2>
           <div class="left">
             <p>Estimating ER by projecting to "nighttime" conditions: </p>
             <ul>
@@ -1377,7 +1325,7 @@ sub {
 
       <section>
         <div class="container">
-          <h2 class="header 1">Chapter 4</h2>
+          <h2 class="header">Chapter 4</h2>
           <div class="left">
             <p>Wide range of possible conditions.</p>
             <img src="images/variability.png" width="100%" ; style = "border:2px solid #555">
