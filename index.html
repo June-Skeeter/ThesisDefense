@@ -430,23 +430,19 @@ sub {
         <div class="container">
         <h2 class="header">Machine Learning</h2>
           <div class="full">
-            <p>A family of methods where algorithms build predictive models from experience.</p>
+            <p>Algorithms that build predictive models from experience.</p>
             <ul>
+              <li>Neural Network (NN) are universal approximators</li>
+              <ul>
+                <li>Single layer with H "hidden" nodes and M independent inputs: <br>
+                $f(X,w)= \sum_{h=1}^Hβ_hg(\sum_{m=0}^M\gamma_{hm}x_m)$</li>
+              </ul>
+              &nbsp;
               <li>Gap filling is essential for calculating C budgets from EC observations</li>
               <ul>
-                <li>Flux partitioning is the standard approach for NEE, no standard methods for NME</li>
-                <ul>
-                  <li>Polar summer > night-time partitioning not possible</li>
-                  <li>Rapid phenology changes > day-time methods impractical too</li>
-                </ul>
-              </ul>
-              <li>Neural Network (NN) methods offer a flexible alternative</li>
-              <ul>
-                <li>No prior assumptions</li>
-                <li>Universal approximators</li>
-                <ul>
-                  <li>Capable of mapping any continuous function to an arbitrary degree of accuracy</li>
-                </ul>
+                <li>Flux partitioning is the standard approach for NEE</li>
+                <li>No standard approach for NME</li>
+                <li>NN methods offer a flexible alternative</li>
               </ul>
             </ul>
           </div>
@@ -713,7 +709,7 @@ sub {
               <li class="nl">Illisarvik will continue to evolve, following one of two trajectories:</li>
               <ol>
                 <li class="nl">Sedge dominated > NME will increase significantly</li>
-                <li class="nl">Shrub dominated > NME will  low</li>
+                <li class="nl">Shrub dominated > NME will remain low</li>
                 <li class="nl">Effects on NEE are less straightforward</li>
               </ol>
             </ol>
@@ -1014,11 +1010,11 @@ sub {
           <h2 class="header 1">Results</h2>
           <div class="left">
             <!-- <p>Red lines/stars correspond to 2017.</p> -->
-            <img src="images/variability.png" width="90%" ; style = "border:2px solid #555">
+            <img src="images/DailyValues.png" width="90%" ; style = "border:2px solid #555">
           </div>
           <div class="figure_full">
             <!-- <p>Conditions by Snow-free Season </p> -->
-            <img src="images/variability1.png" width="90%" ; style = "border:2px solid #555">
+            <img src="images/AnnualDrivers.png" width="90%" ; style = "border:2px solid #555">
           </div>
         </div>
       </section>
@@ -1155,34 +1151,32 @@ sub {
         <div class="container">
           <h2 class="header 1">Future Research</h2>
           <div class="full">
-            <ul>
-              <li>Long-term flux data needed:</li>
+            <ol>
+              <li class="nl">Long-term flux data needed:</li>
               <ul>
-                <li>Chapter 4 shows that interannual variability can have a significant impact on fluxes</li>
-                <li>Warming may reduce overall sink strength</li>
+                <li>Interannual variability can have a significant impact on net fluxes</li>
               </ul>
-              <li>Cold season fluxes:</li>
+              <li class="nl">Cold season dynamics:</li>
               <ul>
-                <li>Extended senescent period could offset much of growing season uptake</li>
+                <li>Extended senescent periods could offset growing season uptake</li>
               </ul>
-              <li>Methane fluxes:</li>
+              <li class="nl">Methane fluxes:</li>
               <ul>
                 <li>Pressure pumping</li>
-                <li>Spatial variability and landscape scale changes</li>
               </ul>
-              <li>Network architecture</li>
+              <li class="nl">Network architecture</li>
               <ul>
                 <li>Multi-layer models to simulate GPP and ER separately</li>
                 <li>Time-lagged models to account for CH<sub>4</sub> dynamics</li>
               </ul>
-            </ul>
+            </ol>
           </div>
         </div>
       </section>
       
       <section>
         <div class="container">
-          <h2 class="header 1">Reflections</h2>
+          <h2 class="header 1">Final Reflections</h2>
           <div class="full">
             <p>If our priority is just extracting information, the research only serves to perpetuate colonialism (Liboiron 2021).</p>
             <ul>
